@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  6 SEP 2023 22:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  7 SEP 2023 08:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1431,18 +1431,21 @@ LaTeX Warning: Citation 'Lee' on page 28 undefined on input line 1038.
 
 LaTeX Warning: Citation 'Hatcher' on page 28 undefined on input line 1053.
 
+
+LaTeX Warning: Citation 'Lee' on page 28 undefined on input line 1057.
+
 [28]
 
-LaTeX Warning: Citation 'ONeill' on page 29 undefined on input line 1062.
+LaTeX Warning: Citation 'ONeill' on page 29 undefined on input line 1070.
 
 
-LaTeX Warning: Citation 'Palmas' on page 29 undefined on input line 1062.
+LaTeX Warning: Citation 'Palmas' on page 29 undefined on input line 1070.
 
 
-LaTeX Warning: Citation 'ONeill' on page 29 undefined on input line 1063.
+LaTeX Warning: Citation 'ONeill' on page 29 undefined on input line 1071.
 
 
-Overfull \hbox (13.22243pt too wide) in paragraph at lines 1064--1065
+Overfull \hbox (13.22243pt too wide) in paragraph at lines 1072--1073
 \OT1/ppl/m/n/10 m[]odulos) $\OML/cmm/m/it/10 V[]; [] ; V[]$\OT1/ppl/m/n/10 , po
 de-mos definir el \OT1/ppl/b/n/10 pro-ducto di-recto \OT1/ppl/m/n/10 como el es
 -pa-cio vec-to-rial definido
@@ -1451,7 +1454,7 @@ de-mos definir el \OT1/ppl/b/n/10 pro-ducto di-recto \OT1/ppl/m/n/10 como el es
 [29]
 Chapter 2.
 
-LaTeX Warning: Empty bibliography on input line 1074.
+LaTeX Warning: Empty bibliography on input line 1082.
 
 [30
 
@@ -1496,7 +1499,7 @@ exlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
 mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/
 type1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (30 pages, 1061878 bytes).
+Output written on geo-riem.pdf (30 pages, 1062904 bytes).
 PDF statistics:
  350 PDF objects out of 1000 (max. 8388607)
  272 compressed objects within 3 object streams
