@@ -6,9 +6,18 @@
 \contentsline {section}{\numberline {1.4}Subvariedades}{12}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Ejercicios 14-18 de agosto}{14}{subsection.1.4.1}%
 \contentsline {section}{\numberline {1.5}Inmersiones, sumersiones y encajes}{16}{section.1.5}%
-\contentsline {section}{\numberline {1.6}Covectores}{20}{section.1.6}%
-\contentsline {section}{\numberline {1.7}Campos vectoriales}{21}{section.1.7}%
-\contentsline {section}{\numberline {1.8}Formas diferenciales}{23}{section.1.8}%
-\contentsline {section}{\numberline {1.9}Corchete de Lie}{23}{section.1.9}%
-\contentsline {section}{\numberline {1.10}Tensores}{29}{section.1.10}%
-\contentsline {chapter}{\numberline {2}Referencias}{30}{chapter.2}%
+\contentsline {section}{\numberline {1.6}Campos vectoriales}{20}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Corchete de Lie}{22}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Ejercicios 4-8 septiembre}{25}{subsection.1.7.1}%
+\contentsline {section}{\numberline {1.8}Teorema de rectificación}{27}{section.1.8}%
+\contentsline {chapter}{\numberline {2}Formas y tensores}{30}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tensores}{30}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Covectores}{32}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Formas diferenciales}{33}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Derivada exterior}{34}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Variedades orientables y no orientables}{36}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Cambios de coordenadas}{37}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Campos tensoriales}{38}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Contracción}{40}{subsection.2.7.1}%
+\contentsline {section}{\numberline {2.8}Derivaciones de campos tensoriales}{43}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Referencias}{45}{chapter.3}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  7 SEP 2023 08:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  21 SEP 2023 09:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1120,31 +1120,31 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 \@quotelevel=\count457
 \@quotereset=\count458
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-00.
+05.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 ) (./geo-riem.aux)
 \openout1 = `geo-riem.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1205,7 +1205,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 100.
+Package hyperref Info: Link coloring ON on input line 105.
 
 (./geo-riem.out) (./geo-riem.out)
 \@outlinefile=\write5
@@ -1237,14 +1237,14 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'geo-riem.bbl' found.
 
 (./geo-riem.bbl)
-Package biblatex Info: Reference section=0 on input line 100.
-Package biblatex Info: Reference segment=0 on input line 100.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 102
+Package biblatex Info: Reference section=0 on input line 105.
+Package biblatex Info: Reference segment=0 on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107
 .
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 102
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107
 .
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1263,31 +1263,31 @@ Chapter 1.
 [3
 
 ] [4] [5]
-Overfull \hbox (4.69324pt too wide) in paragraph at lines 256--257
+Overfull \hbox (4.69324pt too wide) in paragraph at lines 261--262
 []\OT1/ppl/m/n/10 Bueno, pode-mos darnos cuenta de que es con-tinua cuando pen-
 samos que el plano proyec-
  []
 
 [6] [7]
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 3
-35.
+40.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 [8]
 
-LaTeX Warning: Citation 'ONeill' on page 9 undefined on input line 366.
+LaTeX Warning: Citation 'ONeill' on page 9 undefined on input line 371.
 
 [9]
 
-LaTeX Warning: Citation 'ONeill' on page 10 undefined on input line 394.
+LaTeX Warning: Citation 'ONeill' on page 10 undefined on input line 399.
 
 [10]
 
-LaTeX Warning: Citation 'ONeill' on page 11 undefined on input line 437.
+LaTeX Warning: Citation 'ONeill' on page 11 undefined on input line 442.
 
 
-Overfull \hbox (25.81535pt too wide) in paragraph at lines 456--457
+Overfull \hbox (25.81535pt too wide) in paragraph at lines 461--462
 \OT1/ppl/m/n/10 cios tan-gentes, la ma-triz que la rep-re-senta re-specto a las
  bases $[]$ y $[]$
  []
@@ -1297,173 +1297,294 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
 
-LaTeX Warning: Citation 'Lee' on page 13 undefined on input line 508.
+LaTeX Warning: Citation 'Lee' on page 13 undefined on input line 513.
 
 [13] [14
 
 ] [15]
 
-LaTeX Warning: Citation 'DoCarmo' on page 16 undefined on input line 623.
+LaTeX Warning: Citation 'DoCarmo' on page 16 undefined on input line 628.
 
-<fig1.png, id=175, 459.7175pt x 470.75874pt>
+<fig1.png, id=220, 459.7175pt x 470.75874pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 625.
+Package pdftex.def Info: fig1.png  used on input line 630.
 (pdftex.def)             Requested size: 193.33647pt x 197.9831pt.
 [16 <./fig1.png>]
 
-LaTeX Warning: Citation 'Lee' on page 17 undefined on input line 653.
+LaTeX Warning: Citation 'Lee' on page 17 undefined on input line 658.
 
 [17]
-Overfull \hbox (0.72678pt too wide) in paragraph at lines 690--691
+Overfull \hbox (0.72678pt too wide) in paragraph at lines 695--696
 []\OT1/ppl/m/n/10 Para los m[]ultiplos en-teros de $\OML/cmm/m/it/10 $\OT1/ppl
 /m/n/10 , con-sid-er-e-mos su dis-tan-cia al en-tero menor
  []
 
-<fig9.png, id=186, 361.35pt x 363.3575pt>
+<fig9.png, id=231, 361.35pt x 363.3575pt>
 File: fig9.png Graphic file (type png)
 <use fig9.png>
-Package pdftex.def Info: fig9.png  used on input line 702.
+Package pdftex.def Info: fig9.png  used on input line 707.
 (pdftex.def)             Requested size: 193.33647pt x 194.40819pt.
 
 Underfull \vbox (badness 3312) has occurred while \output is active []
 
  [18]
 
-LaTeX Warning: Citation 'Loring' on page 19 undefined on input line 708.
+LaTeX Warning: Citation 'Loring' on page 19 undefined on input line 713.
 
 
-LaTeX Warning: Citation 'Loring' on page 19 undefined on input line 726.
+LaTeX Warning: Citation 'Loring' on page 19 undefined on input line 731.
 
 [19 <./fig9.png (PNG copy)>]
 
-LaTeX Warning: Citation 'Loring' on page 20 undefined on input line 744.
-
-[20]
-
-LaTeX Warning: Citation 'DoCarmo' on page 21 undefined on input line 789.
+LaTeX Warning: Citation 'Loring' on page 20 undefined on input line 749.
 
 
-LaTeX Warning: Citation 'Lee' on page 21 undefined on input line 789.
+LaTeX Warning: Citation 'ONeill' on page 20 undefined on input line 757.
 
-
-LaTeX Warning: Citation 'ONeill' on page 21 undefined on input line 806.
-
-[21]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 815
+LaTeX Font Info:    Trying to load font information for U+euf on input line 766
 .
- (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Overfull \hbox (5.23526pt too wide) in paragraph at lines 815--816
+Overfull \hbox (5.23526pt too wide) in paragraph at lines 766--767
 []\OT1/ppl/b/n/10 Observaci^^Son. []\OT1/ppl/m/n/10 De-no-tare-mos al con-junto
  de cam-pos vec-to-ri-ales en una var-iedad por $\U/euf/m/n/10 X\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 )$\OT1/ppl/m/n/10 . 
  []
 
 
-LaTeX Warning: Citation 'Lee' on page 22 undefined on input line 817.
+LaTeX Warning: Citation 'Lee' on page 20 undefined on input line 768.
+
+[20]
+
+LaTeX Warning: Citation 'Lee' on page 21 undefined on input line 773.
 
 
-LaTeX Warning: Citation 'Lee' on page 22 undefined on input line 822.
+LaTeX Warning: Citation 'Lee' on page 21 undefined on input line 784.
 
 
-LaTeX Warning: Citation 'Lee' on page 22 undefined on input line 833.
+LaTeX Warning: Citation 'Lee' on page 21 undefined on input line 797.
 
-[22]
+[21] [22]
 
-LaTeX Warning: Citation 'Lee' on page 23 undefined on input line 846.
-
-[23]
-
-LaTeX Warning: Citation 'DoCarmo' on page 24 undefined on input line 933.
+LaTeX Warning: Citation 'DoCarmo' on page 23 undefined on input line 851.
 
 
-LaTeX Warning: Citation 'Lee' on page 24 undefined on input line 945.
+LaTeX Warning: Citation 'Lee' on page 23 undefined on input line 863.
 
 
-LaTeX Warning: Citation 'DoCarmo' on page 24 undefined on input line 947.
+LaTeX Warning: Citation 'DoCarmo' on page 23 undefined on input line 865.
 
-[24]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 9
-56.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 8
+74.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<fig6.png, id=225, 361.35pt x 354.32375pt>
+<fig6.png, id=257, 361.35pt x 354.32375pt>
 File: fig6.png Graphic file (type png)
 <use fig6.png>
-Package pdftex.def Info: fig6.png  used on input line 966.
+Package pdftex.def Info: fig6.png  used on input line 884.
 (pdftex.def)             Requested size: 174.00163pt x 170.61952pt.
-<fig7.png, id=226, 361.35pt x 354.32375pt>
+<fig7.png, id=258, 361.35pt x 354.32375pt>
 File: fig7.png Graphic file (type png)
 <use fig7.png>
-Package pdftex.def Info: fig7.png  used on input line 971.
+Package pdftex.def Info: fig7.png  used on input line 889.
 (pdftex.def)             Requested size: 174.00163pt x 170.61952pt.
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 964--974
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 882--892
 [][] [] 
  []
 
-[25 <./fig6.png (PNG copy)> <./fig7.png (PNG copy)>]
-<fig8.png, id=235, 361.35pt x 354.32375pt>
+
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
+ [23]
+<fig8.png, id=268, 361.35pt x 354.32375pt>
 File: fig8.png Graphic file (type png)
 <use fig8.png>
-Package pdftex.def Info: fig8.png  used on input line 999.
+Package pdftex.def Info: fig8.png  used on input line 917.
 (pdftex.def)             Requested size: 174.00165pt x 170.61952pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26 <./fig8.png (PNG copy)>]
+ [24 <./fig6.png (PNG copy)> <./fig7.png (PNG copy)>] [25 <./fig8.png (PNG copy
+)>]
+Overfull \hbox (4.05347pt too wide) in paragraph at lines 952--953
+[]\OT1/ppl/m/n/10 El mapeo $\OML/cmm/m/it/10 T \OT1/cmr/m/n/10 : \U/msb/m/n/10 
+R[] \OMS/cmsy/m/n/10 ! \U/msb/m/n/10 R[]$ \OT1/ppl/m/n/10 que cam-bia co-or-de-
+nadas cil[]^^Pndricas a carte-sianas manda $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r
+; ^^R; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7!
+ []
 
-LaTeX Warning: Citation 'ONeill' on page 27 undefined on input line 1016.
+<fig10.png, id=282, 361.35pt x 401.5pt>
+File: fig10.png Graphic file (type png)
+<use fig10.png>
+Package pdftex.def Info: fig10.png  used on input line 974.
+(pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
+<fig11.png, id=283, 361.35pt x 401.5pt>
+File: fig11.png Graphic file (type png)
+<use fig11.png>
+Package pdftex.def Info: fig11.png  used on input line 979.
+(pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
+
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 972--982
+[][] [] 
+ []
+
+<fig12.png, id=284, 361.35pt x 401.5pt>
+File: fig12.png Graphic file (type png)
+<use fig12.png>
+Package pdftex.def Info: fig12.png  used on input line 985.
+(pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
+
+Underfull \vbox (badness 1259) has occurred while \output is active []
+
+ [26]
+
+LaTeX Warning: Citation 'ONeill' on page 27 undefined on input line 993.
+
+[27 <./fig10.png (PNG copy)> <./fig11.png (PNG copy)> <./fig12.png (PNG copy)>]
+
+LaTeX Warning: Citation 'Lee' on page 28 undefined on input line 999.
 
 
-LaTeX Warning: Citation 'Lee' on page 27 undefined on input line 1022.
+LaTeX Warning: Citation 'Arnold' on page 28 undefined on input line 1004.
 
 
-LaTeX Warning: Citation 'Arnold' on page 27 undefined on input line 1027.
-
-[27]
-
-LaTeX Warning: Citation 'Lee' on page 28 undefined on input line 1038.
+LaTeX Warning: Citation 'Lee' on page 28 undefined on input line 1015.
 
 
-LaTeX Warning: Citation 'Hatcher' on page 28 undefined on input line 1053.
-
-
-LaTeX Warning: Citation 'Lee' on page 28 undefined on input line 1057.
+Overfull \hbox (14.85336pt too wide) in paragraph at lines 1025--1026
+\OT1/ppl/m/n/10 bierta de "bo-las" $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 h[]\OT1/
+cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 )))\OMS/cmsy/m/n/10 g[]$ \OT1/ppl/m/n/10
+ tiene una sub-cu-bierta finita $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 h[]\OT1/cmr
+/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n/10
+ (\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 )))\OMS/cmsy/m/n/10 g[]$
+ []
 
 [28]
 
-LaTeX Warning: Citation 'ONeill' on page 29 undefined on input line 1070.
+LaTeX Warning: Citation 'Lee' on page 29 undefined on input line 1030.
 
 
-LaTeX Warning: Citation 'Palmas' on page 29 undefined on input line 1070.
+LaTeX Warning: Citation 'Hatcher' on page 29 undefined on input line 1038.
+
+[29]
+Chapter 2.
+
+LaTeX Warning: Citation 'ONeill' on page 30 undefined on input line 1049.
 
 
-LaTeX Warning: Citation 'ONeill' on page 29 undefined on input line 1071.
+LaTeX Warning: Citation 'Palmas' on page 30 undefined on input line 1049.
 
 
-Overfull \hbox (13.22243pt too wide) in paragraph at lines 1072--1073
+LaTeX Warning: Citation 'ONeill' on page 30 undefined on input line 1050.
+
+
+Overfull \hbox (13.22243pt too wide) in paragraph at lines 1051--1052
 \OT1/ppl/m/n/10 m[]odulos) $\OML/cmm/m/it/10 V[]; [] ; V[]$\OT1/ppl/m/n/10 , po
 de-mos definir el \OT1/ppl/b/n/10 pro-ducto di-recto \OT1/ppl/m/n/10 como el es
 -pa-cio vec-to-rial definido
  []
 
-[29]
-Chapter 2.
 
-LaTeX Warning: Empty bibliography on input line 1082.
+LaTeX Warning: Citation 'Spivak' on page 30 undefined on input line 1060.
 
 [30
+
+] [31] [32]
+
+LaTeX Warning: Citation 'DoCarmo' on page 33 undefined on input line 1176.
+
+
+LaTeX Warning: Citation 'Lee' on page 33 undefined on input line 1176.
+
+[33]
+
+LaTeX Warning: Citation 'Loring' on page 34 undefined on input line 1210.
+
+
+LaTeX Warning: Citation 'Loring' on page 34 undefined on input line 1222.
+
+
+LaTeX Warning: Citation 'Loring' on page 34 undefined on input line 1228.
+
+[34]
+
+LaTeX Warning: Citation 'Loring' on page 35 undefined on input line 1244.
+
+
+LaTeX Warning: Citation 'Lee' on page 35 undefined on input line 1254.
+
+[35]
+
+LaTeX Warning: Citation 'DoCarmo' on page 36 undefined on input line 1277.
+
+[36]
+
+LaTeX Warning: Citation 'Hatcher' on page 37 undefined on input line 1305.
+
+
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+ [37]
+
+LaTeX Warning: Citation 'ONeill' on page 38 undefined on input line 1339.
+
+
+Overfull \hbox (22.22485pt too wide) in paragraph at lines 1340--1341
+[]\OT1/ppl/b/n/10 Definici^^Son \OT1/ppl/m/n/10 ([])\OT1/ppl/b/n/10 . []\OT1/pp
+l/m/n/10 Un $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r; s\OT1/cmr/m/n/10 )$\OT1/ppl/b
+/n/10 -campo ten-so-rial \OT1/ppl/m/n/10 en una var-iedad $\OML/cmm/m/it/10 M$ 
+\OT1/ppl/m/n/10 es una funci[]on $\OML/cmm/m/it/10 C[]\OT1/cmr/m/n/10 (\OML/cmm
+/m/it/10 M; \U/msb/m/n/10 R\OT1/cmr/m/n/10 )$\OT1/ppl/m/n/10 -
+ []
+
+
+LaTeX Warning: Citation 'Loring-dif' on page 38 undefined on input line 1345.
+
+[38]
+
+LaTeX Warning: Citation 'ONeill' on page 39 undefined on input line 1374.
+
+
+Overfull \hbox (2.30365pt too wide) in paragraph at lines 1384--1385
+[]\OT1/ppl/b/n/10 Definici^^Son. []\OT1/ppl/m/n/10 Sea $\OML/cmm/m/it/10 A$ \OT
+1/ppl/m/n/10 un $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r; s\OT1/cmr/m/n/10 )$\OT1/p
+pl/m/n/10 -campo ten-so-rial $\OML/cmm/m/it/10 A$ \OT1/ppl/m/n/10 definido en u
+na var-iedad $\OML/cmm/m/it/10 M$\OT1/ppl/m/n/10 . Si $[]$
+ []
+
+[39]
+
+LaTeX Warning: Citation 'Loring-dif' on page 40 undefined on input line 1393.
+
+
+LaTeX Warning: Citation 'ONeill' on page 40 undefined on input line 1401.
+
+
+Overfull \hbox (17.7621pt too wide) in paragraph at lines 1412--1413
+[]\OT1/ppl/m/n/10 En una vecin-dad co-or-de-nada $\OML/cmm/m/it/10 U$ \OT1/ppl/
+m/n/10 alrede-dor de $\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 M$
+ \OT1/ppl/m/n/10 con carta $\OML/cmm/m/it/10 h \OT1/cmr/m/n/10 = (\OML/cmm/m/it
+/10 x[]; [] ; x[]\OT1/cmr/m/n/10 )$\OT1/ppl/m/n/10 ,
+ []
+
+[40] [41] [42] [43] [44]
+Chapter 3.
+
+LaTeX Warning: Empty bibliography on input line 1529.
+
+[45
 
 ] (./geo-riem.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `geo-riem.out' has not changed.
-(rerunfilecheck)             Checksum: 922655ED51A4CF5B1A70D10E972F9416;2078.
+(rerunfilecheck)             Checksum: 81D481B1FFE77FD72AB7BD644E813492;3668.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                geo-riem
@@ -1474,11 +1595,11 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36331 strings out of 476025
- 736182 string characters out of 5790018
+ 36455 strings out of 476025
+ 738076 string characters out of 5790018
  1874388 words of memory out of 5000000
- 56165 multiletter control sequences out of 15000+600000
- 534429 words of font info for 97 fonts, out of 8000000 for 9000
+ 56251 multiletter control sequences out of 15000+600000
+ 535104 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,89p,1197b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1489,20 +1610,22 @@ r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
 local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
 cal/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
 /texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
-xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive
-/2023/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
+xlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
+ve/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/
+2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
+23/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/
+2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
+ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/t
 exlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
 023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/tex
 mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/
 type1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (30 pages, 1062904 bytes).
+Output written on geo-riem.pdf (45 pages, 1792367 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 496 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

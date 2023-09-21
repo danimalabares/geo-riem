@@ -87,12 +87,17 @@
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
 \newcommand{\X}{\mathfrak{X}}
+\newcommand{\T}{\mathfrak{T}}
 \newcommand{\Cinf}{C^\infty}
 
+\DeclareMathOperator{\sen}{sen}
 \DeclareMathOperator{\img}{img}
 \DeclareMathOperator{\Arg}{Arg}
 \DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\Alt}{Alt}
+\DeclareMathOperator{\sgn}{sgn}
 
 \title{Geometría Riemanniana}
 \author{Semestre 2024-1}
@@ -747,62 +752,8 @@
 		para cualquier $(r^1,\ldots,r^m)\in h(U)$.
 	\end{teo}
 	En otras palabras, $f$ se ve localmente como una inclusión (si es una inmersión) o como una proyección (si es una sumersión).
-	\section{Covectores}
-	\begin{defn}
-		Una \textbf{1-forma} (\textbf{covector}) en un espacio tangente $T_pM$ es una función lineal $\omega:T_pM\to\R$.
-	\end{defn}
-	Las 1-formas (covectores) son elementos en el dual del espacio tangente $T_pM^*$, que llamaremos el espacio \textbf{cotangente}.
-	\begin{ejem}[Dos 1-formas en $(T_p\R^2)^*$]
-		Dada una curva $\alpha:I\subset\R\to\R^2$ tal que $\alpha(0)=(x_0,y_0)$ y $\alpha'(0)=(v_1,v_2)$, tenemos las 1-formas (covectores)
-		\begin{align*}
-			\begin{aligned}
-				dx:T_{(x_0,y_0)}\R^2&\to\R\\
-				v=\alpha'(0)&\mapsto v_1
-			\end{aligned}
-			\qquad
-			\begin{aligned}
-				dy:T_{(x_0,y_0)}\R^2&\to\R\\
-				v=\alpha'(0)&\mapsto v_1
-			\end{aligned}
-		\end{align*}
-		Y resultará que cualquier $\omega\in T_(x_0,y_0)\R^2$ es de la forma $\omega=adx+bdy$. Es decir:
-		\begin{align*}
-			\omega:T_{(x_0,y_0)}\R^2&\to\R\\
-			(v_1,v_2)&\mapsto av_1+bv_2
-		\end{align*}
-	\end{ejem}
-	Ahora consideremos un vector tangente a una variedad $M$ en algún punto $p$ que en coordenadas locales se exprese como
-	\[v_p=a_1(p)\frac{\partial}{\partial x^1}\Big|_p+\ldots+a_n(p)\frac{\partial}{\partial x^n}\Big|_p\]
-	Si $\omega\in(T_pM)^*$, por linealidad tenemos
-	\[\omega(v_p)=a_1(p)\omega\left(\frac{\partial}{\partial x^1}\Big|_p\right)+\ldots+a_n(p)\omega\left(\frac{\partial}{\partial x^n}\Big|_p\right)\]
-	\begin{obs}
-		Tendremos que
-		\[dx_p^i\left(\frac{\partial}{\partial x^j}\Big|_p\right)=\begin{cases}
-			1\qquad\text{si }i=j\\
-			0\qquad\text{si }i\neq j
-		\end{cases}\]
-	\end{obs}
-	\begin{obs}
-		Las 1-formas (covectores) $dx^1,\ldots,dx^n$ son una base del espacio cotangente $(T_pM)^*$.
-	\end{obs}
-	\begin{obs}
-		En el ejemplo anterior usamos que la derivada de una curva es un vector tangente. De hecho, otra forma de definir los vectores tangentes es justo como derivadas de curvas (ver \cite{DoCarmo} y \cite{Lee} \textbf{Prop 3.23}).
-	\end{obs}
 	
-	\begin{obs}
-		Las funciones bilineales de la forma $\omega:V\times W\to\R$ también forman un espacio vectorial. Si $V=W=\R^n$ tenemos como ejemplos determinante y el producto escalar.
-	\end{obs}
-	
-	Ahora tratemos de definir una operación en el espacio cotangente, que llamaremos \textbf{producto cuña}. Consideremos el caso de una variedad de dimensión 2 $M$. Como en el caso de $M=\R^2$, los covectores $dx^1$ y $dx^2$ forman una base del espacio cotangente. Definamos
-	\[dx^1\wedge dx^2:T_pM\times T_pM\to\R\]
-	que actuará de la siguiente forma: para $u=a\frac{\partial}{\partial x^1}+b\frac{\partial}{\partial x^2}$ y $v=c\frac{\partial}{\partial x^1}+d\frac{\partial}{\partial x^2}$,
-	\[(dx^1\wedge dx^2)(u,v)=\begin{bmatrix}
-		a&b\\
-		c&d
-	\end{bmatrix}\]
-	Lo visto en esta clase continúa en la \hyperref[sec:formas-dif]{sección 1.8}.
-	
-	\section{Campos vectoriales}
+	\section{Campos vectoriales}\label{sec:campos-vectoriales}
 	\begin{defn}[\cite{ONeill}]
 		Un \textbf{campo vectorial} es una correspondencia que a cada $p\in M$ le asocia un vector tangente $v\in T_pM$, y \textit{varía suavemente} sobre la variedad.
 	\end{defn}
@@ -845,43 +796,10 @@
 		\end{align*}
 		Donde $\tilde{x}^i$ son las funciones coordenadas de $k$. Esta fórmula se obtiene sin complicaciones usando el \hyperref[lema:dif-coord]{lema} para las coordenadas de la diferencial aplicado al cambio de coordenadas (\cite{Lee} \textbf{(3.12)}), que nos dice cómo cambian las coordenadas de un vector tangente mediante una función de transición.
 	\end{proof}
-	%\begin{ejem}[El haz tangente de $S^1$]
-	%	Consideremos las siguientes cartas en $S^1$:
-	%	\begin{align*}
-		%	\begin{aligned}
-			%		h_1:U_1=S^1\backslash\{-1\}&\to\R\\
-			%		z=e^{i\theta}&\mapsto \theta^1\in(-\pi,\pi)\\\\
-			%		\begin{tikzpicture}
-				%			\draw (0,0) circle (1);
-				%			\draw[fill=white] (-1,0) circle (0.05);
-				%		\end{tikzpicture}
-			%	\end{aligned}\qquad
-		%	\begin{aligned}
-			%		h_1:U_2=S^1\backslash\{1\}&\to\R\\
-			%		z=e^{i\theta}&\mapsto \theta^2\in(0,2\pi)\\\\
-			%		\begin{tikzpicture}
-				%			\draw (0,0) circle (1);
-				%			\draw[fill=white] (1,0) circle (0.05);
-				%		\end{tikzpicture}
-			%	\end{aligned}
-		%	\end{align*}
-	%\end{ejem}
-	\section{Formas diferenciales}\label{sec:formas-dif}
-	Ahora construimos el concepto dual al de campo vectorial para covectores.
-	\begin{defn}
-		Una \textbf{1-forma diferencial} en una variedad suave $M$ es una función que a cada punto $p\in M$ y a cada vector tangente $v_p\in T_pM$ le asocia un número $\omega(p,v_p)$.
-	\end{defn}
-	Localmente,
-	\[\omega(p,v_p)=\sum_{i=1}^na_i(p)dx^i_p(v_p)\]
-	con $a_i:U\subset M\to\R$ suave para toda $i$. Una expresión más sencilla es $\omega=\sum a_idx^i$.
-	\begin{obs}
-		Dado un campo vectorial $V$ y una 1-forma diferencial $\omega$ en $M$, podemos calcular
-		\[p\mapsto V_p\mapsto\omega_p(V_p)\in\R\]
-		Este número lo denotaremos, abusando de notación por
-		\[\omega(V):M\to\R\]
-	\end{obs}
 	
-	\section{Corchete de Lie}
+	
+	
+	\section{Corchete de Lie}\label{sec:corchete-de-Lie}
 	Dado un campo vectorial $V$ en una variedad $M$, es posible verlo como una función
 	\begin{align*}
 		\begin{aligned}
@@ -1012,6 +930,65 @@
 			&=\sum_{i,j}\left(a_i\frac{\partial b_j}{\partial x^i}-b_j\frac{\partial a_i}{\partial x^j}\right)\frac{\partial f}{\partial x^j}
 		\end{align*}
 	\end{obs}
+	\subsection{Ejercicios 4-8 septiembre}
+	\begin{ejer}
+		En $\R^3$ considera los campos vectoriales en coodenadas cartesianas $X=x^2E_1+yE_3$ y $Y=y^3E_2$ y la función $f:\R^3\to\R$ dada por $f(p,q,r)=p^2qr$. Calcula $[X,Y]$ en $(1,01)$, $fY$ en $(1,01)$ y $Yf$ en $(1,0,1)$. Expresa $X$ en términos de la base de campos coordenados correspondiente a coordenadas cilíndricas.
+	\end{ejer}
+	\begin{proof}[Solución]
+		
+		El corchete de Lie de $X$ y $Y$ debe ser un campo vectorial, es decir, un operador que asocia funciones suaves en la variedad con números reales. Para cualquier $g\in\Cinf(\R^3,\R)$, tenemos
+		\begin{align*}
+			[X,Y](g)&=X(\underbrace{Yg}_{\in\Cinf(\R^3,\R)})-Y(\underbrace{Xg}_{\in\Cinf(\R^3,\R)})\\
+			&=\ldots\\
+			&=-y^3\frac{\partial g}{\partial z}\in\R
+		\end{align*}
+		Es decir, $[X,Y]=-y\frac{\partial}{\partial z}$, de forma que $[X,Y]_{(1,0,1)}=-0\frac{\partial}{\partial z}\in T_{(1,0,1)}\R^3$.
+		
+		Luego, $fY$ también es un campo vectorial, así que al evaluar en punto nos da un vector tangente:
+		\[(fY)_{(1,0,1)}=f(1,0,1)(y^3E_2)_{(1,0,1)}=0\in T_{(1,0,1)}\R^3\]
+		Por otro lado, $Yf$ es una función definida en la variedad $\R^3$ que en cada punto nos devuelve un número real:
+		\[(Yf)(1,0,1)=\left[y^3\frac{\partial f}{\partial y}\right]_{(1,0,1)}=[y^3x^2z]_{(1,0,1)}=0\in\R\]
+		
+		El mapeo $T:\R^3\to\R^3$ que cambia coordenadas cilíndricas a cartesianas manda $(r,\theta,z)\mapsto(r\cos\theta,r\sen\theta,z)$. Su diferencial
+		\[dT=\begin{pmatrix}
+			\cos\theta&-r\sen\theta&0\\
+			\sen\theta&r\cos\theta&0\\
+			0&0&1
+		\end{pmatrix}\]
+		tiene inversa
+		\[dT^{-1}=\begin{pmatrix}
+			\cos\theta&\sen\theta&0\\
+			-\frac{1}{r}\sen\theta&\frac{1}{r}\cos\theta&0\\
+			0&0&1
+		\end{pmatrix}.\]
+		Los vectores columna de $dT^{-1}$ son las coordenadas cilíndricas de los vectores tangentes básicos $E_1$, $E_2$ y $E_3$. Sustituyendo,
+		\begin{align*}
+			X&=r^2\cos^2\theta(\cos\theta E_r-\frac{1}{r}\sen\theta E_\theta)+r\sen\theta E_z\\
+			&=r^2\cos^3\theta E_r-r\cos^2\theta\sen\theta E_\theta+r\sen\theta E_z.
+		\end{align*}
+		También se puede definir el cambio de coordenadas normalizando los vectores.
+	\end{proof}
+	\begin{figure}[H]
+		\begin{subfigure}{0.5\linewidth}
+			\centering
+			\includegraphics[width=0.9\linewidth]{fig10}
+			\caption*{$X$}
+		\end{subfigure}
+		\begin{subfigure}{0.5\linewidth}
+			\centering
+			\includegraphics[width=0.9\linewidth]{fig11}
+			\caption*{$Y$}
+		\end{subfigure}
+		\begin{center}
+			\begin{subfigure}{0.5\linewidth}
+				\centering
+				\includegraphics[width=0.9\linewidth]{fig12}
+				\caption*{$[X,Y]$}
+			\end{subfigure}
+		\end{center}
+	\end{figure}
+	
+	\section{Teorema de rectificación}
 	Podemos simplificar la expresión local de un campo vectorial mediante un cambio de coordenadas:	
 	\begin{lema}[\cite{ONeill}\textbf{, 57}]
 		Si $V$ es un campo vectorial y $p\in M$ con $V_p\neq0$, entonces existe un sistema de coordenadas $x^1,\ldots,x^n$ alrededor de $p$ tal que $V=\frac{\partial}{\partial x^1}$.
@@ -1045,27 +1022,29 @@
 		
 		Hemos construido una cubierta abierta $\{U_p\}_{p\in M}$ de $M$, que tiene una subcubierta finita $U_1,\ldots, U_k$. ¿Cómo nos aseguramos de que hay una $t_0$ tal que el flujo $\psi_{t_0}:M\to M$ no se salga del dominio de todos estos abiertos?
 		
-		Conviene hacer con un poco más de detalle la construcción: en vez de aplicar la compacidad a la cubierta $\{U_p\}$, debemos tomar una bola de radio $\varepsilon_p$ dentro de cada abierto $h(U_p)\subset\R^n$ (donde el flujo tiene la expresión que hemos especificado). Y ahora sí, la cubierta de "bolas" $\{h^{-1}(B_{\varepsilon_p}(p))\}_{p\in M}$ tiene una subcubierta finita $\{h^{-1}(B_{\varepsilon_i}(p_i))\}_{i=1}^k$ y podemos definir $t_0:=\min_{1\leq i\leq k}\varepsilon_i$.
+		Conviene hacer con un poco más de detalle la construcción: en vez de aplicar la compacidad a la cubierta $\{U_p\}$, debemos tomar una bola de radio $\varepsilon_p$ dentro de cada abierto $h(U_p)\subset\R^n$ (donde el flujo tiene la expresión que hemos especificado). Y ahora sí, la cubierta de "bolas" $\{h^{-1}(B_{\varepsilon_p/2}(h(p)))\}_{p\in M}$ tiene una subcubierta finita $\{h^{-1}(B_{\varepsilon_i/2}(h(p_i)))\}_{i=1}^k$ y podemos definir $t_0:=\min_{1\leq i\leq k}\varepsilon_i/2$. (Hemos tomado $\varepsilon_p/2$ para asegurarnos de que la curva integral que pase por cualquier punto del abierto no se salga).
 		
 		Se sigue de la expresión local del flujo que la función suave $\psi_{t_0}:M\to M$ no tiene puntos fijos, y la homotopía $H:[0,1]\times M\to M$ que manda $(s,p)\mapsto \psi_{st_0}(p)$ es la buscada.
 	\end{proof}
-	¿Qué clase de información nos da este resultado? ¿Será que si una variedad no admite un campo vectorial que no se anula en ninguna parte no es posible construir una función suave homotópica a la identidad y sin puntos fijos? El ejemplo natural es $S^n$ en el contexto del siguiente teorema de topología algebraica:
-	\begin{teo}[de la bola peluda \cite{Hatcher}\textbf{, 2.28}]
-		$S^n$ admite un campo vectorial continuo que no se anula si y sólo si $n$ es impar.
-	\end{teo}
-	No podemos demostrarlo, pero sí podemos dar un ejemplo:
-		\begin{ejer*}[\cite{Lee}\textbf{, 9.4}]
+	¿Qué clase de información nos da este resultado? Para desarrollar intuición veamos un ejemplo.
+	\begin{ejer*}[\cite{Lee}\textbf{, 9.4}]
 		En $S^n\subset\C^{n+1}$ con $n$ impar, definamos $\theta(t,z)=e^{it}z$. Entonces, el \textbf{generador infinitesimal} de $\theta$, es decir, el campo vectorial $V_p=\frac{d}{dt}\theta(t,p)$, es un campo vectorial suave que no se anula.
 	\end{ejer*}
 	\begin{proof}
-		Derivando respecto a $t$, obtenemos que $V_p=ie^{it}z$ como vector en $\C^{n+1}$. Es claro que este vector nunca se anula. Además, se trata de un campo vectorial suave simplemente por ser el generador infinitesimal de un flujo (Proposición 9.11)
+		Derivando respecto a $t$, obtenemos que $V_p=ie^{it}z$ como vector en $\C^{n+1}$. Es claro que este vector nunca se anula. Además, se trata de un campo vectorial suave simplemente por ser el generador infinitesimal de un flujo (Proposición 9.11).
 	\end{proof}
-	Así que en $S^2$, por ejemplo, cualquier campo vectorial suave se anula en por lo menos un punto. ¿Será que entonces no hay una función homotópica a la identidad y sin puntos fijos? Resulta que no.
+	
+	¿Será que si una variedad no admite un campo vectorial que no se anula en ninguna parte no es posible construir una función suave homotópica a la identidad y sin puntos fijos? Veamos el siguiente teorema de topología algebraica:
+	\begin{teo}[de la bola peluda \cite{Hatcher}\textbf{, 2.28}]\label{teo:bola-peluda}
+		$S^n$ admite un campo vectorial continuo que no se anula si y sólo si $n$ es impar.
+	\end{teo}
+	Así que en $S^2$, por ejemplo, cualquier campo vectorial suave se anula en por lo menos un punto. ¿Será que entonces no hay una función homotópica a la identidad y sin puntos fijos? Al menos en las esferas de dimensión par, la respuesta es que no.
 	
 	Cuando una función ${f:S^n\to S^n}$ no tiene puntos fijos, el segmento que une $f(x)$ y $-x$ no pasa por el origen, así que podemos definir la homotopía de la línea recta normalizada $H(t,x)=(tf(x)-(1-t)x)/|(tf(x)-(1-t)x)|$. Ésta resulta ser una homotopía entre $f$ y la función antípoda $-\Id$.
 	
-	El resultado clave de topología algebraica que (no podemos demostrar) es que hay un \textbf{invariante homotópico }que se llama \textbf{grado} para funciones entre esferas que asocia el número $(-1)^{n+1}$ a la función antípoda y el número $1$ a la identidad. Así que estos números deben coincidir. De hecho, la prueba del teorema de la bola peluda es precisamente construyendo una homotopía entre la identidad y la antípoda.
-
+	El resultado clave de topología algebraica (que no podemos demostrar) es que hay un \textbf{invariante homotópico} que se llama \textbf{grado} para funciones entre esferas que asocia el número $(-1)^{n+1}$ a la función antípoda y el número $1$ a la identidad. Así que estos números deben coincidir. De hecho, la prueba del teorema de la bola peluda es precisamente construyendo una homotopía entre la identidad y la antípoda.
+	
+	\chapter{Formas y tensores}
 	\section{Tensores}
 	Éstas son las definiciones de \cite{ONeill}. También recomendamos consultar \cite{Palmas}. \textbf{Advertencia:} la notación en estos dos libros (y en otros) puede no ser igual.
 	\begin{defn}[\cite{ONeill}\textbf{, Cap 3}]
@@ -1074,10 +1053,479 @@
 		Una función definida en un espacio de este estilo es \textbf{multilineal} si es lineal en cada entrada.
 	\end{defn}
 	\begin{defn}
-		Sea $V$ un espacio vectorial sobre un campo $K$. Un \textbf{$(r,s)$-tensor} es una función multilineal definida en el producto directo de $(V^*)^r$ con $V^s$. Es decir, es una función multilineal
-		\[(V^*)^r\times V^s\to K\]
+		Sea $V$ un espacio vectorial sobre un campo $K$. Un \textbf{$(r,s)$-tensor} es una función $K$-multilineal definida en el producto directo de $(V^*)^r$ con $V^s$. Es decir, es una función multilineal
+		\[T:(V^*)^r\times V^s\to K\]
 	\end{defn}
 	
-	\chapter{Referencias}
-	\printbibliography[heading=none]
+	Ahora comparemos con la definición de \cite{Spivak}:
+	\begin{defn}
+		Un $k$-tensor es una función multilineal
+		\[T:V^k\to\R\]
+	\end{defn}
+	\begin{obs}
+		El conjunto de $k$-tensores $\tau^k(V)$  tiene estructura de espacio vectorial con las operaciones
+		\begin{align*}
+			(S+T)(v_1,\ldots,v_k)=S(v_1,\ldots,v_k)+T(v_1,\ldots,v_k)\\
+			(\lambda T)(v_1,\ldots,v_k)=\lambda T(v_1,\ldots,v_k)
+		\end{align*}
+	\end{obs}
+	\begin{defn}
+		Para  el \textbf{producto tensorial} de $S\in\tau^k(V)$ y $T\in\tau^\ell(V)$ es el tensor $S\otimes T\in\tau^{k+\ell}(V)$ dado por
+		\begin{align*}
+			S\otimes T:V^k\times V^\ell&\to\R\\
+			(v_1,\ldots,v_k,v_{k+1},\ldots,v_{k+\ell})&\mapsto S(v_1,\ldots,v_k)\otimes T(v_{k+1},\ldots,v_{k+\ell})
+		\end{align*}
+	\end{defn}
+	\begin{obs}[Intuición sobre el producto tensorial]
+		El producto tensorial de dos espacios vectoriales $A$ y $B$ se puede pensar como el espacio vectorial donde viven los "productos" de los elementos de $A$ y $B$. Como en $\R^3$, no siempre es posible definir un producto entre vectores, así que esta estructura a menudo se "sale" de los espacios originales y resulta en un objecto algebraico abstracto.
+	\end{obs}
+	\begin{prop}
+		Dada una base $v_1,\ldots,v_n$ de $V$, tenemos la base $\varphi_1,\ldots,\varphi_n$ del espacio dual $V*$ dada por
+		\begin{align*}
+			\varphi_i:V&\to\R\\
+			v_j&\mapsto\delta_{ij}=\begin{cases}
+				0\qquad\text{si }i\neq j\\
+				1\qquad\text{si }i=j
+			\end{cases}
+		\end{align*}
+		Entonces, los productos de la forma $\varphi_{i_1}\otimes\ldots\otimes\varphi_{i_k}$ son una base de $\tau^k(V)$.
+	\end{prop}
+	\begin{obs}
+		Dada una transformación lineal entre espacios vectoriales $f:V\to W$, la transformación lineal 
+		\begin{align*}
+			f^*:\tau^k(W)&\to\tau^k(V)\\
+			T(v_1,\ldots,v_k)&\mapsto T(f(v_1),\ldots,f(v_k))
+		\end{align*}
+	\end{obs}
+	\begin{defn}
+		Un $k$-tensor $T$ en $V$ es \textbf{alternante} si
+		\[T(v_1,\ldots,v_i,\ldots,v_j,\ldots,v_k)=-T(v_1,\ldots,v_j,\ldots,v_i,\ldots,v_k)\]
+		Y denotaremos al conjunto de $k$-tensores alternantes por $\Lambda^k(V)$.
+	\end{defn}
+	Para $T\in\tau^k(V)$, definamos
+	\[	\Alt(T)=\frac{1}{k!}\sum_{\sigma\in S_k}\sgn\sigma T(v_{\sigma(1)},\ldots,v_{\sigma(k)})\]
+	\begin{prop}\leavevmode
+		\begin{enumerate}
+			\item Si $T\in\tau^k(V)$, entonces $\Alt(T)\in\Lambda^k(V)$.
+			\item Si $\omega\in\Lambda^k(V)$, entonces $\Alt(\omega)=\omega$.
+			\item  Si $T\in\tau^k(V)$, entonces $\Alt(\Alt(T))=\Alt(T)$.
+		\end{enumerate}
+	\end{prop}
+	El producto tensorial de dos tensores alternantes no necesariamente es alternante, por lo que definimos
+	\begin{defn}
+		El \textbf{producto cuña} de dos tensores alternantes $\omega\in\Lambda^k(V)$ y $\eta\in\Lambda^\ell(V)$ es 
+		\[\omega\wedge\eta=\frac{(k+\ell)!}{k!\ell!}\Alt(\omega\otimes\eta)\]
+	\end{defn}
+	\begin{prop}[Propiedades del producto cuña]\leavevmode
+		\begin{enumerate}
+			\item $(\omega_1+\omega_2)\wedge\eta=\omega_1\wedge\eta+\omega_2\wedge\eta$.
+			\item $\omega\wedge(\eta_1+\eta_2)=\omega\wedge\eta_1+\omega\wedge\eta_2$.
+			\item $\lambda(\omega\wedge\eta)=\lambda\omega\wedge\eta=\omega\wedge\lambda\eta$.
+			\item $\omega\wedge\eta=(-1)^{k\ell}\eta\wedge\omega$ \textbf{(Anticonmutatividad)}
+			\item $f^*(\omega\wedge\eta)=f^*(\omega)\wedge f^*(\eta)$.
+			\item $(\omega\wedge\eta)\wedge\theta=\omega\wedge(\eta\wedge\theta)$.
+		\end{enumerate}
+	\end{prop}
+	\begin{prop}
+		La colección de formas alternantes $\varphi {i_1}\wedge\ldots\wedge\varphi_{i_k}$ con $1\leq i_1\leq\ldots\leq i_k\leq n$ es una base de $\Lambda^k(V)$, de forma que tiene dimensión $\binom{n}{k}$.
+	\end{prop}
+	\begin{prop}
+		Sean $v_1,\ldots,v_k$ son una base de un espacio vectorial $V$ y $\omega\in\Lambda^n(V)$. Para los vectores $w_i=\sum_j\lambda_{ij}v_j$ en $V$, tenemos que
+		\[\omega(w_1,\ldots,w_n)=\det(\lambda_{ij})\omega(v_1,\ldots,v_k)\]
+	\end{prop}
+	
+	\section{Covectores}
+	\begin{defn}
+		Una \textbf{1-forma} (\textbf{covector}) en un espacio tangente $T_pM$ es una función lineal $\omega:T_pM\to\R$.
+	\end{defn}
+	Las 1-formas (covectores) son elementos en el dual del espacio tangente $T_pM^*$, que llamaremos el espacio \textbf{cotangente}.
+	\begin{ejem}[Dos 1-formas en $(T_p\R^2)^*$]
+		Dada una curva $\alpha:I\subset\R\to\R^2$ tal que $\alpha(0)=(x_0,y_0)$ y $\alpha'(0)=(v_1,v_2)$, tenemos las 1-formas (covectores)
+		\begin{align*}
+			\begin{aligned}
+				dx:T_{(x_0,y_0)}\R^2&\to\R\\
+				v=\alpha'(0)&\mapsto v_1
+			\end{aligned}
+			\qquad
+			\begin{aligned}
+				dy:T_{(x_0,y_0)}\R^2&\to\R\\
+				v=\alpha'(0)&\mapsto v_1
+			\end{aligned}
+		\end{align*}
+		Y resultará que cualquier $\omega\in T_(x_0,y_0)\R^2$ es de la forma $\omega=adx+bdy$. Es decir:
+		\begin{align*}
+			\omega:T_{(x_0,y_0)}\R^2&\to\R\\
+			(v_1,v_2)&\mapsto av_1+bv_2
+		\end{align*}
+	\end{ejem}
+	Ahora consideremos un vector tangente a una variedad $M$ en algún punto $p$ que en coordenadas locales se exprese como
+	\[v_p=a_1(p)\frac{\partial}{\partial x^1}\Big|_p+\ldots+a_n(p)\frac{\partial}{\partial x^n}\Big|_p\]
+	Si $\omega\in(T_pM)^*$, por linealidad tenemos
+	\[\omega(v_p)=a_1(p)\omega\left(\frac{\partial}{\partial x^1}\Big|_p\right)+\ldots+a_n(p)\omega\left(\frac{\partial}{\partial x^n}\Big|_p\right)\]
+	\begin{obs}
+		Tendremos que
+		\[dx_p^i\left(\frac{\partial}{\partial x^j}\Big|_p\right)=\begin{cases}
+			1\qquad\text{si }i=j\\
+			0\qquad\text{si }i\neq j
+		\end{cases}\]
+	\end{obs}
+	\begin{obs}
+		Las 1-formas (covectores) $dx^1,\ldots,dx^n$ son una base del espacio cotangente $(T_pM)^*$.
+	\end{obs}
+	\begin{obs}
+		En el ejemplo anterior usamos que la derivada de una curva es un vector tangente. De hecho, otra forma de definir los vectores tangentes es justo como derivadas de curvas (ver \cite{DoCarmo} y \cite{Lee} \textbf{Prop 3.23}).
+	\end{obs}
+	
+	\begin{obs}
+		Las funciones bilineales de la forma $\omega:V\times W\to\R$ también forman un espacio vectorial. Si $V=W=\R^n$ tenemos como ejemplos determinante y el producto escalar.
+	\end{obs}
+	
+	Ahora tratemos de definir una operación en el espacio cotangente, que llamaremos \textbf{producto cuña}. Consideremos el caso de una variedad de dimensión 2 $M$. Como en el caso de $M=\R^2$, los covectores $dx^1$ y $dx^2$ forman una base del espacio cotangente. Definamos
+	\[dx^1\wedge dx^2:T_pM\times T_pM\to\R\]
+	que actuará de la siguiente forma: para $u=a\frac{\partial}{\partial x^1}+b\frac{\partial}{\partial x^2}$ y $v=c\frac{\partial}{\partial x^1}+d\frac{\partial}{\partial x^2}$,
+	\[(dx^1\wedge dx^2)(u,v)=\begin{bmatrix}
+		a&b\\
+		c&d
+	\end{bmatrix}\]
+	\section{Formas diferenciales}
+	Ahora construimos el concepto dual al de campo vectorial para covectores.
+	\begin{defn}
+		Una \textbf{1-forma diferencial} en una variedad suave $M$ es una función que a cada punto $p\in M$ y a cada vector tangente $v_p\in T_pM$ le asocia un número $\omega(p,v_p)$.
+	\end{defn}
+	Localmente,
+	\[\omega(p,v_p)=\sum_{i=1}^na_i(p)dx^i_p(v_p)\]
+	con $a_i:U\subset M\to\R$ suave para toda $i$. Una expresión más sencilla es $\omega=\sum a_idx^i$.
+	\begin{obs}
+		Dado un campo vectorial $V$ y una 1-forma diferencial $\omega$ en $M$, podemos calcular
+		\[p\mapsto V_p\mapsto\omega_p(V_p)\in\R\]
+		Este número lo denotaremos, abusando de notación por
+		\[\omega(V):M\to\R\]
+	\end{obs}
+	
+	\section{Derivada exterior}
+	Una función $f\in\Cinf(R^n,\R)$ se considera una 0-forma. Notemos que su diferencial $df$ es una 1-forma en cuanto a que para cualquier punto $p$ de la variedad, la función $df_p$ es un covector: a cada vector le asigna un número real. En coordenadas, tenemos
+	\[df=\sum\frac{\partial f}{\partial x^i}dx^i\]
+	
+	La siguiente definición generaliza esta idea.
+	\begin{defn}[\cite{Loring}\textbf{, 4.5}]
+		Para una $k$-forma definida en algún abierto $U$ de $\R^n$,
+		\[\omega=\sum_{1\leq i_1\leq\ldots\leq i_k\leq n}\omega_{ i_1,\ldots, i_k}dx_{i_1}\wedge\ldots\wedge dx_{i_k}:=\sum_Ia_Idx^I\]
+		su \textbf{derivada exterior} o \textbf{diferencial} es la $(k+1)$-forma
+		\[d\omega=\sum_Ida_I\wedge dx^I=\sum_I\left(\sum_j\frac{\partial a_I}{\partial x^j}dx^j\right)\wedge dx^I\]
+	\end{defn}
+	\begin{defn}\leavevmode
+		\begin{itemize}
+			\item 		Una $k$-forma $\omega$ es \textbf{cerrada} si $dw=0$
+			\item Una $k$-forma es \textbf{exacta} si existe una $(k-1)$-forma $\theta$ tal que $\omega=d\theta$.
+		\end{itemize}
+	\end{defn}
+	\begin{prop}[\cite{Loring}\textbf{, 4.7}] Si $U$ es un abierto de $\R^n$
+		\begin{enumerate}
+			\item $d^2=0$. (Usando la conmutativadad de las segundas derivadas parciales)
+			\item Si $f\in\Cinf(U,\R)$, y $X\in\mathfrak{X}(U)$, $(df)(X)=Xf$.
+		\end{enumerate}
+	\end{prop}
+	\begin{ejem}[Una 1-forma cerrada que no es exacta, \cite{Loring}\textbf{, 4.9 y ejemplo p. 43}]
+		Consideremos la 1-forma 
+		\[\omega=\frac{-y}{x^2+y^2}dx+\frac{x}{x^2+y^2}dy\]
+		definida en $\R^2-\{0\}$. Una 1-forma $Pdx+Qdy$ es cerrada cuando $\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$, así que $\omega$ es cerrada. Consideremos la integral
+		\[\int_\alpha\omega=\int_0^{\theta_0}-\sen t(-\sen t)+\cos t\cos tdt=\int_0^{\theta_0}dt=\theta_0\]
+		
+		Para ver que $\omega$ no es exacta, supongamos que $f:\R^2-\{0\}\to\R$ es tal que $df=\omega$. En este caso, sabemos que la integral de línea sobre cualquier curva cerrada debe dar cero. Explícitamente, si $\alpha(t)=(\cos(t),\sen(t))$,
+		\begin{align*}
+			\int_\alpha\omega&=\int_0^{\theta_0}\frac{\partial f}{\partial x}(x(t),y(t))\frac{dx}{dt}+\frac{\partial f}{\partial y}(x(t),y(t))\frac{dy}{dt}dt\\
+			&=\int_0^{\theta_0}\frac{d}{dt}f(x(t),y(t))dt\\
+			&=f(x(\theta_0),y(\theta_0))-f(x(0),y(0))\\
+			&=f(\cos\theta_0,\sen\theta_0)-f(1,0)
+		\end{align*}
+		Haciendo $\theta_0\to2\pi$ esta integral tiende a $0$, pero la anterior tiende a $2\pi$.
+	\end{ejem}
+	
+	Resulta que la proporción de formas exactas respecto a formas cerradas depende exclusivamente de la topología de una variedad. Siguiendo a \cite{Loring}, definamos el cociente de dos espacios vectoriales
+	\[H^k(U)=\frac{\{k\text{-formas cerradas en }M\}}{\{k\text{-formas exactas en }M\}}\]
+	que llamaremos la \textbf{$k$-ésima de cohomología de De Rham} de $M$, que está bien definido ya que cualquier forma cerrada es exacta. Georges De Rham demostró en 1931 que las formas diferenciales satisfacen los mismos axiomas que los ciclos y las cadenas de la homología singular, mostrando una dualidad entre estas construcciones.
+	
+	Un resultado central en esta teoría es que dos espacios homotópicamente equivalentes tienen asociada la misma cohomología (Corolario 27.11). En particular, como $\R^n$ es contraíble (homotópicamente equivalente a un punto), su cohomología es trivial para $k\geq1$: ¡no hay 1-formas no triviales definidas en el espacio unipuntual! Este resultado se conoce como el Lema de Poincaré (Corolario 27.13).
+	
+	En el ejemplo anterior vimos un espacio no contraible cuya primera homología no es trivial: hay una 1-forma cerrada que no es exacta.
+	
+	Mostramos una demostración "a pie" del Lema de Poincaré para subconjuntos estrellados de $\R^n$ (en particular, todo $\R^n$). Un conjunto $U\subset \R^n$ es \textbf{estrellado} si existe un punto $c$ tal que para cualquier $x\in U$ el segmento que une $c$ y $x$ se queda contenido en $U$.
+	
+	\begin{teo}[\cite{Lee}\textbf{, 11.49, Lema de Poincaré para conjuntos estrellados}]
+		Cualquier 1-forma cerrada definida en un conjunto estrellado $U\subseteq\R^n$ es exacta.
+	\end{teo}
+	\begin{proof}
+		Sea $\omega$ una 1-forma cerrada en $U$. Supongamos sin pérdida de generalidad que el centro de $U$ es el origen (la traslación adecuada manda formas cerradas en cerradas y exactas en exactas). Mostraremos que
+		\[d\int_{\gamma_x}\omega=\omega\]
+		donde $\gamma_x(t)=tx$ para $0\leq t\leq1$, el segmento que une $x$ al origen.
+		
+		Supongamos que $\omega=\sum_{i=1}^n\omega_idx^i$. Como la integral es una función real-valuada en $U$, para encontrar su derivada exterior basta encontrar sus derivadas parciales:
+		\begin{align*}
+			\frac{\partial}{\partial x^j}\int_{\gamma_x}\omega(x)&=\frac{\partial}{\partial x^j}\int_0^1\sum_{i=1}^n\omega_i(tx)x^idt\\
+			&=\int_0^1\sum_{i=1}^n\frac{\partial}{\partial x^j}\omega_i(tx)x^idt\\
+			&=\int_0^1\left(\sum_{i=1}^n\frac{\partial \omega_i}{\partial x^j}(tx)tx^i+\omega_j(tx)\right)dt\\
+			&=\int_0^1\left(\sum_{i=1}^n\frac{\partial \omega_j}{\partial x^i}(tx)tx^i+\omega_j(tx)\right)dt\\
+			&=\int_0^1\frac{d}{dt}t\omega_{j}(tx)dt\\
+			&=\omega_j(x)
+		\end{align*}
+		Usando que como $\omega$ es cerrada,
+		\[\frac{\partial \omega_i}{\partial x^j}=\frac{\partial \omega_j}{\partial x^i}\]
+	\end{proof}
+	\section{Variedades orientables y no orientables}
+	En un espacio vectorial $V$ de dimensión finita definamos una relación de equivalencia entre bases $\{v_1,\ldots,v_n\}\sim\{w_1,\ldots,w_n\}$ cuando el determinante de la transformación lineal $T:V\to V$ tal que $T(v_j)=w_j$ para toda $j$ es positivo. Sólo existen dos clases de equivalencia. La es una elección de una de estas clases de equivalencia es una orientación.
+	
+	\begin{defn}[\cite{DoCarmo}\textbf{, 4.4}]
+		Una variedad diferenciable $M$ es \textbf{orientable} si admite un atlas $A$ para el cual los cambios de coordenadas tienen jacobiana con determinante positivo. La elección de tal estructura diferenciable se llama \textbf{orientación}, y una \textbf{variedad orientada} es una pareja $(M,A)$. Dos orientaciones cuya unión también satisface la condición de jacobianas con determinante positivo en los cambios de cordanas \textbf{determinan la misma orientación}
+	\end{defn}
+	\begin{obs}\leavevmode
+		\begin{itemize}
+			\item Si $M$ es orientable y conexa entonces existen exactamente dos orientaciones distintas.
+			\item Los difeomorfismos preservan orientación en cuanto a que si $M$ y $N$ son difeomorfas, basta que una sea orientable para que la otra lo sea.
+			\item Si $M$ y $N$ son variedades difeomorfas orientadas, un difeomorfismo puede preservar o invertir la orientación.
+			\item Si $M$ puede ser cubierta por dos vecindades coordenadas cuya intersección es conexa, entonces $M$ es orientable. El determinante de la Jacobiana del cambio de coordenadas no puede ser 0 por tratarse de una función invertible. Como la intersección de las vecindades coordenadas es conexa, el determinante no puede cambiar de signo. Reajustando si es necesario las coordenadas, podemos suponer que el determinante es siempre positivo.
+		\end{itemize}
+	\end{obs}
+	\begin{ejem}[$S^n$ es orientable]
+		Consideremos el caso de $S^2$ con el atlas dado por las proyecciones estereográficas desde los polos norte y sur:
+		\begin{align*}
+			\begin{aligned}
+				h_1:S^1\backslash\{N\}&\to\R^2\\
+				(x,y,z)&\mapsto\left(\frac{x}{1-z},\frac{y}{1-z}\right)
+			\end{aligned}\qquad\qquad
+			\begin{aligned}
+				h_2:S^1\backslash\{S\}&\to\R^2\\
+				(x,y,z)&\mapsto\left(\frac{x}{1+z},\frac{y}{1+z}\right)
+			\end{aligned}
+		\end{align*}
+		¿Cuál es la función de cambio de coordenadas $(u^1,v^1)\mapsto(u^2,v^2)$?
+		\[u^2=\frac{u^1}{|(u^1,v^1)|^2}\qquad\qquad v^2=\frac{v^1}{|(u^1,v^1)|^2}\]
+		Observemos que esta transformación fija la circunferencia unitaria en $\R^2$, e invierte las regiones de adentro y afuera. De hecho, se trata de la inversión respecto a la circunferencia unitaria. Como la intersección de estas dos vecindades es conexa, por la observación anterior $S^2$ (y con un argumento análogo $S^n$) es orientable.
+	\end{ejem}
+	\begin{obs}
+		La transformación antípoda $-\Id:S^n\to S^n$ preserva la orientación cuando $n$ es impar, y la invierte cuando $n$ es impar. (Ver \hyperref[teo:bola-peluda]{Teorema de la bola peluda}). \href{https://math.stackexchange.com/questions/74712/proving-rigorously-a-map-preserves-orientation}{Esta} prueba me pareció buena, usando un campo normal. Otra idea para demostrarlo, siguiendo las ideas de \cite{Hatcher}, es ver la antípoda como la composición de tantas reflexiones como coordenadas en $\R^{n+1}$.
+	\end{obs}
+	
+	\section{Cambios de coordenadas}
+	Consideremos un campo vectorial $X$ definido en alguna variedad $M$. Dadas dos vecindades coordenadas $U$ y $V$ con intersección no vacía, tenemos las expresiones
+	\[X=\sum_{i=0}^na^i\frac{\partial}{\partial x^i}=\sum_{j=0}^nb^j\frac{\partial}{\partial y^j}\]
+	y queremos encontrar la relación entre las funciones $a^i$ y $b^j$.
+	
+	Consideremos la matriz $M$ de la diferencial de $k\circ h^{-1}$, que es de la forma $M=\left(\frac{\partial y^j}{\partial x^i}\right)$. Observemos que $X(x^k)=a^k$, y $X(y^m)=b^m$. Y también $X(y^m)=\sum_{i=1}^na^i\frac{\partial y^m}{\partial x^i}$, así que de hecho
+	\[\begin{pmatrix}
+		\frac{\partial y^1}{\partial x^1}&\cdots&\frac{\partial y^m}{\partial x^n}\\
+		\vdots&&\vdots\\
+		\frac{\partial y^m}{\partial x^1}&\cdots&\frac{\partial y^m}{\partial x^n}\\
+		\vdots&&\vdots\\
+		\frac{\partial y^n}{\partial x^1}&\cdots&\frac{\partial y^n}{\partial x^1}
+	\end{pmatrix}\begin{pmatrix}
+		a^1\\\vdots\\a^n
+	\end{pmatrix}=\begin{pmatrix}
+		b^1\\\vdots\\ b^m\\\vdots\\b^n
+	\end{pmatrix}\]
+	dicho de otra forma, $Ma=b$.
+	
+	Ahora hagamos el mismo razonamiento para una 1-forma (pensada como una correspondencia que a cada punto de la variedad le asigna un elemento en el dual del espacio tangente) dada por
+	\[\theta=\sum_{k=1}^nc_kdx^k=\sum_{m=1}^ne_mdy^m\]
+	Y nuevamente busquemos la relación entre las funciones $c_k$ y $e_m$. Como antes, $\theta\left(\frac{\partial}{\partial y^j}\right)=e_j$ y $\theta\left(\frac{\partial}{\partial x^i}\right)=c_i$. Y también $\theta\left(\frac{\partial}{\partial x^i}\right)=\sum_{m=1}^ne_mdy^m\left(\frac{\partial}{\partial x^i}\right)$.
+	
+	Y ahora sabemos que se tiene la relación
+	\[\frac{\partial}{\partial x^i}=\sum_{\ell=1}^ng_\ell\frac{\partial}{\partial y^\ell}\]
+	de forma que $\frac{\partial y^m}{\partial x^i}=\sum_{\ell=1}^ng_\ell\frac{\partial y^m}{\partial y^\ell}=g_m$ y entonces
+	\[dy^m\left(\frac{\partial}{\partial x^i}\right)=dy^m\left(\sum_{\ell=1}^m\frac{\partial}{\partial y^\ell}\right)=g_m\]
+	y entonces concluimos que $\theta\left(\frac{\partial}{\partial x^i}\right)=\sum_{m=1}^ne_m\frac{\partial y^m}{\partial x^i}$, que no es sino la multiplicación por la matriz inversa de $M$. Tenemos que $Me=c$ y que $M^{-1}c=e$.
+	
+	\section{Campos tensoriales}
+	Un campo tensorial es a un tensor lo que un campo vectorial a un vector y una 1-forma a un covector. De hecho, los campos vectoriales y las 1-formas son casos particulares de campos tensoriales.
+	\begin{defn}[\cite{ONeill}]\label{def:campo-tensorial}
+		Un \textbf{$(r,s)$-campo tensorial} en una variedad $M$ es una función $\Cinf(M,\R)$-multilineal
+		\[A:\mathfrak{X}^*(M)^r\times\mathfrak{X}(M)^s\to\Cinf(M,\R)\]
+		Es decir, $A$ es una función que a $r$ 1-formas y $s$ campos vectoriales asocia una función real-valuada.
+	\end{defn}
+	
+	Comparemos con la definición de \cite{Loring-dif} en su libro \textit{Differential Geometry: Connections, Curvature and Characterstic Classes}:
+	\begin{defn}[\textbf{21.10}]
+		Un $(r,s)$\textbf{-campo tensorial} en una variedad $M$ es una sección del \textbf{haz vectorial}
+		\[\left(\bigotimes_rTM\right)\otimes\left(\bigotimes_sTM^*\right)=\underbrace{TM\otimes\ldots\otimes TM}_{r\text{ veces}}\otimes \underbrace{TM^*\otimes\ldots\otimes TM^*}_{s\text{ veces}}\]
+		donde el concepto de haz vectorial es una generalización natural del haz tangente para espacios vectoriales arbitrarios.
+	\end{defn}
+	
+	Recordando el diagrama conmutativo que usamos para definir campos vectoriales usando el concepto de sección, ahora tenemos:
+	\[\begin{tikzcd}
+		&\left(\bigotimes_rTM\right)\otimes\left(\bigotimes_sTM^*\right)\arrow{d}{\pi}\\
+		M\arrow[dashed]{ur}{A}\arrow[swap]{r}{\Id}&M
+	\end{tikzcd}\]
+	que nos muestra que a cada punto de la variedad asignamos un $(r,s)$-tensor. (Ver Proposición 21.11 para una equivalencia entre las definiciones).
+	
+	\begin{ejem}
+		Un $(1,0)$-campo tensorial es un campo vectorial y un $(0,1)$-campo tensorial es una 1-forma.
+	\end{ejem}
+	
+	Denotaremos por $\T^r_s(M)$ al conjunto de $(r,s)$-campos tensoriales, que es un módulo sobre el anillo $\Cinf(M,\R)$ con la suma de tensores entrada a entrada.
+	
+%	De acuerdo a la siguiente proposición,
+%	\begin{teo}[\cite{Loring-dif}\textbf{, 18.8}]
+%		Si $v_1,\ldots,v_n$ es una base de $V$ y $w_1,\ldots,w_m$ es una base de $W$, entonces
+%		\[\{v_i\otimes w_j:1\leq i\leq n,1\leq j\leq n\}\]
+%		es una base de $V\otimes W$.
+%	\end{teo}
+%	los elementos básicos del módulo $\T^r_s(M)$ serán los campos tensoriales que a cada punto de la variedad asignan el producto tensorial de un elemento de $\bigotimes_rTM^*$ y uno de $\bigotimes_sTM$
+	
+	Ahora estudiemos cómo se comportan los campos tensoriales en vecindades coordenadas.
+	\begin{ejem}[\cite{ONeill}\textbf{, Cap. 2, Sec. Tensor Components}]
+		Tomemos $A\in\T^1_2(M)$ y una carta coordenada $h=(x^1,\ldots,x^n)$ en $M$. Para una 1-forma y dos campos vectoriales con las siguientes expresiones locales
+		\[\theta=\sum_k\theta_kdx^k\qquad X=\sum_i X^i\frac{\partial}{\partial x^i}\qquad Y=\sum_j Y^j\frac{\partial}{\partial x^j},\]
+		al evaluar en $A$ obtenemos
+		\[A\left(\sum_k\theta_kdx^k,\sum_i X^i\frac{\partial}{\partial x^i},\sum_j Y^j\frac{\partial}{\partial x^j}\right)=\sum_{i,j,k}\theta_kX^iY^jA\left(dx^j,\frac{\partial}{\partial x^i},\frac{\partial}{\partial y^j}\right)\]
+		por multilinealidad. Como esperábamos, $A$ está determinado únicamente por su acción en la base. Esto nos motiva a definir
+		\[A_{ij}^k:=A\left(dx^j,\frac{\partial}{\partial x^i},\frac{\partial}{\partial y^j}\right)\]
+	\end{ejem}
+	En general,
+	\begin{defn}
+		Sea $A$ un $(r,s)$-campo tensorial $A$ definido en una variedad $M$. Si ${h:U\to\R^n}$ es una vecindad coordenada alrededor de $p\in M$ con $h=(x^1,\ldots,x^n)$, las \textbf{funciones componenetes} de $A$ respecto a $h$ son las funciones real-valuadas
+		\[A^{i_1,\ldots,i_r}_{j_1,\ldots,j_s}=A\left(dx^{i_1},\ldots,dx^{i_r},\frac{\partial}{\partial x^{j_1}},\ldots,\frac{\partial}{\partial x^{j_s}}\right)\]
+	\end{defn}
+	Y de hecho,
+	\begin{lema}
+		En una vecindad coordenada como en la definición anterior,
+		\[A=\sum A^{i_1,\ldots,i_r}_{j_1,\ldots,j_s}\frac{\partial}{\partial x^{j_1}}\otimes\ldots\otimes\frac{\partial}{\partial x^{j_s}}\otimes dx^{i_1}\otimes\ldots\otimes dx^{i_r}\]
+	\end{lema}
+	que es lo que esperaríamos de acuerdo a que
+		\begin{teo}[\cite{Loring-dif}\textbf{, 18.8}]
+				Si $v_1,\ldots,v_n$ es una base de $V$ y $w_1,\ldots,w_m$ es una base de $W$, entonces
+				\[\{v_i\otimes w_j:1\leq i\leq n,1\leq j\leq n\}\]
+				es una base de $V\otimes W$.
+		\end{teo}
+	\subsection{Contracción}
+	Queremos construir una operación que llamaremos \textbf{contracción}. 
+	
+	\begin{lema}[\cite{ONeill}\textbf{6, Cap. 2}]
+		Existe una función
+		\begin{align*}
+			C:\T^1_1(M)&\to \Cinf(M,\R)\\
+			A&\mapsto C(A)
+		\end{align*}
+		tal que
+			\[C(\theta\otimes X)=\theta(X)\]
+		para cualquesquiera $\theta\in\X^*(M)$ y $X\in\X(M)$
+	\end{lema}
+	\begin{proof}
+		En una vecindad coordenada $U$ alrededor de $p\in M$ con carta $h=(x^1,\ldots,x^n)$, definamos
+		\begin{align*}
+			C(A)&=C\left(\sum_{i,k}A_i^k\frac{\partial}{\partial x^k}\otimes dx^i\right)\\
+			&=\sum_{i,k}A_i^kC\left(\frac{\partial}{\partial x^k}\otimes dx^i\right)\\
+			&=\sum_{i,k}A_i^kdx^i\left(\frac{\partial}{\partial x^k}\right)\\
+			&=\sum_iA^i_i
+		\end{align*}
+		que es una función en $\Cinf(M,\R)$. Para ver que $C$ está bien definida en toda la variedad debemos ver que no depende de la elección de coordenadas. Supongamos que $k=(y^1,\ldots,y^n)$ es otro sistema de coordenadas en $p$. Usaremos las siguientes expresiones de cambio de coordenadas (que encontramos hace un par de secciones):
+		\[dy^m=\sum_ i\frac{\partial y^m}{\partial x^i}dx^i\qquad\qquad\frac{\partial}{\partial y^m}=\sum_j\frac{\partial x^j}{\partial y^m}\frac{\partial}{\partial x^j}\]
+		Las funciones componentes de $A$ son
+		\begin{align*}
+			A^m_m&=\sum_mA\left(dy^m,\frac{\partial}{\partial y^m}\right)\\
+			&=\sum_mA\left(\sum_ i\frac{\partial y^m}{\partial x^i}dx^i,\sum_j\frac{\partial x^j}{\partial y^m}\frac{\partial}{\partial x^j}\right)\\
+			&=\sum_{i,j}\frac{\partial y^m}{\partial x^i}\frac{\partial x^j}{\partial y^m}A\left(dx^i,\frac{\partial}{\partial x^j}\right)\\
+			&=\sum_iA\left(dx^i,\frac{\partial}{\partial x^j}\right)
+		\end{align*}
+		
+	\end{proof}
+	
+
+	
+	Notemos que para el caso de un $(1,1)$-campo tensorial definido en $\R^2$, tenemos cuatro funciones componentes que se pueden mostrar en forma de matriz:
+	\[\begin{pmatrix}
+		A^1_1&A^1_2\\
+		A^2_1&A^2_2
+	\end{pmatrix}\]
+	y de hecho la contracción de $A$ es simplemente la traza de esta matriz, $A^1_1+A^2_2$.
+	
+	Para generalizar esta construcción nos ayudaremos del caso que acabamos de ver. Para $i\in\{1,\ldots,r\}$ y $j\in\{1,\ldots,s\}$, definimos
+	\[C_j^i:\T_s^r(M)\to\T_s^r(M)\]
+	enviando
+	\begin{align*}
+			A:\mathfrak{X}^*(M)^r\times\mathfrak{X}(M)^s&\to\Cinf(M,\R)\\
+			(\theta^1,\ldots,\theta^n,X_1,\ldots,X_n)&\mapsto A(\theta^1,\ldots,\theta^n,X_1,\ldots,X_n)
+	\end{align*}
+	en
+	\begin{align*}
+		C^i_j(A):\mathfrak{X}^*(M)^{r-1}\times\mathfrak{X}(M)^{s-1}&\to\Cinf(M,\R)\\
+		(\theta^1,\ldots,\hat{\theta^i}\ldots,\theta^n,X_1,\ldots,\hat{X_j},\ldots,X_n)&\mapsto C(A^\#)
+	\end{align*}
+	donde
+	\begin{align*}
+		B:\mathfrak{X}^*(M)^1\times\mathfrak{X}(M)^1&\to\Cinf(M,\R)\\
+		(\theta^i,X_j)&\mapsto A(\theta^1,\ldots,\theta^n,X_1,\ldots,X_n)
+	\end{align*}
+	Es decir, $B$ es el $(1,1)$-tensor que obtenemos al fijar todas las entradas salvo la $i$-ésima en las 1-formas y la $j$-ésima en los tensores, y a éste le aplicamos la contracción que definimos al principio.
+	
+	\begin{ejem}
+		Tomemos $M=\R^2$ y $A\in\T^2_3(\R^2)$ dado por
+			\begin{align*}
+			A:\mathfrak{X}^*(\R^2)^2\times\mathfrak{X}(\R^2)^3&\to\Cinf(\R^2,\R)\\
+			(\omega,\theta,X,Y,Z)&\mapsto A(\omega,\theta,X,Y,Z)
+		\end{align*}
+		Supongamos que tenemos las expresiones locales
+		\[X=\sum X^i\frac{\partial}{\partial x^i},\qquad Y=\sum Y^j\frac{\partial}{\partial x^j},\qquad Z=\sum_mZ^m\frac{\partial}{\partial x^m}\]\[ \theta=\sum_k\theta_k dx^k,\qquad \omega=\sum_n\omega^ndx^n\]
+		de manera que
+		\begin{align*}
+			A(\omega,\theta,X,Y,Z)&=A\left(\sum_n\omega_ndx^n,\sum_k\theta_k dx^k,\sum_iX^i\frac{\partial}{\partial x^i},\sum_jY^j\frac{\partial}{\partial x^j},\sum_mZ^m\frac{\partial}{\partial x^m}\right)\\
+			&=\sum_{n,k,i,j,m}\omega_n\theta_kX^iY^jZ^mA\left(dx^n,dx^k,\frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right)\\
+			&=\sum_{n,k,i,j,m}\omega_n\theta_kX^iY^jZ^mA^{n,k}_{i,j,m}
+		\end{align*}
+		Calculemos la contracción $C^1_3(A)$. Para esto, fijamos $\theta,X$ y $Y$, y variamos $\omega$ y $X$ para definir
+		\begin{align*}
+			B:\mathfrak{X}^*(\R^2)^1\times\mathfrak{X}(\R^2)^1&\to\Cinf(\R^2,\R)\\
+			(\omega,Z)&\mapsto A(\omega,\theta,X,Y,Z)
+		\end{align*}
+		Si suponemos que
+		\[B=\sum_{n,m} B^n_m\omega_nZ^m\]
+		entonces debe ser cierto que
+		\[B^n_m=\sum_{k,i,j}\theta_kX^iY^jA\left(dx^n,dx^k,\frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right)\]
+		Ahora aplicamos la contracción a $B$, que nos devuelve simplemente la función
+		\begin{align*}C(B)&=\sum_mB^m_m\\
+			&=\sum_m\sum_{k,i,j}\theta_kX^iY^jA\left(dx^m,dx^k,\frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right)\\
+			&:=\sum_{i,j,k}E^k_{ij}\theta_kX^iY^j
+		\end{align*}
+		De manera la contracción buscada es $E$, el $(1,2)$-campo tensorial con funciones componentes $E^k_{ij}$. Es decir, $C^1_3(A)=E$.
+	\end{ejem}
+	
+	\section{Derivaciones de campos tensoriales}
+	\begin{defn}
+		Una \textbf{derivación} de campos tensoriales en una variedad $M$ es una familia de operadores
+		\[\D:\T_s^r(M)\to\T_s^r(M)\qquad r,s\in\N\]
+		tales que
+		\begin{itemize}
+			\item son $\R$-lineales,
+			\item satisfacen Leibniz respecto al producto tensorial, es decir
+			\[\D(A\otimes B)=(\D A)\otimes B+A\otimes\D(B)\]
+			\item y conmutan con las contracciones, es decir,
+			\[\D(CA)=C(\D A)\]
+			para cualquier contracción $C$.
+		\end{itemize}
+	\end{defn}
+	\begin{obs}
+		Para $t=s=0$ obtenemos $\T^0_0=\Cinf(M,\R)$, de manera que tenemos una derivación justo como fueron definidas en la Sección \ref{sec:corchete-de-Lie}. Recordemos que estas derivaciones están en correspondencia uno a uno con campos vectoriales. Así, podemos evaluar este tipo de derivaciones en funciones, es decir, podemos calcular $\D^0_0f$ por ser de la forma $Vf$.
+		
+		Agregando un campo vectorial al argumento, podemos pensar que el corchete de Lie es una derivación $\D^1_0$, es decir, $D^1_0W=[V,W]$ para $W\in\T^1_0(M)$.
+	\end{obs}
+	
+	\begin{obs}
+		Nos gustaría que para una función del estilo $\theta(X)$ se tuviera que
+		\begin{align*}
+			\D(\theta(X))&=(\D\theta)(X)+\theta(\D X)\\
+		\iff(\D\theta)(X)&=\D(\theta(X))-\theta(\D(X))\\
+		\iff(\D\theta)(X)&=\D(\theta(X))-\theta([V,X])
+		\end{align*}
+		para algún $V$ como en la observación anterior
+	\end{obs}
+		De hecho, esta relación sí se cumple, más aún:
+	\begin{prop}[Regla del producto]
+		Para funciones de la forma $A(\theta^1,\ldots,\theta^n,X_1,\ldots,X_n)$, se cumple que
+		\begin{align*}
+			\D^0_0(A(\theta^1,\ldots,\theta^n,X_1,\ldots,X_n))&=(\D^r_sA)(\theta^1,\ldots,\theta^r,X_1,\ldots,X_s)\\
+			&+\sum_iA(\theta^q,\ldots,\D_1^0\theta^i,\ldots,\theta^r,X_1,\ldots,X_x)\\
+			&+\sum_jA(\theta^1,\ldots,\theta^r,X_1,\ldots,\D^1_0X_j,\ldots,X_s)
+		\end{align*}
+	\end{prop}
+	
+	\chapter{Referencias}	\printbibliography[heading=none]
+	
 \end{document}
