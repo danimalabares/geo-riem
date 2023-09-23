@@ -18,6 +18,7 @@
 \contentsline {section}{\numberline {2.5}Variedades orientables y no orientables}{36}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Cambios de coordenadas}{37}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Campos tensoriales}{38}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Contracción}{40}{subsection.2.7.1}%
-\contentsline {section}{\numberline {2.8}Derivaciones de campos tensoriales}{43}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Referencias}{45}{chapter.3}%
+\contentsline {section}{\numberline {2.8}Contracción}{40}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Derivaciones de campos tensoriales}{43}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Interpretaciones}{45}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Referencias}{46}{chapter.3}%

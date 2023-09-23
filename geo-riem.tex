@@ -64,7 +64,7 @@
 }
 
 %Referencias
-\usepackage[style=mla]{biblatex}
+\usepackage[style=mla,backend=bibtex]{biblatex}
 \addbibresource{bib.bib}
 
 \theoremstyle{definition}
@@ -1342,7 +1342,7 @@
 		Es decir, $A$ es una función que a $r$ 1-formas y $s$ campos vectoriales asocia una función real-valuada.
 	\end{defn}
 	
-	Comparemos con la definición de \cite{Loring-dif} en su libro \textit{Differential Geometry: Connections, Curvature and Characterstic Classes}:
+	Comparemos con la definición de \cite{Loring-dif}.
 	\begin{defn}[\textbf{21.10}]
 		Un $(r,s)$\textbf{-campo tensorial} en una variedad $M$ es una sección del \textbf{haz vectorial}
 		\[\left(\bigotimes_rTM\right)\otimes\left(\bigotimes_sTM^*\right)=\underbrace{TM\otimes\ldots\otimes TM}_{r\text{ veces}}\otimes \underbrace{TM^*\otimes\ldots\otimes TM^*}_{s\text{ veces}}\]
@@ -1389,13 +1389,17 @@
 		En una vecindad coordenada como en la definición anterior,
 		\[A=\sum A^{i_1,\ldots,i_r}_{j_1,\ldots,j_s}\frac{\partial}{\partial x^{j_1}}\otimes\ldots\otimes\frac{\partial}{\partial x^{j_s}}\otimes dx^{i_1}\otimes\ldots\otimes dx^{i_r}\]
 	\end{lema}
-	que es lo que esperaríamos de acuerdo a que
+	que es lo que esperaríamos de acuerdo a que, en cada punto, la base está dada por el producto tensorial de los elementos básicos de acuerdo al siguiente teorema:
 		\begin{teo}[\cite{Loring-dif}\textbf{, 18.8}]
 				Si $v_1,\ldots,v_n$ es una base de $V$ y $w_1,\ldots,w_m$ es una base de $W$, entonces
 				\[\{v_i\otimes w_j:1\leq i\leq n,1\leq j\leq n\}\]
 				es una base de $V\otimes W$.
 		\end{teo}
-	\subsection{Contracción}
+		\begin{obs}[Componentes del producto tensorial]
+			Para cualesquiera $A\in\T^r_s(M)$ y $B\in\T^p_q(M)$, las componentes del producto tensorial son las funciones de la forma
+			\[(A\otimes B)^{i_1,\ldots,i_r,m_1,\ldots,m_p}_{j_i,\ldots,j_s,n_1,\ldots,n_q}=A^{i_1,\ldots,i_r}_{j_i,\ldots,j_s}B^{m_1,\ldots,m_p}_{n_1,\ldots,n_q}\]
+		\end{obs}
+	\section{Contracción}
 	Queremos construir una operación que llamaremos \textbf{contracción}. 
 	
 	\begin{lema}[\cite{ONeill}\textbf{6, Cap. 2}]
@@ -1495,7 +1499,7 @@
 		\begin{itemize}
 			\item son $\R$-lineales,
 			\item satisfacen Leibniz respecto al producto tensorial, es decir
-			\[\D(A\otimes B)=(\D A)\otimes B+A\otimes\D(B)\]
+			\[\D(A\otimes B)=(\D A)\otimes B+A\otimes\D(B),\]
 			\item y conmutan con las contracciones, es decir,
 			\[\D(CA)=C(\D A)\]
 			para cualquier contracción $C$.
@@ -1525,7 +1529,35 @@
 			&+\sum_jA(\theta^1,\ldots,\theta^r,X_1,\ldots,\D^1_0X_j,\ldots,X_s)
 		\end{align*}
 	\end{prop}
+	\begin{proof}
+		Primero observemos que para $A\in\T^1_1(M)$, $\theta\in\X^*(M)\approx\T^0_1(M)$ y $X\in\X(M)\approx\T^1_0(M)$, podemos calcular $A\otimes\theta\otimes X\in\T^2_2(M)$ que esté dado por
+		\[(A\otimes\theta\otimes X)(\omega,\eta,W,Y)=A(\omega,W)\theta(Y)\X(\eta)\]
+		Supongamos que tenemos las expresiones locales \[A(\theta,X)=\sum A^i_j\theta_iX^j,\qquad\theta=\sum\theta_idx^i,\qquad X=\sum_iX^j\frac{\partial}{\partial x^j}\]
+		Hacemos dos contracciones directamente sobre estas expresiones para obtener:
+		\[A^i_j\theta_\ell X^k\to\sum A^i_j\theta_iX^k\to\sum_j\sum_iA^i_j\theta_iX^j\]
+		es decir, tenemos la igualdad $A(\theta,X)=\bar{C}(A\otimes\theta\otimes X)$.
+		
+		Ahora calculamos la derivación:
+		\begin{align*}
+			\D^0_0(A(\theta,X))&=\D^0_0(\bar{C}(A\otimes\theta\otimes X))\\
+			&=\bar{C}(\D^2_2(A\otimes\theta\otimes X))\\
+			&=\bar{C}(\D^1_1A\otimes\theta\otimes X)+\bar{C}(A\otimes\D^0_1\otimes X)+\bar{C}(A\otimes\theta\otimes\D^1_0X)\\
+			&=(\D^1_1A)(\theta,X)+A(\D^0_1\theta,X)+A(\theta,\D^1_0X)
+		\end{align*}
+		Con lo que hemos demostrado el caso para $r=s=1$. Los demás casos se demuestran análogamente.
+	\end{proof}
 	
+	\section{Interpretaciones}
+	Dada una transformación $\Cinf(M,\R)$-lineal de la forma
+	\[A:\X(M)^r\to\X(M)\]
+	podemos asociarle el campo tensorial $\bar{A}\in\T^1_r(M)$ con la regla
+	\[\bar{A}(\theta,X_1,\ldots,X_r)=\theta(A(X_1,\ldots,X_r))\]
+	De hecho esta correspondencia es un isomorfismo entre $\T^1_r(M)$ y los mapeos multilineales $\X(M)^r\to\X(M)$. Este resultado se puede generalizar:
+	\begin{ejer*}[\cite{Lee}\textbf{, 12-4}]
+		Sea $V$ un espacio vectorial de dimensión finita. Existe un isomorfismo natural (independiente de la base) entre los tensores $\tau^{k+1}_\ell$ y los mapeos multilineales de la forma
+		\[T:(V^*)^k\times V^\ell\to V\]
+	\end{ejer*}
+	En adelante denotaremos indistintamente $A$ y $\bar{A}$.
 	\chapter{Referencias}	\printbibliography[heading=none]
 	
 \end{document}
