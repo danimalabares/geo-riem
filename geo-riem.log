@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  23 SEP 2023 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  24 SEP 2023 08:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1027,20 +1027,10 @@ Package biblatex Info: ... file 'blx-compat.def' found.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
-Package biblatex Info: Trying to load BibTeX backend compatibility...
-Package biblatex Info: ... file 'blx-bibtex.def' found.
-
-(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-bibtex.def
-File: blx-bibtex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-
-
-Package biblatex Warning: Using fall-back bibtex backend:
-(biblatex)                functionality may be reduced/unavailable.
-
-)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \c@textcitecount=\count443
 \c@textcitetotal=\count444
@@ -1241,10 +1231,7 @@ File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Data encoding 'utf8' specified.
-(biblatex)             No need to reencode data.
-\openout4 = `geo-riem-blx.bib'.
+\openout4 = `geo-riem.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'geo-riem.bbl' found.
@@ -1339,12 +1326,12 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 8
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<fig6.png, id=299, 361.35pt x 354.32375pt>
+<fig6.png, id=297, 361.35pt x 354.32375pt>
 File: fig6.png Graphic file (type png)
 <use fig6.png>
 Package pdftex.def Info: fig6.png  used on input line 884.
 (pdftex.def)             Requested size: 174.00163pt x 170.61952pt.
-<fig7.png, id=300, 361.35pt x 354.32375pt>
+<fig7.png, id=298, 361.35pt x 354.32375pt>
 File: fig7.png Graphic file (type png)
 <use fig7.png>
 Package pdftex.def Info: fig7.png  used on input line 889.
@@ -1354,12 +1341,18 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 882--892
 [][] [] 
  []
 
-[23]
-<fig8.png, id=313, 361.35pt x 354.32375pt>
+
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
+ [23]
+<fig8.png, id=312, 361.35pt x 354.32375pt>
 File: fig8.png Graphic file (type png)
 <use fig8.png>
 Package pdftex.def Info: fig8.png  used on input line 917.
 (pdftex.def)             Requested size: 174.00165pt x 170.61952pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [24 <./fig6.png (PNG copy)> <./fig7.png (PNG copy)>] [25 <./fig8.png (PNG copy
 )>]
 Overfull \hbox (4.05347pt too wide) in paragraph at lines 952--953
@@ -1369,12 +1362,12 @@ nadas cil[]^^Pndricas a carte-sianas manda $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r
 ; ^^R; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7!
  []
 
-<fig10.png, id=327, 361.35pt x 401.5pt>
+<fig10.png, id=326, 361.35pt x 401.5pt>
 File: fig10.png Graphic file (type png)
 <use fig10.png>
 Package pdftex.def Info: fig10.png  used on input line 974.
 (pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
-<fig11.png, id=328, 361.35pt x 401.5pt>
+<fig11.png, id=327, 361.35pt x 401.5pt>
 File: fig11.png Graphic file (type png)
 <use fig11.png>
 Package pdftex.def Info: fig11.png  used on input line 979.
@@ -1384,7 +1377,7 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 972--982
 [][] [] 
  []
 
-<fig12.png, id=329, 361.35pt x 401.5pt>
+<fig12.png, id=328, 361.35pt x 401.5pt>
 File: fig12.png Graphic file (type png)
 <use fig12.png>
 Package pdftex.def Info: fig12.png  used on input line 985.
@@ -1436,13 +1429,6 @@ na var-iedad $\OML/cmm/m/it/10 M$\OT1/ppl/m/n/10 . Si $[]$
  []
 
 [39]
-Overfull \hbox (0.22195pt too wide) in paragraph at lines 1394--1395
-[]\OT1/ppl/b/n/10 Teorema \OT1/ppl/m/n/10 ([]Tu, [][]\OT1/ppl/m/it/10 Dif-fer-e
-n-tial Ge-om-e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes[
-][]\OT1/ppl/b/n/10 , 18.8\OT1/ppl/m/n/10 )\OT1/ppl/b/n/10 .
- []
-
-
 Overfull \hbox (17.7621pt too wide) in paragraph at lines 1416--1417
 []\OT1/ppl/m/n/10 En una vecin-dad co-or-de-nada $\OML/cmm/m/it/10 U$ \OT1/ppl/
 m/n/10 alrede-dor de $\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 M$
@@ -1469,13 +1455,13 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36673 strings out of 476025
- 742570 string characters out of 5790018
+ 36597 strings out of 476025
+ 741562 string characters out of 5790018
  1874388 words of memory out of 5000000
- 56412 multiletter control sequences out of 15000+600000
+ 56340 multiletter control sequences out of 15000+600000
  535104 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,22n,89p,1878b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,22n,89p,1197b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
@@ -1496,10 +1482,10 @@ exlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
 mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/
 type1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (46 pages, 1805348 bytes).
+Output written on geo-riem.pdf (46 pages, 1805146 bytes).
 PDF statistics:
- 614 PDF objects out of 1000 (max. 8388607)
- 510 compressed objects within 6 object streams
+ 612 PDF objects out of 1000 (max. 8388607)
+ 508 compressed objects within 6 object streams
  155 named destinations out of 1000 (max. 500000)
  245 words of extra memory for PDF output out of 10000 (max. 10000000)
 

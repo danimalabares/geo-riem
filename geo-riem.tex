@@ -64,7 +64,7 @@
 }
 
 %Referencias
-\usepackage[style=mla,backend=bibtex]{biblatex}
+\usepackage[style=mla,backend=biber]{biblatex}
 \addbibresource{bib.bib}
 
 \theoremstyle{definition}
@@ -1272,16 +1272,16 @@
 		\[\frac{\partial \omega_i}{\partial x^j}=\frac{\partial \omega_j}{\partial x^i}\]
 	\end{proof}
 	\section{Variedades orientables y no orientables}
-	En un espacio vectorial $V$ de dimensión finita definamos una relación de equivalencia entre bases $\{v_1,\ldots,v_n\}\sim\{w_1,\ldots,w_n\}$ cuando el determinante de la transformación lineal $T:V\to V$ tal que $T(v_j)=w_j$ para toda $j$ es positivo. Sólo existen dos clases de equivalencia. La es una elección de una de estas clases de equivalencia es una orientación.
+	En un espacio vectorial $V$ de dimensión finita definamos una relación de equivalencia entre bases $\{v_1,\ldots,v_n\}\sim\{w_1,\ldots,w_n\}$ cuando el determinante de la transformación lineal $T:V\to V$ tal que $T(v_j)=w_j$ para toda $j$ es positivo.
 	
 	\begin{defn}[\cite{DoCarmo}\textbf{, 4.4}]
-		Una variedad diferenciable $M$ es \textbf{orientable} si admite un atlas $A$ para el cual los cambios de coordenadas tienen jacobiana con determinante positivo. La elección de tal estructura diferenciable se llama \textbf{orientación}, y una \textbf{variedad orientada} es una pareja $(M,A)$. Dos orientaciones cuya unión también satisface la condición de jacobianas con determinante positivo en los cambios de cordanas \textbf{determinan la misma orientación}
+		Una variedad diferenciable $M$ es \textbf{orientable} si admite un atlas $A$ para el cual los cambios de coordenadas tienen jacobiana con determinante positivo. La elección de tal estructura diferenciable se llama \textbf{orientación}, y una \textbf{variedad orientada} es una pareja $(M,A)$. Dos orientaciones cuya unión es un atlas para el cual los cambios de coordenadas tienen jacobian con determinante positivo \textbf{determinan la misma orientación}.
 	\end{defn}
 	\begin{obs}\leavevmode
 		\begin{itemize}
 			\item Si $M$ es orientable y conexa entonces existen exactamente dos orientaciones distintas.
-			\item Los difeomorfismos preservan orientación en cuanto a que si $M$ y $N$ son difeomorfas, basta que una sea orientable para que la otra lo sea.
-			\item Si $M$ y $N$ son variedades difeomorfas orientadas, un difeomorfismo puede preservar o invertir la orientación.
+			\item Si $M$ y $N$ son difeomorfas, basta que una sea orientable para que la otra lo sea.
+			\item Si $M$ y $N$ son variedades difeomorfas orientadas, un difeomorfismo puede \textbf{preservar} o \textbf{invertir} la orientación. Explícitamente, si $\varphi:(M,A)\to (N,B)$ es un difeomorfismo entre variedades orientables, $\varphi$ induce un atlas $B'$ en $N$ como sigue: para una carta coordenada $h:U\subset M\to\R^n$ definimos $\varphi\circ h^{-1}:\R^n\to \varphi(U)$. Cuando $B$ y $B'$ determinan la misma orientación decimos que $\varphi$ preserva orientación.
 			\item Si $M$ puede ser cubierta por dos vecindades coordenadas cuya intersección es conexa, entonces $M$ es orientable. El determinante de la Jacobiana del cambio de coordenadas no puede ser 0 por tratarse de una función invertible. Como la intersección de las vecindades coordenadas es conexa, el determinante no puede cambiar de signo. Reajustando si es necesario las coordenadas, podemos suponer que el determinante es siempre positivo.
 		\end{itemize}
 	\end{obs}

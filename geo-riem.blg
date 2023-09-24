@@ -1,65 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2023)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: geo-riem.aux
-The style file: biblatex.bst
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=200001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: geo-riem-blx.bib
-Database file #2: bib.bib
-Biblatex version: 3.19
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 10 entries,
-            6399 wiz_defined-function locations,
-            1267 strings with 10072 characters,
-and the built_in function-call counts, 55749 in all, are:
-= -- 4126
-> -- 1035
-< -- 416
-+ -- 1248
-- -- 284
-* -- 3528
-:= -- 5316
-add.period$ -- 0
-call.type$ -- 10
-change.case$ -- 284
-chr.to.int$ -- 42
-cite$ -- 18
-duplicate$ -- 5632
-empty$ -- 5171
-format.name$ -- 527
-if$ -- 12009
-int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 0
-newline$ -- 248
-num.names$ -- 581
-pop$ -- 3141
-preamble$ -- 1
-purify$ -- 308
-quote$ -- 0
-skip$ -- 2077
-stack$ -- 0
-substring$ -- 6950
-swap$ -- 1323
-text.length$ -- 257
-text.prefix$ -- 9
-top$ -- 1
-type$ -- 328
-warning$ -- 0
-while$ -- 613
-width$ -- 0
-write$ -- 239
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'geo-riem.blg'
+[84] biber-darwin:340> INFO - === Sun Sep 24, 2023, 08:49:21
+[101] Biber.pm:419> INFO - Reading 'geo-riem.bcf'
+[231] Biber.pm:979> INFO - Found 9 citekeys in bib section 0
+[250] Biber.pm:4419> INFO - Processing section 0
+[265] Biber.pm:4610> INFO - Looking for bibtex file 'bib.bib' for section 0
+[267] bibtex.pm:1713> INFO - LaTeX decoding ...
+[283] bibtex.pm:1519> INFO - Found BibTeX data source 'bib.bib'
+[381] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[381] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[381] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[381] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[393] bbl.pm:660> INFO - Writing 'geo-riem.bbl' with encoding 'UTF-8'
+[398] bbl.pm:763> INFO - Output to geo-riem.bbl

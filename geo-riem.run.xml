@@ -44,8 +44,7 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>geo-riem.aux</file>
-      <file>geo-riem-blx.bib</file>
+      <file>geo-riem.bcf</file>
     </provides>
     <requires type="dynamic">
       <file>geo-riem.bbl</file>
@@ -54,7 +53,6 @@
       <file>blx-dm.def</file>
       <file>mla.dbx</file>
       <file>blx-compat.def</file>
-      <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
       <file>standard.bbx</file>
       <file>mla-strict.bbx</file>
@@ -67,14 +65,13 @@
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">
-    <generic>bibtex</generic>
+    <generic>biber</generic>
     <cmdline>
-      <binary>bibtex</binary>
-      <option>-min-crossrefs 2</option>
+      <binary>biber</binary>
       <infile>geo-riem</infile>
     </cmdline>
     <input>
-      <file>geo-riem.aux</file>
+      <file>geo-riem.bcf</file>
     </input>
     <output>
       <file>geo-riem.bbl</file>
@@ -83,14 +80,10 @@
       <file>geo-riem.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>geo-riem.aux</file>
-      <file>geo-riem-blx.bib</file>
+      <file>geo-riem.bcf</file>
     </requires>
     <requires type="editable">
       <file>bib.bib</file>
-    </requires>
-    <requires type="static">
-      <file>biblatex.bst</file>
     </requires>
   </external>
 </requests>

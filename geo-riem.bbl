@@ -3,8 +3,8 @@
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
-% This file may safely be deleted. It will be recreated as
-% required.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
 %
 \begingroup
 \makeatletter
@@ -16,236 +16,262 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{Arnold}{book}{}
-    \name{author}{2}{}{%
-      {{hash=CR}{%
-         family={Cooke},
-         familyi={C\bibinitperiod},
-         given={R.},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=AV}{%
-         family={Arnold},
-         familyi={A\bibinitperiod},
-         given={V.I.},
-         giveni={V\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer Berlin Heidelberg}%
-    }
-    \strng{namehash}{CRAV1}
-    \strng{fullhash}{CRAV1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{C}
-    \field{sortinithash}{C}
-    \true{singletitle}
-    \field{isbn}{9783540548133}
-    \field{series}{Springer Textbook}
-    \field{title}{Ordinary Differential Equations}
-    \field{year}{1992}
-  \endentry
 
-  \entry{DoCarmo}{book}{}
-    \name{author}{1}{}{%
-      {{hash=DCM}{%
-         family={Do\bibnamedelima Carmo},
-         familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
-         given={M.P.},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Birkh{\"a}user}%
-    }
-    \strng{namehash}{DCM1}
-    \strng{fullhash}{DCM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{D}
-    \field{sortinithash}{D}
-    \true{singletitle}
-    \field{series}{Mathematics (Boston, Mass.)}
-    \field{title}{Riemannian Geometry}
-    \field{year}{1992}
-  \endentry
-
-  \entry{Hatcher}{book}{}
-    \name{author}{1}{}{%
-      {{hash=HA}{%
-         family={Hatcher},
-         familyi={H\bibinitperiod},
-         given={Allen},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Cambridge Univ. Press}%
-    }
-    \strng{namehash}{HA1}
-    \strng{fullhash}{HA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{H}
-    \field{sortinithash}{H}
-    \true{singletitle}
-    \field{title}{{Algebraic topology}}
-    \list{location}{1}{%
-      {Cambridge}%
-    }
-    \field{year}{2000}
-  \endentry
-
-  \entry{Lee}{book}{}
-    \name{author}{1}{}{%
-      {{hash=LJM}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={John\bibnamedelima M.},
-         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LJM1}
-    \strng{fullhash}{LJM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \true{singletitle}
-    \field{edition}{Second Edition}
-    \field{title}{Introduction to Smooth Manifolds}
-    \field{year}{2013}
-  \endentry
-
-  \entry{ONeill}{book}{}
-    \name{author}{1}{}{%
-      {{hash=OB}{%
-         family={O'Neill},
-         familyi={O\bibinitperiod},
-         given={Barrett},
-         giveni={B\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Academic Press}%
-    }
-    \strng{namehash}{OB1}
-    \strng{fullhash}{OB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{O}
-    \field{sortinithash}{O}
-    \true{singletitle}
-    \field{isbn}{0125267401}
-    \field{title}{Semi-Riemannian Geometry With Applications to Relativity,
-  103, Volume 103 (Pure and Applied Mathematics)}
-    \field{year}{1983}
-  \endentry
-
-  \entry{Palmas}{book}{}
-    \name{author}{2}{}{%
-      {{hash=PVOA}{%
-         family={Palmas\bibnamedelima V.},
-         familyi={P\bibinitperiod\bibinitdelim V\bibinitperiod},
-         given={Oscar\bibnamedelima A.},
-         giveni={O\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=SMH}{%
-         family={Sánchez\bibnamedelima M.},
-         familyi={S\bibinitperiod\bibinitdelim M\bibinitperiod},
-         given={Héctor},
-         giveni={H\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Universidad Nacional Aut{\'o}noma de M{\'e}xico}%
-    }
-    \strng{namehash}{PVOASMH1}
-    \strng{fullhash}{PVOASMH1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{P}
-    \field{sortinithash}{P}
-    \true{singletitle}
-    \field{isbn}{9789703252282}
-    \field{series}{Las prensas de ciencias}
-    \field{title}{Geometría riemanniana}
-    \field{year}{2007}
-  \endentry
-
-  \entry{Spivak}{book}{}
-    \name{author}{1}{}{%
-      {{hash=SM}{%
-         family={Spivak},
-         familyi={S\bibinitperiod},
-         given={M.},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Avalon Publishing}%
-    }
-    \strng{namehash}{SM1}
-    \strng{fullhash}{SM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{S}
-    \field{sortinithash}{S}
-    \true{singletitle}
-    \field{isbn}{9780805390216}
-    \field{title}{Calculus On Manifolds: A Modern Approach To Classical
-  Theorems Of Advanced Calculus}
-    \field{year}{1965}
-  \endentry
-
-  \entry{Loring-dif}{book}{}
-    \name{author}{1}{}{%
-      {{hash=TLW}{%
-         family={Tu},
-         familyi={T\bibinitperiod},
-         given={Loring\bibnamedelima W.},
-         giveni={L\bibinitperiod\bibinitdelim W\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer International Publishing}%
-    }
-    \strng{namehash}{TLW1}
-    \strng{fullhash}{TLW1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{series}{Graduate Texts in Mathematics}
-    \field{title}{Differential Geometry: Connections, Curvature, and
-  Characteristic Classes}
-    \field{year}{2017}
-  \endentry
-
-  \entry{Loring}{book}{}
-    \name{author}{1}{}{%
-      {{hash=TL}{%
-         family={Tu},
-         familyi={T\bibinitperiod},
-         given={L.W.},
-         giveni={L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Springer New York}%
-    }
-    \strng{namehash}{TL1}
-    \strng{fullhash}{TL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{isbn}{9781441973993}
-    \field{series}{Universitext}
-    \field{title}{An Introduction to Manifolds}
-    \field{year}{2010}
-  \endentry
-\enddatalist
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Arnold}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3cd37d0f1cea994ffa064dee95fc9df5}{%
+           family={Cooke},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ff4159d339a8205fcaf83c1c04fc4275}{%
+           family={Arnold},
+           familyi={A\bibinitperiod},
+           given={V.I.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{a2b10575aec76318cd52a09e5a213ddc}
+      \strng{fullhash}{a2b10575aec76318cd52a09e5a213ddc}
+      \strng{bibnamehash}{a2b10575aec76318cd52a09e5a213ddc}
+      \strng{authorbibnamehash}{a2b10575aec76318cd52a09e5a213ddc}
+      \strng{authornamehash}{a2b10575aec76318cd52a09e5a213ddc}
+      \strng{authorfullhash}{a2b10575aec76318cd52a09e5a213ddc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Springer Textbook}
+      \field{title}{Ordinary Differential Equations}
+      \field{year}{1992}
+    \endentry
+    \entry{DoCarmo}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8cdfb237b7d5baf36e225cea088d4b55}{%
+           family={Do\bibnamedelima Carmo},
+           familyi={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={M.P.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser}%
+      }
+      \strng{namehash}{8cdfb237b7d5baf36e225cea088d4b55}
+      \strng{fullhash}{8cdfb237b7d5baf36e225cea088d4b55}
+      \strng{bibnamehash}{8cdfb237b7d5baf36e225cea088d4b55}
+      \strng{authorbibnamehash}{8cdfb237b7d5baf36e225cea088d4b55}
+      \strng{authornamehash}{8cdfb237b7d5baf36e225cea088d4b55}
+      \strng{authorfullhash}{8cdfb237b7d5baf36e225cea088d4b55}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Mathematics (Boston, Mass.)}
+      \field{title}{Riemannian Geometry}
+      \field{year}{1992}
+    \endentry
+    \entry{Hatcher}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0a94eadf86d8b878d4c37bc5640e53e3}{%
+           family={Hatcher},
+           familyi={H\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge Univ. P}%
+      }
+      \strng{namehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{fullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{bibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorbibnamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authornamehash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \strng{authorfullhash}{0a94eadf86d8b878d4c37bc5640e53e3}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Algebraic topology}}
+      \field{year}{2000}
+    \endentry
+    \entry{Lee}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=36896354ee3aedc1a13d683ea773634e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{bibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorbibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authornamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhash}{36896354ee3aedc1a13d683ea773634e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second Edition}
+      \field{title}{Introduction to Smooth Manifolds}
+      \field{year}{2013}
+    \endentry
+    \entry{ONeill}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0942bea3c19d7664ab502201b97f79ce}{%
+           family={O'Neill},
+           familyi={O\bibinitperiod},
+           given={Barrett},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Academic P}%
+      }
+      \strng{namehash}{0942bea3c19d7664ab502201b97f79ce}
+      \strng{fullhash}{0942bea3c19d7664ab502201b97f79ce}
+      \strng{bibnamehash}{0942bea3c19d7664ab502201b97f79ce}
+      \strng{authorbibnamehash}{0942bea3c19d7664ab502201b97f79ce}
+      \strng{authornamehash}{0942bea3c19d7664ab502201b97f79ce}
+      \strng{authorfullhash}{0942bea3c19d7664ab502201b97f79ce}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Semi-Riemannian Geometry With Applications to Relativity, 103, Volume 103 (Pure and Applied Mathematics)}
+      \field{year}{1983}
+    \endentry
+    \entry{Palmas}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=52df2f41855be219849e905ea5cdeb0d}{%
+           family={Palmas\bibnamedelima V.},
+           familyi={P\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Oscar\bibnamedelima A.},
+           giveni={O\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6499a1d9398797063a84d51560349dcd}{%
+           family={Sánchez\bibnamedelima M.},
+           familyi={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Héctor},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Universidad Nacional Autónoma de México}%
+      }
+      \strng{namehash}{1f2b24101c2e22a94272938e45256c18}
+      \strng{fullhash}{1f2b24101c2e22a94272938e45256c18}
+      \strng{bibnamehash}{1f2b24101c2e22a94272938e45256c18}
+      \strng{authorbibnamehash}{1f2b24101c2e22a94272938e45256c18}
+      \strng{authornamehash}{1f2b24101c2e22a94272938e45256c18}
+      \strng{authorfullhash}{1f2b24101c2e22a94272938e45256c18}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Las prensas de ciencias}
+      \field{title}{Geometría riemanniana}
+      \field{year}{2007}
+    \endentry
+    \entry{Spivak}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0bac1611a259b9231200c5e711dc0830}{%
+           family={Spivak},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Avalon Publishing}%
+      }
+      \strng{namehash}{0bac1611a259b9231200c5e711dc0830}
+      \strng{fullhash}{0bac1611a259b9231200c5e711dc0830}
+      \strng{bibnamehash}{0bac1611a259b9231200c5e711dc0830}
+      \strng{authorbibnamehash}{0bac1611a259b9231200c5e711dc0830}
+      \strng{authornamehash}{0bac1611a259b9231200c5e711dc0830}
+      \strng{authorfullhash}{0bac1611a259b9231200c5e711dc0830}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Calculus On Manifolds: A Modern Approach To Classical Theorems Of Advanced Calculus}
+      \field{year}{1965}
+    \endentry
+    \entry{Loring}{book}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=e89009a6128ca9f717f2783dd1d5d58d}{%
+           family={Tu},
+           familyi={T\bibinitperiod},
+           given={L.W.},
+           giveni={L\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{e89009a6128ca9f717f2783dd1d5d58d}
+      \strng{fullhash}{e89009a6128ca9f717f2783dd1d5d58d}
+      \strng{bibnamehash}{e89009a6128ca9f717f2783dd1d5d58d}
+      \strng{authorbibnamehash}{e89009a6128ca9f717f2783dd1d5d58d}
+      \strng{authornamehash}{e89009a6128ca9f717f2783dd1d5d58d}
+      \strng{authorfullhash}{e89009a6128ca9f717f2783dd1d5d58d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Universitext}
+      \field{title}{An Introduction to Manifolds}
+      \field{year}{2010}
+    \endentry
+    \entry{Loring-dif}{book}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=bd797f5054139f44f22b71934a7e9d84}{%
+           family={Tu},
+           familyi={T\bibinitperiod},
+           given={Loring\bibnamedelima W.},
+           giveni={L\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=1}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{fullhash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{bibnamehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{authorbibnamehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{authornamehash}{bd797f5054139f44f22b71934a7e9d84}
+      \strng{authorfullhash}{bd797f5054139f44f22b71934a7e9d84}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \true{singletitle}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Differential Geometry: Connections, Curvature, and Characteristic Classes}
+      \field{year}{2017}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
+
