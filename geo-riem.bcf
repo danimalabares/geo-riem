@@ -2806,6 +2806,9 @@
     <bcf:citekey order="40" intorder="1">Loring-dif</bcf:citekey>
     <bcf:citekey order="41" intorder="1">ONeill</bcf:citekey>
     <bcf:citekey order="42" intorder="1">Lee</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">Loring-dif</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">seade</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Loring-dif</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

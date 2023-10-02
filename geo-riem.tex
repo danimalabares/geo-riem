@@ -62,9 +62,10 @@
 	citebordercolor=white,
 	filebordercolor=white
 }
+\usepackage{cleveref}
 
 %Referencias
-\usepackage[style=mla,backend=biber]{biblatex}
+\usepackage[style=mla,backend=bibtex]{biblatex}
 \addbibresource{bib.bib}
 
 \theoremstyle{definition}
@@ -88,6 +89,7 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\D}{\mathbb{D}}
+\newcommand{\Hy}{\mathbb{H}}
 \newcommand{\X}{\mathfrak{X}}
 \newcommand{\T}{\mathfrak{T}}
 \newcommand{\Cinf}{C^\infty}
@@ -108,7 +110,7 @@
 	\addcontentsline{toc}{part}{\contentsname}
 	\tableofcontents
 	
-	\chapter{Variedades Riemannianas}
+	\chapter{Variedades Diferenciables}
 	\section{Variedades diferenciables}
 	\begin{defn}
 		Una \textbf{variedad topológica} es un espacio topológico $M$ \textbf{localmente homeomorfo} a $\R^n$. Es decir, es un espacio topológico tal que para cualquier $p\in M$ existe una vecindad abierta $U\subseteq M$ de $p$, un abierto $V\subseteq\R^n$ y un  homeomorfismo $h:U\to V$. Decimos que $h$ es una \textbf{carta} y $U$ es una \textbf{vecindad coordenada}.
@@ -1090,8 +1092,8 @@
 		\end{align*}
 		Entonces, los productos de la forma $\varphi_{i_1}\otimes\ldots\otimes\varphi_{i_k}$ son una base de $\tau^k(V)$.
 	\end{prop}
-	\begin{obs}
-		Dada una transformación lineal entre espacios vectoriales $f:V\to W$, la transformación lineal 
+	\begin{obs}\label{pullback}
+		Dada una transformación lineal entre espacios vectoriales $f:V\to W$, tenemos la transformación lineal 
 		\begin{align*}
 			f^*:\tau^k(W)&\to\tau^k(V)\\
 			T(v_1,\ldots,v_k)&\mapsto T(f(v_1),\ldots,f(v_k))
@@ -1301,10 +1303,146 @@
 		\[u^2=\frac{u^1}{|(u^1,v^1)|^2}\qquad\qquad v^2=\frac{v^1}{|(u^1,v^1)|^2}\]
 		Observemos que esta transformación fija la circunferencia unitaria en $\R^2$, e invierte las regiones de adentro y afuera. De hecho, se trata de la inversión respecto a la circunferencia unitaria. Como la intersección de estas dos vecindades es conexa, por la observación anterior $S^2$ (y con un argumento análogo $S^n$) es orientable.
 	\end{ejem}
-	\begin{obs}
+	\begin{obs}\label{obs:antipoda-orientacion}
 		La transformación antípoda $-\Id:S^n\to S^n$ preserva la orientación cuando $n$ es impar, y la invierte cuando $n$ es impar. (Ver \hyperref[teo:bola-peluda]{Teorema de la bola peluda}). \href{https://math.stackexchange.com/questions/74712/proving-rigorously-a-map-preserves-orientation}{Esta} prueba me pareció buena, usando un campo normal. Otra idea para demostrarlo, siguiendo las ideas de \cite{Hatcher}, es ver la antípoda como la composición de tantas reflexiones como coordenadas en $\R^{n+1}$.
 	\end{obs}
+	\subsection{Ejercicios 14 de semptiembre}
+	\begin{defn}
+		Se dice que un grupo $G$ \textbf{actúa} en una variedad difernciable $M$ si existe $\phi:G\times M\to M$ tal que
+		\begin{itemize}
+			\item Para cada $g\in G$ la transgormación $\phi_g:M\to M$ dada por $\phi_g(p)=\phi(g,p)$ es un difeomorfismo y $\phi_e:M\to M$ es la identidad en $M$.
+			\item Si $g_1,g_2\in G$, entonces $\phi_{g_1g_2}=\phi_{g_1}\circ\phi_{g_2}$.
+		\end{itemize}
+		Por brevevedad escribiremos $gp$ para denotar $\phi(g,p)$.
+		
+		Diremos que la acción es \textbf{propiamente discontinua} si todo punto $p\in M$ tiene una vecindad $U\subset M$ tal que $U\cap g(U)\neq\varnothing$ para toda $g\neq e$.
+	\end{defn}
+	Una acción determina una relación de equivalencia en $M$ dada por $p\sim q$ si $p=gq$ para alguna $g\in G$.
 	
+	Denotando $M/G$ al espacio cociente relacionado a esta relación de equivalencia, tenemos la proyección natural $\pi:M\to M/G$. Para cada parametrización local ${\psi:\Omega\subset\R^n\to U\subset M}$ tenemos una función $\pi\circ\psi:\Omega\subset\R^n\to\pi(U)\subset M/G$.
+	\begin{enumerate}
+		\item Muestra que $M/G$ con estas parametrizaciones es una variedad diferenciable.
+		\item Sea $M=S^2$ la esfera unitaria. Sea $G$ el grupo generado por la transformación atntípoda. ¿Qué variedad es $M/G$?
+		\item Sea $M$ el cilindro infinito dado por los puntos $(x,y,z)$ tales que $x^2+y^2=1$ y $z\in\R$. Sea $G$ el grupo generado por $A:M\to M$, $A(x,y,z)=(-x,-y,-z)$. ¿Qué variedad es $M/G$?
+		\item Prueba que $M/G$ es orientable si y sólo si existe una orientación de $M$ tal que es preservada por todo difeomorfismo de $G$.
+		\item Prueba que las dos variedades anteriores son no-orientables.
+	\end{enumerate}
+	\begin{proof}[Solución]\leavevmode
+		\begin{enumerate}
+			\item Dada una parametrización local $\psi:\Omega\subset\R^n\to U\subset M$, podemos suponer que $U$ es tal que $U\cap g(U)\neq\varnothing$ para $g\in G$ con $g\neq e$ tomando la intersección si es necesario. Esto implica que $\pi|_U$ es inyectiva, y como además su imagen es un abierto (la proyección cociente es abierta), la familia de funciones $\pi\circ\psi$ definidas de esta forma son homeomorfismos de subconjuntos abiertos de $\R^n$ en subconjuntos abiertos de $M/G$ que cubren a $M/G$.
+			
+			Para ver que $M/G$ es una variedad diferenciable basta ver que los cambios de coordenadas son suaves. Sean $\pi\circ\psi_1$ y $\pi\circ\psi_2$ dos cartas en $M/G$ cuyos dominios $\pi(U_1)$ y $\pi(U_2)$ definidos como en el párrafo anterior tienen intersección no vacía. Los cambios de coordenadas son de la forma
+			\begin{equation}\label{ec:cambio-coord-traslacion}
+				(\pi\circ\psi_2)^{-1}\circ(\pi\circ\psi_1):\R^n\to\R^n
+			\end{equation}
+			Como $(\pi\circ\psi_2)^{-1}=\psi^{-1}\circ\pi|_{U_2}^{-1}$, basta demostrar que la función $\pi|_{U_2}^{-1}\circ\pi:M\to M$ es suave, pero esta función es justamente un difeomorfismo de $G$, que es suave por hipótesis.
+			\[\begin{tikzcd}
+				&\varnothing\neq\pi(U_1)\cap\pi(U_2)\subset M/G\\
+				U_1\subset M\arrow[swap]{ur}{\pi|_{U_1}}&&U_2\subset M\arrow{ul}{\pi|_{U_2}}\\
+				\Omega_1\subset\R^n\arrow{u}{\psi_1}&&\Omega_2\subset\R^n\arrow[swap]{u}{\psi_2}
+			\end{tikzcd}\]
+			
+			\item El plano proyectivo $\R P^2$. Una recta por el origen en $\R^3$ tiene dos representantes en $S^2$, que se identifican cuando tomamos el cociente por el grupo generado por la transformación antípoda.
+			
+			\item Una banda de Möbius "infinita". En el caso de un cilindro acotado, digamos $\{(x,y,z)\in\R^3:x^2+y^2=1,|z|\leq1\}$, tenemos la siguiente situación (imagen de Andreo, es un \texttt{tikzpicture}?):
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.7\linewidth]{fig13}
+			\end{figure}
+			
+			\item Supongamos que $M/G$ es orientable. Entonces la jacobiana de los cambios de coordenadas como en \ref{ec:cambio-coord-traslacion} tiene determinante positivo, así que los difeomorfismos de $G$ también (cualquier difeomorfismo de $G$ se puede ver de esta forma).
+				
+			Al contrario, si la diferencial de cualquier difeomorfismo de $G$ tiene jacobiana con determinante positivo, es inmediato que los cambios de coordenadas en $M/G$ preservan orientación.
+			
+			\item Para el caso de $S^2$ ver la \hyperref[obs:antipoda-orientacion]{observación} anterior. Para el caso del cilindro se puede calcular explícitamente la jacobiana de la diferencial de la transformación antípoda y ver que su determinante es $-1$.
+		\end{enumerate}
+	\end{proof}
+	
+	\subsection{Más sobre orientaciones}
+	Tanto en \cite{Lee} como en \cite{Loring} hay esencialmente tres maneras equivalentes de definir orientaciones en variedades diferenciables:
+	\begin{enumerate}
+		\item Existe un atlas tal que los cambios de coordenadas tienen jacobiana con determinante positiva. Hay dos posibles clases de equivalencia de tales atlases.
+		\item Asignando primero una \textbf{orientación punto a punto} en los espacios tangentes de la variedad como espacios vectoriales, es decir, escogiendo una clase de equivalencia en las bases. Luego, escogiendo un \textbf{marco} (una colección de campos vectoriales $(E_1,\ldots,E_n)$ que en cada punto forman una base del espacio tangente) continuo tal que en cada punto forma una base que está en la clase de equivalencia distinguida.
+		\item Existe una $n$-forma diferencial $\omega$ que no se anula. (Recordemos que el espacio de $n$-formas en una $n$-variedad es de dimensión 1). Una orientación es la elección de una de las dos posibles  clases de equivalencia de $n$-formas diferenciales en $M$ que no se anulan.
+	\end{enumerate}
+	Hay otra manera de definir orientaciones en variedades topológicas usando homología (\cite{Hatcher}, 3.3).
+	
+	\begin{ejer*}[\cite{Lee}\textbf{, 15.13}]
+		Si $M$ y $N$ son variedades orientadas de dimensión $>0$ y ${F:M\to N}$ es un difeomorfismo local, son equivalentes:
+		\begin{enumerate}
+			\item La diferencial $dF_p$ envía bases orientadas (en la clase de equivalencia distinguida) de $T_pM$ en bases orientadas de $T_{F(p)}M$.
+			\item Dadas dos cartas coordenadas cuyas bases canónicas $\frac{\partial}{\partial x^i}$ están en la clase de equivalencia distinguida, la diferencial de $F$ tiene jacobiana con determinante positivo.
+			\item Dada una $n$-forma diferencial $\omega$ en $N$ que no se anula, la \textbf{forma inducida} o \textbf{pullback} $F^*\omega$ (definida \hyperref[pullback]{aquí}) está en la clase de equivalencia distinguida de $n$-formas diferenciales en $M$ que no se anulan.
+		\end{enumerate}
+	\end{ejer*}
+	
+	La condición 2 en este ejercicio es equivalente a la definición de \cite{DoCarmo} para que una función preserve orientación.
+	
+	Agregamos dos resultados interesantes:
+	\begin{prop}[\cite{Lee-riem}\textbf{, 2.41. La forma Riemanniana de volumen}]
+		
+		Sea $(M,g)$ una variedad Riemanniana orientada de dimensión $n>1$. Entonces existe una única $n$-forma $dV$ en $M$ que llamaremos \textbf{forma de volumen} que satisface cualquiera de las siguientes propiedades equivalentes:
+		
+			\begin{enumerate}[label={(\arabic*)}]
+			\item Si $(\varepsilon^1,...,\varepsilon^n)$ es cualquier \textbf{comarco} (campo de covectores que es una base de cada $T_pM^*$) ortonormal local orientado en $T^*M$, entonces
+			\[dV=\varepsilon^1\wedge...\wedge\varepsilon^n\]
+			\item Si $(E_1,...,E_n)$ es cualquier marco ortonormal local orientado de $TM$, entonces
+			\[dV(E_1,...,E_n)=1\]
+			\item Para cualesquiera cartas coordenadas locales orientadas $(x_1,...,x_n)$,
+			$$dV=\sqrt{\det (g_{ij})}dx^1\wedge...\wedge dx^n$$
+		\end{enumerate}
+	\end{prop}
+
+	
+%	\begin{lema}[\cite{Lee-intro-curv}\textbf{, 3.2}]
+%		En una variedad Riemanniana orientada existe una única $n$-forma $dV$ tal que $dV(E_1,\ldots,E_n)=1$ si $(E_1,\ldots,E_n)$ es un marco ortonormal orientado de $T_pM$ definido en algún $p\in M$. Esta forma se llama \textbf{elemento de volumen}.
+%	\end{lema}
+%	\begin{ejer*}[\cite{Lee-intro-curv}\textbf{, 3.9}]
+%		La expresión local de $dV$ respecto a cualquier marco local orientado $\{E_i\}$ es
+%		\[dV=\sqrt{\det g_{ij}}\varepsilon^n\wedge\ldots\wedge\varepsilon^n\]
+%		donde $g_{ij}=\langle E_i,E_j\rangle$ y $\{\varepsilon^i\}$ es el \textbf{comarco} dual (el campo de covectores en $T_pM^*$ canónico definido por $\varepsilon^i(E_j)=\delta^i_j$).
+%	\end{ejer*}
+	
+	
+	\subsection{Más sobre variedades cociente}
+	Es posible dar condiciones más generales para construir una variedad cociente con la acción de un grupo:
+	
+	\begin{teo}[\cite{Lee}\textbf{, 21.10}]
+		Si $G$ es un \textbf{grupo de Lie} que actúa suave, \textbf{libre} y \textbf{propiamente} en una variedad suave $M$, el espacio de órbitas $M/G$ es una variedad topológica de dimensión $\dim M-\dim G$ y tiene una estructura diferenciable única tal que la proyección $\pi:M\to M/G$ es una sumersión suave.
+	\end{teo}
+	
+	Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la propiedad de que las funciones
+		\begin{align*}
+		\begin{aligned}
+			G\times G&\to G\\
+			(g,h)&\mapsto g\cdot h\\
+		\end{aligned}
+		\qquad\qquad\qquad
+		\begin{aligned}
+			G&\to G\\
+			g&\mapsto g^{-1}\\
+		\end{aligned}
+	\end{align*}
+	son suaves. Una acción es libre cuando no tiene puntos fijos, es decir, $gp\neq p$ para toda $g\neq e$. Por último, una acción es propia si el mapeo $G\times M\to M\times M$ dado por $(g,m)\mapsto (gm,m)$ es propio, es decir, la imagen inversa de un compacto es compacto.
+	
+	La condición de ser propia nos ayuda a descartar casos patológicos como el siguiente:
+	\begin{ejem}[\cite{Lee}\textbf{, 21.3, Flujo irracional en el toro}]
+		Para cualquier número irracional $\alpha$, el grupo aditivo $\R$ actúa en $\mathbb{T}=S^1\times S^1$ mediante
+		\[t\cdot (w,z)=(e^{2\pi it}w,e^{2\pi i\alpha t}z)\]
+		La órbita de cada punto es una curva densa, y de hecho el espacio de órbitas $\mathbb{T}/\R$ no es Housdorff: no podemos separar los puntos con abiertos.
+	\end{ejem}
+	\begin{prop}[\cite{Lee}\textbf{, 21.4}]
+		Si un grupo de Lie actúa continua y propiamente en una variedad $M$, el espacio de órbitas es Housdorff.
+	\end{prop}
+	Por último incluimos el siguiente lema que nos recuerda a la definición de nuestros ejercicios:
+	\begin{lema}[\cite{Lee}\textbf{, 21.11}]
+		Supongamos que un grupo de Lie \textbf{discreto} $\Gamma$ actúa continua y libremente en una variedad $E$. La acción es propia si y sólo si se satisfacen las dos siguientes condiciones:
+		\begin{enumerate}
+			\item [\textit{(i)}] Cualquier punto $p\in E$ tiene una vecindad $U$ tal que para $(g\cdot U)\cap U=\varnothing$ a menos que $g=e$.
+			\item [\textit{(ii)}] Si $p, p'\in E$ no están en la misma órbita, existen vecindades $V$ de $p$ y $V'$ de $p'$ tales que $(g\cdot V)\cap V'0\varnothing$ para toda $g\in\Gamma$.
+		\end{enumerate}
+	\end{lema}
+	Un grupo de Lie es discreto si tiene la topología discreta, es decir, cualquier subconjunto es abierto.
 	\section{Cambios de coordenadas}
 	Consideremos un campo vectorial $X$ definido en alguna variedad $M$. Dadas dos vecindades coordenadas $U$ y $V$ con intersección no vacía, tenemos las expresiones
 	\[X=\sum_{i=0}^na^i\frac{\partial}{\partial x^i}=\sum_{j=0}^nb^j\frac{\partial}{\partial y^j}\]
@@ -1552,12 +1690,191 @@
 	\[A:\X(M)^r\to\X(M)\]
 	podemos asociarle el campo tensorial $\bar{A}\in\T^1_r(M)$ con la regla
 	\[\bar{A}(\theta,X_1,\ldots,X_r)=\theta(A(X_1,\ldots,X_r))\]
-	De hecho esta correspondencia es un isomorfismo entre $\T^1_r(M)$ y los mapeos multilineales $\X(M)^r\to\X(M)$. Este resultado se puede generalizar:
+	De hecho esta correspondencia es un isomorfismo entre $\T^1_r(M)$ y los mapeos multilineales $\X(M)^r\to\X(M)$.
+	
+	Demostraremos el caso de $\X(M)$ y $\T^1_0(M)$. El isomorfismo es
+	\begin{align*}
+		\Phi:\X(M)&\to\T^1_0(M)\\
+		\begin{aligned}
+			X\\\leavevmode
+		\end{aligned}&
+		\begin{aligned}
+			\mapsto\\\leavevmode
+		\end{aligned}
+		\begin{aligned}
+			\Phi(X):\X^*(M)&\to\Cinf(M,\R)\\
+			\theta&\mapsto\theta(X)
+		\end{aligned}
+	\end{align*}
+	Para ver que es suprayectiva, tomemos $A\in\T^1_0(M)$ y busquemos $X\in\X(M)$ tal que $\Phi(X)=A$. En una vecindad coordenada $U\subset M$, con funciones coordenadas $x^i:U\to M$, las funciones componentes de $A$ se pueden expresar en términos de la base $\Phi\left(\frac{\partial}{\partial x^1}\right),\ldots,\Phi\left(\frac{\partial}{\partial x^n}\right)$ por ser $\Phi$ lineal. Luego,
+	\begin{align*}
+		A&=A^1\Phi\left(\frac{\partial}{\partial x^1}\right)+\ldots+A^n\Phi\left(\frac{\partial}{\partial x^n}\right)\\
+		&=\Phi\left(A^1\frac{\partial}{\partial x^1}+\ldots+A^n\frac{\partial}{\partial x^n}\right)\\
+		&=\Phi(X)
+	\end{align*}
+	
+	Para ver que $\Phi$ es inyectiva, supongamos que $\Phi(X)=0\in\T^1_0(M)$, de manera que $\Phi(X)(dx^j)=0$ para toda $j$. Por definición, esto quiere decir que $dx^j(X)=0$. 
+	
+	Este resultado se puede generalizar:
 	\begin{ejer*}[\cite{Lee}\textbf{, 12-4}]
 		Sea $V$ un espacio vectorial de dimensión finita. Existe un isomorfismo natural (independiente de la base) entre los tensores $\tau^{k+1}_\ell$ y los mapeos multilineales de la forma
 		\[T:(V^*)^k\times V^\ell\to V\]
 	\end{ejer*}
 	En adelante denotaremos indistintamente $A$ y $\bar{A}$.
-	\chapter{Referencias}	\printbibliography[heading=none]
+	
+	\chapter{Variedades Riemannianas}
+	\begin{defn}
+		Sea $V$ un espacio vectorial de dimensión $n$. Un \textbf{producto escalar} es una forma bilineal
+			\[b:V\times V\to\R\]
+		con las siguientes propiedades:
+		\begin{itemize}
+			\item Simétrica: $b(v,w)=b(w,v)$ para $v,w\in V$,
+			\item No degenerada: si $b(v,w)=0$ para todo $w\in V$, entonces $v=0$.
+		\end{itemize}
+		Un \textbf{producto interior} es un producto escalar que además es:
+		\begin{itemize}
+			\item Definido positivo: $b(v,v)>0$ para todo $v\neq0$.
+		\end{itemize}
+	\end{defn}
+	\begin{obs}
+		Una forma bilineal determina una \textbf{forma cuadrática} de la forma
+		\begin{align*}
+			b:V&\to\R\\
+			q(v)&\mapsto b(v,v)
+		\end{align*}
+		A su vez, una forma cuadrática determina una matriz que se puede llevar a una matriz diagonal con 1 y -1 en la diagonal. La cantidad de -1 en esta forma se llama el \textbf{índice} de la forma cuadrática.
+	\end{obs}
+	
+	\begin{defn}
+		Una \textbf{métrica Riemanniana} en una variedad $M$ es un campo tensorial $g\in\T^0_2(M)$.
+	\end{defn}
+	\begin{obs}
+		Una métrica Riemanniana no es más que una correspondencia que a cada punto $p\in M$ asocia un producto interior de la forma
+			\[\langle -,- \rangle_p:T_pM\times T_pM\to\R\]
+		 En contraste, una \textbf{métrica semi-Riemanniana} asocia a cada punto de la variedad un producto escalar. Estas distinticón se puede expresar en términos del índice de las métricas: una semi-Riemanniana tiene índice constante, y una Riemanniana tiene índice cero. Adicionalmente, diremos que una variedad de índice constante -1 es una \textbf{variedad Lorentziana}.
+	\end{obs}
+	El producto interior en los espacios tangentes nos permite medir el tamaño de los vectores y el ángulo entre ellos mediante las expresiones
+	\[|v|_p=\sqrt{\langle v,v\rangle_p}\qquad\text{y}\qquad\cos\theta=\frac{\langle v,w\rangle}{|v||w|}\]
+	y la longitud de una curva $\alpha$ mediante
+	\[\mathcal{L}(\alpha)=\int_a^b\sqrt{\langle\alpha'(t),\alpha'(t)\rangle_{\alpha(t)}}dt\]
+	
+	\begin{ejem}[Espacio de Minkowski]
+		En un espacio vectorial $V$ en el que tengamos definida una métrica semi-Riemanniana $\langle -,-\rangle$, podemos clasificar los vectores en tres tipos:
+		\begin{itemize}
+			\item Nulo o luminoso: $\langle v,v\rangle=0$.
+			\item Espacial: $\langle v,v\rangle>0$.
+			\item Temporal: $\langle v,v\rangle<0$.
+		\end{itemize}
+	\end{ejem}
+	
+	\begin{defn}
+		Dos variedades $(M,g_M)$ y $(N,g_N)$ son \textbf{isométricas} si existe $\Phi:M\to N$ biyectiva que preserva la métrica en el sentido de que
+		\[\langle v,w\rangle_p=\langle d\Phi_pv,d\Phi_pw\rangle_{\Phi(p)}\]
+	\end{defn}
+	
+	\begin{obs}
+		Un \textbf{espacio métrico} $(X,d)$ es un conjunto $X$ junto con una \textbf{función métrica} $d:X\times X\to\R$. Un \textbf{espacio vectorial normado} es una pareja $(V,|\cdot|)$ donde hay una función de distancia inducida por la métrica de la forma $d(v,w)=|v-w|$.
+		
+		Estos conceptos son diferentes al de métrica Riemanniana, aunque hay una forma de relacionarlos: una métrica Riemanniana induce una función de distancia en la variedad mediante la expresión
+		\[d(p,q)=\inf\{\mathcal{L}(\alpha)|\alpha:[0,1]\to M\text{ con }\alpha(0)=p,\alpha(1)=q\}\]
+	\end{obs}
+	\begin{ejem}[La esfera unitaria $S^2$ en $\R^3$]
+		Los vectores tangentes a la esfera se pueden pensar como vectores en $\R^3$, en donde ya tenemos un producto interno.
+		
+		¿Cómo podríamos encontrar la métrica sin usar la variedad ambiente? Como la métrica Riemanniana es un operador bilineal en cada punto de la variedad, sus valores están determinados por la acción en la base. En nuestro ejemplo, la métrica de una 2-variedad debe estar determinada por los dos vectores tangentes básicos. Así que si la parametrización es de la forma
+		\[\varphi(u,v)=(x(u,v),y(u,v),z(u,v))\]
+		la métrica está dada en términos de los tres valores
+		\[E=\langle \varphi_u,\varphi_v\rangle,\qquad F=\langle \varphi_u,\varphi_v\rangle,\qquad G=\langle\varphi_v,\varphi v\rangle,\]
+		que en el curso de geometría diferencial de curvas y superficies llamamos los coeficientes de la \textbf{primera forma fundamental}. Para una excelente revisión del curso de curvas y superficies, y su relación con éste, revisar \cite{Loring-dif} Cap. 1, Secs. 2, 3 y 5.
+	\end{ejem}
+	\begin{ejem}[Subvariedades de $\R^n$]
+		Cualquier subvariedad $M\subset\R^n$ hereda la métrica euclideana.
+		
+		En analogía con el ejemplo anterior, la métrica en estos casos estará dada en términos de la matriz
+		\[(g_{ij})=\left(\left\langle\frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j}\right\rangle\right)\]
+	\end{ejem}
+	\begin{ejem}[El semiplano hiperbólico, \cite{seade}, \cite{Loring-dif} Ejercicio 1.7]
+		En el conjunto
+		\[\Hy^2:=\{(x,y)\in\R^2:y>0\}\]
+		definamos una métrica para $p=(x_0,y_0)\in\Hy^2$ mediante
+		\[E=\frac{1}{y^2_0},\qquad F=0,\qquad G=\frac{1}{y^2_0}\]
+		como en los ejemplos anteriores ya que $\Hy^2$ es una 2-variedad. Dicho de otra forma, para el punto $p$ tenemos la función
+			\[\langle-,-\rangle_{\Hy^2}:T_p\Hy^2\times T_p\Hy^2\to\R\]
+		definida por
+		\[\langle u,v\rangle_{\Hy^2}=\frac{1}{y_0^2}\langle u,v\rangle\]
+		donde $\langle -,-\rangle$ es el producto interno euclideano.
+
+		Esto nos permite definir la norma de los vectores tangentes y la longitud de curvas. Por ejemplo, la longitud de una curva vertical $\alpha(t)=(0,t)$ entre $(0,1)$ y $(0,2)$ es
+		\begin{align*}
+			\mathcal{L}(\alpha)&=\int_1^2\sqrt{\langle \alpha'(t),\alpha'(t)\rangle_{\Hy^2,\alpha(t)}}dt\\
+			&=\int_1^2 \frac{1}{t}\langle \alpha'(t),\alpha'(t)\rangle_{\alpha(t)}dt\\
+			&=\int_1^2\frac{1}{t}\langle (0,1),(0,1)\rangle_{\alpha(t)}dt\\
+			&=\int_1^2\frac{1}{t}dt\\
+			&=\int_1^2\frac{1}{t}dt\\
+			&=\log(2)-\log(1)\\
+			&=\log(2)
+		\end{align*}
+		que es distinta de la euclideana. Para una excelente introducción a la geometría hiperbólica y sus distintos modelos, consultar el capítulo de Cannon en \cite{flavors}.
+	\end{ejem}
+	
+	\section{Conexiones}
+	\begin{defn}[\cite{ONeill}\textbf{, 9 Cap 3}]
+		Una conexión $D$ en una variedad suave $M$ es una función
+	\begin{align*}
+		D:\X(M)\times\X(M)&\to\X(M)\\
+		(V,W)&\mapsto D_VW
+	\end{align*}
+	tal que
+	\begin{enumerate}
+		\item[\textbf{(D1)}] es $\Cinf(M,\R)$-lineal en $V$,
+		\item[\textbf{(D2)}] es $\R$-lineal en $W$,
+		\item[\textbf{(D3)}] satisface la regla de Leibniz:
+		\[D_V(fW)=(Vf)W+fD_V(W)\]
+	\end{enumerate}
+	\end{defn}
+	Que interpretamos como derivar un campo vectorial en dirección de otro. Esta definición captura las propiedades esenciales de la derivada direccional de una función vector-valuada en $\R^n$ como en cálculo (ver \cite{Loring-dif} 6.1.
+	\begin{obs}
+		Dos tensores métricos en una misma variedad determinan dos conexiones de Levi-Civita.
+	\end{obs}
+	\begin{lema}
+		Un campo vectorial $X$ en una variedad Riemanniana $(M,\langle ,\rangle)$ está únicamente determinado por los valores de $\langle X,Z\rangle$ para todo $Z\in\X(M)$.
+	\end{lema}
+	\begin{teo}[\cite{ONeill}\textbf{, 11 Cap 3}]
+		Sea $(M,g)$ una variedad semi-Riemanniana. Denotemos $g(V,W)=\langle V,W\rangle$. Existe una única conexión $D$ determinada por la métrica $g$ tal que además
+		\begin{enumerate}
+			\item[\textbf{(D4)}] Es libre de torsión:
+			\[[V,W]=D_VW-D_WV\]
+			\item[\textbf{(D5)}] Es compatible con la métrica:
+			\[X\langle V,W\rangle=\langle D_XV,W\rangle+\langle V,D_XW\rangle\]
+		\end{enumerate}
+		Dicha conexión recibe el nombre de \textbf{conexión de Levi-Civita} o \textbf{conexión Riemanniana}.
+	\end{teo}
+
+	
+	\begin{proof}
+		(\textit{Tomada de \cite{Loring-dif}, 6.6}). Permutando ciclicamente los campos en \textbf{(D5)} obtenemos
+		\begin{align*}
+			X\langle V,W\rangle=\langle D_XV,W\rangle+\langle V,D_XW\rangle\\
+			V\langle W,X\rangle=\langle D_VW,X\rangle+\langle W,D_VX\rangle\\
+			W\langle X,V\rangle=\langle D_WX,V\rangle+\langle X,D_WV\rangle
+		\end{align*}
+		Ahora usamos \textbf{(D4)}, para sustituir $DW_V$ en la tercera de las tres anteriores:
+			\[W\langle X,V\rangle=\langle D_WX,V\rangle+\langle X,D_VX\rangle-\langle X,[V,W]\rangle\]
+		Restando la tercera a la segunda y sumando la anterior,
+		\begin{align*}
+			V\langle W,X\rangle+W\langle &X,V\rangle-X\langle V,W\rangle\\
+			&=2\langle D_VW,X\rangle+\langle W,D_VX-D_XV\rangle+\langle V,DWX-D_XW\rangle-\langle X,[V,W]\rangle\\
+			&=2\langle D_VW,X\rangle+\langle W,[V,X]\rangle +\langle V,[W,X]\rangle-X\langle X,[V,W]\rangle
+		\end{align*}
+		Y despejando $\langle D_V,W,X\rangle$, obtenemos la \textbf{fórmula de Kozsul}:
+	\begin{align*}
+		2\langle D_VW,X\rangle=&V\langle W,X\rangle+W\langle X,V\rangle-X\langle V,W\rangle\\
+		&-\langle V,[W,X]\rangle+\langle W,[X,V]\rangle+\langle X,[V,W]\rangle
+	\end{align*}
+	Por el lema anterior, hemos caracterizado $D_V,W$, lo que prueba la unicidad de la conexión. De hecho, definiendo de esta forma la conexión, es rutinario mostrar que satisface las condiciones de la definición.
+	\end{proof}
+
+	\chapter{Referencias}
+	\printbibliography[heading=none]
 	
 \end{document}
