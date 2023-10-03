@@ -1362,7 +1362,7 @@
 	Tanto en \cite{Lee} como en \cite{Loring} hay esencialmente tres maneras equivalentes de definir orientaciones en variedades diferenciables:
 	\begin{enumerate}
 		\item Existe un atlas tal que los cambios de coordenadas tienen jacobiana con determinante positiva. Hay dos posibles clases de equivalencia de tales atlases.
-		\item Asignando primero una \textbf{orientación punto a punto} en los espacios tangentes de la variedad como espacios vectoriales, es decir, escogiendo una clase de equivalencia en las bases. Luego, escogiendo un \textbf{marco} (una colección de campos vectoriales $(E_1,\ldots,E_n)$ que en cada punto forman una base del espacio tangente) continuo tal que en cada punto forma una base que está en la clase de equivalencia distinguida.
+		\item Asignando primero una \textbf{orientación punto a punto} en los espacios tangentes de la variedad como espacios vectoriales, es decir, escogiendo una clase de equivalencia en las bases. Luego, escogiendo un \textbf{marco} (una colección de campos vectoriales $(E_1,\ldots,E_n)$ que en cada punto forman una base del espacio tangente) continuo tal que en cada punto forman una base que está en la clase de equivalencia distinguida.
 		\item Existe una $n$-forma diferencial $\omega$ que no se anula. (Recordemos que el espacio de $n$-formas en una $n$-variedad es de dimensión 1). Una orientación es la elección de una de las dos posibles  clases de equivalencia de $n$-formas diferenciales en $M$ que no se anulan.
 	\end{enumerate}
 	Hay otra manera de definir orientaciones en variedades topológicas usando homología (\cite{Hatcher}, 3.3).
@@ -1378,7 +1378,7 @@
 	
 	La condición 2 en este ejercicio es equivalente a la definición de \cite{DoCarmo} para que una función preserve orientación.
 	
-	Agregamos dos resultados interesantes:
+	Agregamos un resultado interesante:
 	\begin{prop}[\cite{Lee-riem}\textbf{, 2.41. La forma Riemanniana de volumen}]
 		
 		Sea $(M,g)$ una variedad Riemanniana orientada de dimensión $n>1$. Entonces existe una única $n$-forma $dV$ en $M$ que llamaremos \textbf{forma de volumen} que satisface cualquiera de las siguientes propiedades equivalentes:
@@ -1723,6 +1723,7 @@
 	En adelante denotaremos indistintamente $A$ y $\bar{A}$.
 	
 	\chapter{Variedades Riemannianas}
+	\section{Métrica Riemanniana}
 	\begin{defn}
 		Sea $V$ un espacio vectorial de dimensión $n$. Un \textbf{producto escalar} es una forma bilineal
 			\[b:V\times V\to\R\]
@@ -1837,8 +1838,11 @@
 		Dos tensores métricos en una misma variedad determinan dos conexiones de Levi-Civita.
 	\end{obs}
 	\begin{lema}
-		Un campo vectorial $X$ en una variedad Riemanniana $(M,\langle ,\rangle)$ está únicamente determinado por los valores de $\langle X,Z\rangle$ para todo $Z\in\X(M)$.
+		Un campo vectorial $V$ en una variedad Riemanniana $(M,\langle ,\rangle)$ está únicamente determinado por los valores de $\langle V,X\rangle$ para todo $X\in\X(M)$.
 	\end{lema}
+	\begin{proof}
+		Si $\langle V,X\rangle=\langle \hat{V},X\rangle$ para todo $X\in\X(M)$, como el producto interno es definido positivo en todos los puntos, se sigue que $V_p-\hat{V}_p=0$. 
+	\end{proof}
 	\begin{teo}[\cite{ONeill}\textbf{, 11 Cap 3}]
 		Sea $(M,g)$ una variedad semi-Riemanniana. Denotemos $g(V,W)=\langle V,W\rangle$. Existe una única conexión $D$ determinada por la métrica $g$ tal que además
 		\begin{enumerate}
@@ -1871,9 +1875,34 @@
 		2\langle D_VW,X\rangle=&V\langle W,X\rangle+W\langle X,V\rangle-X\langle V,W\rangle\\
 		&-\langle V,[W,X]\rangle+\langle W,[X,V]\rangle+\langle X,[V,W]\rangle
 	\end{align*}
-	Por el lema anterior, hemos caracterizado $D_V,W$, lo que prueba la unicidad de la conexión. De hecho, definiendo de esta forma la conexión, es rutinario mostrar que satisface las condiciones de la definición.
+	Para probar la unicidad, si $\hat{D}_VW$ también satisface las propiedades \textbf{(D1)} a \textbf{(D5)}, entonces también satisface la fórmula de Koszul, de forma que $\langle D_VW,X\rangle=\langle \hat{D}_VW,X\rangle$ para cualquier $X\in\X(M)$. Por el lema anterior, hemos caracterizado $D_V,W$, lo que prueba la unicidad de la conexión. De hecho, definiendo de esta forma la conexión, es rutinario mostrar que satisface las condiciones de la definición.
 	\end{proof}
-
+	\begin{defn}
+		En este contexto, decimos que $D_VW$ es la \textbf{derivada covriante} de $W$ respecto a $V$.
+	\end{defn}
+	\section{Símbolos de Christoffel}
+	Ahora estudiemos cómo se ve la derivada covariante localmente.
+	\begin{defn}
+		En una vecindad coordenada $U\subset M$ con coordenadas $x^1,\ldots,x^k$ sabemos que existen las funciones $\Gamma^k_{ij}\in\Cinf(U,\R)$ tales que
+		\[D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j}=\sum_{k=1}^n\Gamma^k_{ij}\frac{\partial}{\partial x^k}\]
+		que llamaremos \textbf{símbolos de Christoffel} de $D$ en $U$.
+	\end{defn}
+	Para encontrar una expresión de los símbolos de Christoffel en términos de los coeficientes locales de la métrica, $g_{ij}$, hagamos el siguiente ejemplo:
+	\begin{ejem}[Símbolos de Christoffel en $\Hy^2$.]
+		Dada la métrica en el semiplano superior
+		\[g_{11}=E=\frac{1}{y^2_0},\qquad g_{12}=g_{21}=F=0,\qquad g_{22}=G=\frac{1}{y^2_0},\]
+		en una vecindad con coordenadas $(x,y):=(x^1,x^2)$, al derivar los campos básicos obtenemos:
+		\begin{align*}
+			D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x}&=\Gamma_{11}^1\frac{\partial}{\partial x}+\Gamma^2_{11}\frac{\partial}{\partial y}\\			
+			D_{\frac{\partial}{\partial y}}\frac{\partial}{\partial x}&=\Gamma_{21}^1\frac{\partial}{\partial x}+\Gamma^2_{21}\frac{\partial}{\partial y}\\			
+			D_{\frac{\partial}{\partial y}}\frac{\partial}{\partial y}&=\Gamma_{22}^1\frac{\partial}{\partial x}+\Gamma^2_{22}\frac{\partial}{\partial y}
+		\end{align*}
+		Luego, en un punto $(x,y)$ en la vecindad coordenada,
+		\begin{align*}
+			\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\rangle&=\Gamma_{11}^1\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\rangle+\Gamma_{11}^2\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\rangle=\Gamma_{11}^1\frac{1}{y^2}\\
+			\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial y}\rangle&=\Gamma_{11}^1\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\rangle+\Gamma_{11}^2\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\rangle=\Gamma_{11}^2\frac{1}{y^2}
+		\end{align*}
+	\end{ejem}
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
