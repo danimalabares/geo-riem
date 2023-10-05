@@ -1870,7 +1870,7 @@
 			&=2\langle D_VW,X\rangle+\langle W,D_VX-D_XV\rangle+\langle V,DWX-D_XW\rangle-\langle X,[V,W]\rangle\\
 			&=2\langle D_VW,X\rangle+\langle W,[V,X]\rangle +\langle V,[W,X]\rangle-X\langle X,[V,W]\rangle
 		\end{align*}
-		Y despejando $\langle D_V,W,X\rangle$, obtenemos la \textbf{fórmula de Kozsul}:
+		Y despejando $\langle D_V,W,X\rangle$, obtenemos la \textbf{fórmula de Koszul}:
 	\begin{align*}
 		2\langle D_VW,X\rangle=&V\langle W,X\rangle+W\langle X,V\rangle-X\langle V,W\rangle\\
 		&-\langle V,[W,X]\rangle+\langle W,[X,V]\rangle+\langle X,[V,W]\rangle
@@ -1887,10 +1887,18 @@
 		\[D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j}=\sum_{k=1}^n\Gamma^k_{ij}\frac{\partial}{\partial x^k}\]
 		que llamaremos \textbf{símbolos de Christoffel} de $D$ en $U$.
 	\end{defn}
-	Para encontrar una expresión de los símbolos de Christoffel en términos de los coeficientes locales de la métrica, $g_{ij}$, hagamos el siguiente ejemplo:
-	\begin{ejem}[Símbolos de Christoffel en $\Hy^2$.]
+	Para encontrar una expresión de los símbolos de Christoffel en términos de los coeficientes locales de la métrica, $g_{ij}$, consideremos 
+	\begin{align*}
+		\left\langle D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle=\sum_{k=1}^m\Gamma_{ij}^k\left\langle\frac{\partial}{\partial x^k},\frac{\partial}{\partial x^m}\right\rangle
+	\end{align*}
+	Además, observemos que al aplicar la fórmula de Koszul en los campos coordenados los corchetes valen cero (ya que las derivadas parciales de funciones suaves conmutan), de manera que
+
+	\[2\left\langle D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle=\frac{\partial}{\partial x^i}\left\langle \frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle+\frac{\partial}{\partial x^j}\left\langle \frac{\partial}{\partial x^m},\frac{\partial}{\partial x^i}\right\rangle-\frac{\partial}{\partial x^m}\left\langle \frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j}\right\rangle\]
+	
+	 Veamos el siguiente ejemplo:
+	\begin{ejem}[Símbolos de Christoffel en $\Hy^2$]
 		Dada la métrica en el semiplano superior
-		\[g_{11}=E=\frac{1}{y^2_0},\qquad g_{12}=g_{21}=F=0,\qquad g_{22}=G=\frac{1}{y^2_0},\]
+		\[g_{11}=E=\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{1}{y^2_0},\qquad g_{12}=g_{21}=\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle=F=0,\qquad g_{22}=G=\left\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\right\rangle=\frac{1}{y^2_0},\]
 		en una vecindad con coordenadas $(x,y):=(x^1,x^2)$, al derivar los campos básicos obtenemos:
 		\begin{align*}
 			D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x}&=\Gamma_{11}^1\frac{\partial}{\partial x}+\Gamma^2_{11}\frac{\partial}{\partial y}\\			
@@ -1898,10 +1906,17 @@
 			D_{\frac{\partial}{\partial y}}\frac{\partial}{\partial y}&=\Gamma_{22}^1\frac{\partial}{\partial x}+\Gamma^2_{22}\frac{\partial}{\partial y}
 		\end{align*}
 		Luego, en un punto $(x,y)$ en la vecindad coordenada,
-		\begin{align*}
-			\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\rangle&=\Gamma_{11}^1\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\rangle+\Gamma_{11}^2\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\rangle=\Gamma_{11}^1\frac{1}{y^2}\\
-			\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial y}\rangle&=\Gamma_{11}^1\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\rangle+\Gamma_{11}^2\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\rangle=\Gamma_{11}^2\frac{1}{y^2}
-		\end{align*}
+		\[\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\Gamma_{11}^1\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle+\Gamma_{11}^2\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle=\Gamma_{11}^1\frac{1}{y^2}\]
+		Aplicando Koszul,
+			\[2\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{\partial}{\partial x}\left(\frac{1}{y^2}\right)=0\]
+		De forma que $\Gamma_{11}^1=0$.
+		
+		También tenemos que
+		\[\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle=\Gamma_{11}^1\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle+\Gamma_{11}^2\left\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\right\rangle=\Gamma_{11}^2\frac{1}{y^2}\]
+		Aplicando Koszul,
+			\[2\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle+\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle-\frac{\partial}{\partial y}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=-\frac{\partial}{\partial y}\left(\frac{1}{y^2}\right)=2\frac{1}{y^3}\]
+		Así que $\Gamma_{11}^2=\frac{1}{y}$.
+		Como ejercicio se pueden calcular los símbolos restantes $\Gamma^1_{12},\Gamma^2_{12},\Gamma^1_{22}$ y $\Gamma^2_{22}$.
 	\end{ejem}
 	\chapter{Referencias}
 	\printbibliography[heading=none]
