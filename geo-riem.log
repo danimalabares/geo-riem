@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  5 OCT 2023 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  8 OCT 2023 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1488,14 +1488,14 @@ Chapter 3.
 [51
 
 ]
-Overfull \hbox (0.47884pt too wide) in paragraph at lines 1763--1765
+Overfull \hbox (0.47884pt too wide) in paragraph at lines 1764--1766
 []\OT1/ppl/b/n/10 Ejemplo \OT1/ppl/m/n/10 (Es-pa-cio de Minkowski)\OT1/ppl/b/n/
 10 . []\OT1/ppl/m/n/10 En un es-pa-cio vec-to-rial $\OML/cmm/m/it/10 V$ \OT1/pp
 l/m/n/10 en el que teng-amos definida
  []
 
 
-Overfull \hbox (1.74425pt too wide) in paragraph at lines 1777--1778
+Overfull \hbox (1.74425pt too wide) in paragraph at lines 1778--1779
 []\OT1/ppl/b/n/10 Observaci^^Son. []\OT1/ppl/m/n/10 Un \OT1/ppl/b/n/10 es-pa-ci
 o m^^Setrico $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$ \OT1/ppl
 /m/n/10 es un con-junto $\OML/cmm/m/it/10 X$ \OT1/ppl/m/n/10 junto con una \OT1
@@ -1503,35 +1503,27 @@ o m^^Setrico $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$ \OT1/ppl
  []
 
 
-Overfull \hbox (13.85275pt too wide) in paragraph at lines 1785--1786
+Overfull \hbox (13.85275pt too wide) in paragraph at lines 1786--1787
 \OT1/ppl/m/n/10 debe es-tar de-ter-mi-nada por los dos vec-tores tan-gentes b[]
 asicos. As[]^^P que si la parametrizaci[]on
  []
 
 [52]
-Overfull \hbox (8.26239pt too wide) in paragraph at lines 1817--1819
+Overfull \hbox (8.26239pt too wide) in paragraph at lines 1818--1820
 \OT1/ppl/m/n/10 que es dis-tinta de la eu-clideana. Para una ex-ce-lente in-tro
 -ducci[]on a la ge-ometr[]^^Pa hiperb[]olica
  []
 
-[53] [54]
-Overfull \hbox (45.08072pt too wide) detected at line 1901
-\OML/cmm/m/it/10 g[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 E \OT1/cmr/m/n/10 = [] 
-= []\OML/cmm/m/it/10 ;  g[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 g[] \OT1/cmr/m/n
-/10 = [] = \OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 ;  g[] \OT1/c
-mr/m/n/10 = \OML/cmm/m/it/10 G \OT1/cmr/m/n/10 = [] = []\OML/cmm/m/it/10 ;
- []
-
-[55] [56]
+[53] [54] [55] [56] [57]
 Chapter 4.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 1922--1922
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 1936--1936
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
  []
 
-[57
+[58
 
 ] (./geo-riem.aux)
 Package rerunfilecheck Info: File `geo-riem.out' has not changed.
@@ -1541,9 +1533,9 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38495 strings out of 476025
- 784102 string characters out of 5790018
- 1874388 words of memory out of 5000000
+ 38496 strings out of 476025
+ 784109 string characters out of 5790018
+ 1876388 words of memory out of 5000000
  58169 multiletter control sequences out of 15000+600000
  535104 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1568,10 +1560,10 @@ exlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2
 mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/
 type1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (57 pages, 1874489 bytes).
+Output written on geo-riem.pdf (58 pages, 1875514 bytes).
 PDF statistics:
- 773 PDF objects out of 1000 (max. 8388607)
- 655 compressed objects within 7 object streams
- 216 named destinations out of 1000 (max. 500000)
+ 781 PDF objects out of 1000 (max. 8388607)
+ 662 compressed objects within 7 object streams
+ 217 named destinations out of 1000 (max. 500000)
  306 words of extra memory for PDF output out of 10000 (max. 10000000)
 

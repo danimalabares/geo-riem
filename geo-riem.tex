@@ -855,7 +855,7 @@
 			\item \textbf{Bilinealidad}. Para $\lambda_1,\lambda_2\in\R$, $[\lambda_1V_1+\lambda_2V_2,W]=\lambda_1V_1,W]$.
 			\item \textbf{Anticonmutatividad}. $[V,W]=-[W,V]$.
 			\item \textbf{Identidad de Jacobi}. $[[X,Y],Z]+[[Y,Z],X]+[[Z,X],Y]=0$
-			\item Para $f,g\in\Cinf(M,\R)$, $[fX,gY]=fg[X,Y]+fX(g)Y-gY(f)X$.
+			\item Para $f,g\in\Cinf(M,\R)$, $[fX,gY]=fg[X,Y]+f(Xg)Y-g(Yf)X$.
 		\end{enumerate}
 	\end{prop}
 	\begin{defn}
@@ -1715,12 +1715,13 @@
 	
 	Para ver que $\Phi$ es inyectiva, supongamos que $\Phi(X)=0\in\T^1_0(M)$, de manera que $\Phi(X)(dx^j)=0$ para toda $j$. Por definición, esto quiere decir que $dx^j(X)=0$. 
 	
-	Este resultado se puede generalizar:
+	En adelante denotaremos indistintamente $A$ y $\bar{A}$.
+	
+	Comparemos con el siguiente resultado para tensores (no campos tensoriales):
 	\begin{ejer*}[\cite{Lee}\textbf{, 12-4}]
 		Sea $V$ un espacio vectorial de dimensión finita. Existe un isomorfismo natural (independiente de la base) entre los tensores $\tau^{k+1}_\ell$ y los mapeos multilineales de la forma
 		\[T:(V^*)^k\times V^\ell\to V\]
 	\end{ejer*}
-	En adelante denotaremos indistintamente $A$ y $\bar{A}$.
 	
 	\chapter{Variedades Riemannianas}
 	\section{Métrica Riemanniana}
@@ -1898,7 +1899,10 @@
 	 Veamos el siguiente ejemplo:
 	\begin{ejem}[Símbolos de Christoffel en $\Hy^2$]
 		Dada la métrica en el semiplano superior
-		\[g_{11}=E=\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{1}{y^2_0},\qquad g_{12}=g_{21}=\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle=F=0,\qquad g_{22}=G=\left\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\right\rangle=\frac{1}{y^2_0},\]
+		\begin{align*}
+			g_{11}=E=\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{1}{y^2_0},&\qquad g_{22}=G=\left\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\right\rangle=\frac{1}{y^2_0}\\
+			g_{12}=\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle=g_{21}&=\left\langle \frac{\partial}{\partial y},\frac{\partial}{\partial x}\right\rangle=F=0,
+			\end{align*}
 		en una vecindad con coordenadas $(x,y):=(x^1,x^2)$, al derivar los campos básicos obtenemos:
 		\begin{align*}
 			D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x}&=\Gamma_{11}^1\frac{\partial}{\partial x}+\Gamma^2_{11}\frac{\partial}{\partial y}\\			
@@ -1908,13 +1912,23 @@
 		Luego, en un punto $(x,y)$ en la vecindad coordenada,
 		\[\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\Gamma_{11}^1\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle+\Gamma_{11}^2\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle=\Gamma_{11}^1\frac{1}{y^2}\]
 		Aplicando Koszul,
-			\[2\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{\partial}{\partial x}\left(\frac{1}{y^2}\right)=0\]
+		\begin{align*}
+			2\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle&=\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle+\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle-\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle\\
+			&=\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle\\
+			&=\frac{\partial}{\partial x}\left(\frac{1}{y^2}\right)\\
+			&=0
+		\end{align*}
 		De forma que $\Gamma_{11}^1=0$.
 		
 		También tenemos que
 		\[\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle=\Gamma_{11}^1\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle+\Gamma_{11}^2\left\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\right\rangle=\Gamma_{11}^2\frac{1}{y^2}\]
 		Aplicando Koszul,
-			\[2\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle+\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle-\frac{\partial}{\partial y}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=-\frac{\partial}{\partial y}\left(\frac{1}{y^2}\right)=2\frac{1}{y^3}\]
+			\begin{align*}
+			2\left\langle D_{\frac{\partial}{\partial x}}\frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle&=\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle+\frac{\partial}{\partial x}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial y}\right\rangle-\frac{\partial}{\partial y}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle\\
+			&=-\frac{\partial}{\partial y}\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle\\
+			&=-\frac{\partial}{\partial y}\left(\frac{1}{y^2}\right)\\
+			&=2\frac{1}{y^3}
+			\end{align*}
 		Así que $\Gamma_{11}^2=\frac{1}{y}$.
 		Como ejercicio se pueden calcular los símbolos restantes $\Gamma^1_{12},\Gamma^2_{12},\Gamma^1_{22}$ y $\Gamma^2_{22}$.
 	\end{ejem}
