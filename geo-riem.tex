@@ -1834,7 +1834,7 @@
 		\[D_V(fW)=(Vf)W+fD_V(W)\]
 	\end{enumerate}
 	\end{defn}
-	Que interpretamos como derivar un campo vectorial en dirección de otro. Esta definición captura las propiedades esenciales de la derivada direccional de una función vector-valuada en $\R^n$ como en cálculo (ver \cite{Loring-dif} 6.1.
+	Que interpretamos como derivar un campo vectorial en dirección de otro. Esta definición captura las propiedades esenciales de la derivada direccional de una función vector-valuada en $\R^n$ como en cálculo (ver \cite{Loring-dif} 6.1).
 	\begin{obs}
 		Dos tensores métricos en una misma variedad determinan dos conexiones de Levi-Civita.
 	\end{obs}
@@ -1876,8 +1876,20 @@
 		2\langle D_VW,X\rangle=&V\langle W,X\rangle+W\langle X,V\rangle-X\langle V,W\rangle\\
 		&-\langle V,[W,X]\rangle+\langle W,[X,V]\rangle+\langle X,[V,W]\rangle
 	\end{align*}
-	Para probar la unicidad, si $\hat{D}_VW$ también satisface las propiedades \textbf{(D1)} a \textbf{(D5)}, entonces también satisface la fórmula de Koszul, de forma que $\langle D_VW,X\rangle=\langle \hat{D}_VW,X\rangle$ para cualquier $X\in\X(M)$. Por el lema anterior, hemos caracterizado $D_V,W$, lo que prueba la unicidad de la conexión. De hecho, definiendo de esta forma la conexión, es rutinario mostrar que satisface las condiciones de la definición.
+	Para probar la unicidad, si $\hat{D}_VW$ también satisface las propiedades \textbf{(D1)} a \textbf{(D5)}, entonces también satisface la fórmula de Koszul, de forma que $\langle D_VW,X\rangle=\langle \hat{D}_VW,X\rangle$ para cualquier $X\in\X(M)$. Por el lema anterior, hemos caracterizado $D_V,W$, lo que prueba la unicidad de la conexión. De hecho, definiendo de esta forma la conexión, las condificiones \textbf{(D4)} y \textbf{(D5)} se siguen sin complicaciones (ejercicio).
 	\end{proof}
+	\begin{obs}[La demostración de O'Neill]
+		Una vez establecida la fórmula de Koszul, definimos la función $F:\X(M)^3\to\X(M)$ dada por
+		\begin{align*}
+			(V,W,X)\mapsto2\langle D_VW,X\rangle=&V\langle W,X\rangle+W\langle X,V\rangle-X\langle V,W\rangle\\
+			&-\langle V,[W,X]\rangle+\langle W,[X,V]\rangle+\langle X,[V,W]\rangle
+		\end{align*}
+		Cuando fijamos $V$ y $W$, la función $X\mapsto F(V,W,X)$ es una 1-forma. Para verlo, debemos mostrar que es un $(0,1)$-campo tensorial, es decir, que es una función $\Cinf(M,\R)$-multilineal.
+		
+		Notemos que toda 1-forma es una función $\omega(X)=\langle Y,X\rangle$ para algún campo $Y\in\X(M)$ fijo. Es decir, $F(V,W,X)=\langle Y,X\rangle$. Como además $F(V,W,X)=\langle 2D_VX,X$, necesariamente $Y=2D_VW$.
+		
+		Finalmente se demuestra que la correspondencia $(V,W)\mapsto D_VW$ cumple las propiedades \textbf{(D1)} a \textbf{(D5)}.
+	\end{obs}
 	\begin{defn}
 		En este contexto, decimos que $D_VW$ es la \textbf{derivada covriante} de $W$ respecto a $V$.
 	\end{defn}
@@ -1894,7 +1906,9 @@
 	\end{align*}
 	Además, observemos que al aplicar la fórmula de Koszul en los campos coordenados los corchetes valen cero (ya que las derivadas parciales de funciones suaves conmutan), de manera que
 
-	\[2\left\langle D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle=\frac{\partial}{\partial x^i}\left\langle \frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle+\frac{\partial}{\partial x^j}\left\langle \frac{\partial}{\partial x^m},\frac{\partial}{\partial x^i}\right\rangle-\frac{\partial}{\partial x^m}\left\langle \frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j}\right\rangle\]
+	\begin{equation}\label{eq:kozszul-coords}
+		2\left\langle D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle=\frac{\partial}{\partial x^i}\left\langle \frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle+\frac{\partial}{\partial x^j}\left\langle \frac{\partial}{\partial x^m},\frac{\partial}{\partial x^i}\right\rangle-\frac{\partial}{\partial x^m}\left\langle \frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j}\right\rangle
+	\end{equation}
 	
 	 Veamos el siguiente ejemplo:
 	\begin{ejem}[Símbolos de Christoffel en $\Hy^2$]
@@ -1932,6 +1946,36 @@
 		Así que $\Gamma_{11}^2=\frac{1}{y}$.
 		Como ejercicio se pueden calcular los símbolos restantes $\Gamma^1_{12},\Gamma^2_{12},\Gamma^1_{22}$ y $\Gamma^2_{22}$.
 	\end{ejem}
+	
+	\begin{prop}
+		Si $x^1,\ldots,x^n$, son coordenadas en una vecindad $U$,
+		\[\Gamma_{ij}^k = \frac{1}{2} g^{km}\sum_m \left( \frac{\partial g_{jm}}{\partial x^i} + \frac{\partial g_{im}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^m} \right)\]
+		donde las funciones $g^{km}$ son las entradas de la matrix inversa de $(g_{ij})$ en cada punto.
+	\end{prop}
+	\begin{proof}
+		\begin{align*}
+			\left\langle D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^m}\right\rangle&=\sum_{k=1}^n\Gamma_{ij}^k\left\langle\frac{\partial}{\partial x^k},\frac{\partial}{\partial x^m}\right\rangle
+		\end{align*}
+		Usando la \cref{eq:kozszul-coords}, esto se reduce a
+			\[\frac{1}{2} \sum_m \left( \frac{\partial g_{jm}}{\partial x^i} + \frac{\partial g_{im}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^m} \right)=\Gamma_{ij}^1g_{1m}+\Gamma^2_{ij}g_{2m}+\ldots+\Gamma_{ij}^ng_{nm}\]
+		Que no son más que $n$ ecuaciones lineales (una por cada $m$) que se puede expresar de la siguiente forma:
+		\[\begin{pmatrix}
+			g_{11}&\cdots&g_{n1}\\
+			\vdots&&\vdots\\
+			g_{1n}&\cdots&g_{nn}
+		\end{pmatrix}\begin{pmatrix}
+		\Gamma_{ij}^1\\
+		\vdots\\
+		\Gamma_{ij}^n
+		\end{pmatrix}=\begin{pmatrix}
+		\frac{1}{2}\left( \frac{\partial g_{j1}}{\partial x^i} + \frac{\partial g_{i1}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^1} \right)\\
+		\vdots\\
+		\frac{1}{2} \left( \frac{\partial g_{jn}}{\partial x^i} + \frac{\partial g_{in}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^n} \right)
+		\end{pmatrix}\]
+	\end{proof}
+	\begin{obs}
+		Hemos mostrado que los símbolos de Chrisftoffel dependen sólo de la métrica Riemanniana. Recordemos que así demostramos que la curvatura Gaussiana es un invariante isométrico de superficies.
+	\end{obs}
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
