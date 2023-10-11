@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {2.3}Formas diferenciales}{34}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Derivada exterior}{35}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Variedades orientables y no orientables}{37}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Ejercicios 14 de semptiembre}{38}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.1}Ejercicios 14 de septiembre}{38}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Más sobre orientaciones}{40}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Más sobre variedades cociente}{41}{subsection.2.5.3}%
 \contentsline {section}{\numberline {2.6}Cambios de coordenadas}{42}{section.2.6}%
@@ -24,8 +24,10 @@
 \contentsline {section}{\numberline {2.8}Contracción}{45}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Derivaciones de campos tensoriales}{48}{section.2.9}%
 \contentsline {section}{\numberline {2.10}Interpretaciones}{50}{section.2.10}%
-\contentsline {chapter}{\numberline {3}Variedades Riemannianas}{51}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Métrica Riemanniana}{51}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Conexiones}{54}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Símbolos de Christoffel}{55}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Referencias}{58}{chapter.4}%
+\contentsline {section}{\numberline {2.11}Ejercicios de campos tensoriales}{50}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}Más sobre campos tensoriales}{51}{subsection.2.11.1}%
+\contentsline {chapter}{\numberline {3}Variedades Riemannianas}{52}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Métrica Riemanniana}{52}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Conexiones}{55}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Símbolos de Christoffel}{56}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Referencias}{59}{chapter.4}%

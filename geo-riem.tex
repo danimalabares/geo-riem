@@ -101,6 +101,8 @@
 \DeclareMathOperator{\Alt}{Alt}
 \DeclareMathOperator{\sgn}{sgn}
 
+\usepackage{cleveref}
+
 \title{Geometría Riemanniana}
 
 \author{Semestre 2024-1\\ \\ \href{https://github.com/danimalabares/geo-riem/blob/main/geo-riem.pdf}{github.com/danimalabares/geo-riem}}
@@ -1128,8 +1130,8 @@
 			\item $(\omega\wedge\eta)\wedge\theta=\omega\wedge(\eta\wedge\theta)$.
 		\end{enumerate}
 	\end{prop}
-	\begin{prop}
-		La colección de formas alternantes $\varphi {i_1}\wedge\ldots\wedge\varphi_{i_k}$ con $1\leq i_1\leq\ldots\leq i_k\leq n$ es una base de $\Lambda^k(V)$, de forma que tiene dimensión $\binom{n}{k}$.
+	\begin{prop}\label{prop:base-kth-exterior-power}
+		La colección de formas alternantes $\varphi_ {i_1}\wedge\ldots\wedge\varphi_{i_k}$ con $1\leq i_1\leq\ldots\leq i_k\leq n$ es una base de $\Lambda^k(V)$, de forma que tiene dimensión $\binom{n}{k}$.
 	\end{prop}
 	\begin{prop}
 		Sean $v_1,\ldots,v_k$ son una base de un espacio vectorial $V$ y $\omega\in\Lambda^n(V)$. Para los vectores $w_i=\sum_j\lambda_{ij}v_j$ en $V$, tenemos que
@@ -1306,7 +1308,7 @@
 	\begin{obs}\label{obs:antipoda-orientacion}
 		La transformación antípoda $-\Id:S^n\to S^n$ preserva la orientación cuando $n$ es impar, y la invierte cuando $n$ es impar. (Ver \hyperref[teo:bola-peluda]{Teorema de la bola peluda}). \href{https://math.stackexchange.com/questions/74712/proving-rigorously-a-map-preserves-orientation}{Esta} prueba me pareció buena, usando un campo normal. Otra idea para demostrarlo, siguiendo las ideas de \cite{Hatcher}, es ver la antípoda como la composición de tantas reflexiones como coordenadas en $\R^{n+1}$.
 	\end{obs}
-	\subsection{Ejercicios 14 de semptiembre}
+	\subsection{Ejercicios 14 de septiembre}
 	\begin{defn}
 		Se dice que un grupo $G$ \textbf{actúa} en una variedad difernciable $M$ si existe $\phi:G\times M\to M$ tal que
 		\begin{itemize}
@@ -1722,6 +1724,40 @@
 		Sea $V$ un espacio vectorial de dimensión finita. Existe un isomorfismo natural (independiente de la base) entre los tensores $\tau^{k+1}_\ell$ y los mapeos multilineales de la forma
 		\[T:(V^*)^k\times V^\ell\to V\]
 	\end{ejer*}
+	\section{Ejercicios de campos tensoriales}
+	\begin{enumerate}
+		\item Una 1-forma $\theta$ es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$. Un campo vectorial es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$.
+		\item (a) El corchete de Lie es $\R$-lineal como función $\X(M)\times\X(M)\to\X(M)$, pero no es un $(1,2)$-campo tensorial. (b) Resulta que si $\theta$ es una 1-forma, su derivada exterior satisface que $(d\theta)(X,Y)=X\theta Y-Y\theta X-\theta[X,Y]$ (prop. 20.13 \cite{Loring}). Mostrar a partir de esta fórmula que $d\theta$ es un campo tensorial.
+	\end{enumerate}
+	\subsection{Más sobre campos tensoriales}
+	La fórmula sobre la derivada exterior tiene la siguiente generalización:
+	\begin{teo}[Fórmula global para la derivada exterior, teo. 20.14 \cite{Loring}]
+		Sea $k\geq1$. Si $\omega$ es una k-forma y $Y_0,Y_1,\ldots,Y_k$ son campos vectoriales en $M$,
+		\begin{align*}
+			(d\omega)(Y_0,\ldots,Y_k)=\sum_{i=0}^k&(-1)^iY_i\omega(Y_0,\ldots,\hat{Y}_i,\ldots, Y_k)\\
+			&+\sum_{0\leq i\leq j\leq k}(-1)^{i+j}\omega([Y_i,Y_j],Y_0,\ldots,\hat{Y}_i,\ldots,\hat{Y}_j,\ldots,Y_k)
+		\end{align*}
+	\end{teo}
+	Veamos el caso de la derivada exterior de una 2-forma $\omega$. Sabemos que en una vecindad coordenada,
+	\[\omega=\sum\omega_{ij}dx^i\wedge dx^j,\qquad\text{y }\qquad d\omega=\sum d\omega_{ij}\wedge d\omega x^i\wedge dx^j\]
+	Recordemos que la base del espacio de 1-formas está dada por productos cuña ascendentes de la base dual \cref{prop:base-kth-exterior-power}. Por linealeadad, basta estudiar el caso en que
+	\[\omega=udf\wedge dg,\qquad\text{y}\qquad d\omega=d u\wedge df\wedge dg\]
+	Como las $k$-formas asocian a cada punto un tensor alternante, tenemos que
+	\[d\omega(X,Y,Z)=(d u\wedge df\wedge dg)(X,Y,Z)=\left|\begin{matrix}
+		du(X)&du(Y)&du(Z)\\
+		df(X)&df(Y)&df(Z)\\
+		dg(X)&dg(Y)&dg(Z)
+	\end{matrix}\right|
+	=\left|\begin{matrix}
+		Xu&Yu&Zu\\
+		Xf&Yf&Zf\\
+		Xg&Yg&Zg\\
+	\end{matrix}\right|\]
+	Expaniendo este determinante, obtenemos que
+	\begin{align*}
+		d\omega(X,Y,Z)=&X\omega(Y,Z)-Y\omega(X,Z)+Z\omega(X,Y)\\
+		&-\omega([X,Y],Z)+\omega([X,Z],Y)-\omega([Y,Z],X)
+	\end{align*}
 	
 	\chapter{Variedades Riemannianas}
 	\section{Métrica Riemanniana}
