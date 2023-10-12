@@ -1740,7 +1740,7 @@
 	\end{teo}
 	Veamos el caso de la derivada exterior de una 2-forma $\omega$. Sabemos que en una vecindad coordenada,
 	\[\omega=\sum\omega_{ij}dx^i\wedge dx^j,\qquad\text{y }\qquad d\omega=\sum d\omega_{ij}\wedge d\omega x^i\wedge dx^j\]
-	Recordemos que la base del espacio de 1-formas está dada por productos cuña ascendentes de la base dual \cref{prop:base-kth-exterior-power}. Por linealeadad, basta estudiar el caso en que
+	Recordemos que la base del espacio de 1-formas está dada por productos cuña ascendentes de la base dual (ver \cref{prop:base-kth-exterior-power}). Por linealeadad, basta estudiar el caso en que
 	\[\omega=udf\wedge dg,\qquad\text{y}\qquad d\omega=d u\wedge df\wedge dg\]
 	Como las $k$-formas asocian a cada punto un tensor alternante, tenemos que
 	\[d\omega(X,Y,Z)=(d u\wedge df\wedge dg)(X,Y,Z)=\left|\begin{matrix}
@@ -1753,11 +1753,72 @@
 		Xf&Yf&Zf\\
 		Xg&Yg&Zg\\
 	\end{matrix}\right|\]
-	Expaniendo este determinante, obtenemos que
+	Expaniendo este determinante, obtenemos
+	\begin{align*}
+		X_u\left|\begin{matrix}
+			Yf&Zf\\
+			Yg&Zg
+		\end{matrix}\right|
+		-Y_u\left|\begin{matrix}
+			Xf&Zf\\
+			Xg&Zg
+		\end{matrix}\right|
+		+Z_u\left|\begin{matrix}
+			Xf&Yf\\
+			Xg&Yg
+		\end{matrix}\right|
+	\end{align*}
+	Luego
+	\begin{align*}
+		X(u(df\wedge dg))(Y,Z)&=X(u(df\wedge dg)(Y,Z))\\
+		&=X\left(u\left|\begin{matrix}
+			Yf&Zf\\
+			Yg&Zg
+		\end{matrix}\right|\right)\\
+		&=Xu\left|\begin{matrix}
+			Yf&Zf\\
+			Yg&Zg
+		\end{matrix}\right|+uX((Yf)(Zg)-(Yg)(Zf))\\
+		&=Xu\left|\begin{matrix}
+			Yf&Zf\\
+			Yg&Zg
+		\end{matrix}\right|+u(XYf)Zg+u(Yf)(XZg)-u(XYg)(Zf)-u(Yg)(XZf)
+	\end{align*}
+	Y análogamente
+	\begin{align*}
+		X(u(df\wedge dg))(X,Z)=Yu\left|\begin{matrix}
+			Xf&Zf\\
+			Xg&Zg
+		\end{matrix}\right|+u(YXf)Zg+u(Xf)(YZg)-u(YXg)(Zf)-u(Xg)(YZf)
+	\end{align*}
+	\begin{align*}
+		Z(u(df\wedge dg))(X,Y)=Yu\left|\begin{matrix}
+			Xf&Yf\\
+			Xg&Yg
+		\end{matrix}\right|+u(ZXf)Yg+u(Xf)(ZYg)-u(ZXg)(Yf)-u(Xg)(ZYf)
+	\end{align*}
+	Luego los corchetes:
+	\begin{align*}
+		\omega([X,Z],Y)&=u\cdot df\wedge dg([X,Z],Y)\\
+		&=u\left|\begin{matrix}
+			[X,Z]f&Yf\\
+			[X,Z]g&Yg
+		\end{matrix}\right|\\
+		&=u(XZf(Yg)-ZXf(Yg))-u(XZg(Yf)-ZXg(Yf))
+	\end{align*}
+		\begin{align*}
+		-\omega([X,Y],Z)=u(XYf(Zg)-YXf(Zg))-u(XYg(Zf)-YXg(Zf))
+	\end{align*}
+	Y análogamente,
+		\begin{align*}
+		-\omega([Y,Z],X)=u(YZf(Xg)-ZYf(Xg))-u(YZg(Xf)-ZYg(Xf))
+	\end{align*}
+	Por fin,
 	\begin{align*}
 		d\omega(X,Y,Z)=&X\omega(Y,Z)-Y\omega(X,Z)+Z\omega(X,Y)\\
 		&-\omega([X,Y],Z)+\omega([X,Z],Y)-\omega([Y,Z],X)
 	\end{align*}
+	Como en la tarea, esta fórmula se puede usar para ver que la derivada exterior de $\omega$ es un campo $(0,3)$-tensorial (de hecho es una 3-forma, para confirmar esto hay que ver que el tensor que le asocia a cada punto es alternante). Esta propiedad no es inmediata a partir de la definición local.
 	
 	\chapter{Variedades Riemannianas}
 	\section{Métrica Riemanniana}
@@ -2012,6 +2073,38 @@
 	\begin{obs}
 		Hemos mostrado que los símbolos de Chrisftoffel dependen sólo de la métrica Riemanniana. Recordemos que así demostramos que la curvatura Gaussiana es un invariante isométrico de superficies.
 	\end{obs}
+	
+	\section{Campos paralelos}
+	Consideremos una curva suave $\alpha:I\subset\R\to M$. Un \textbf{campo vectorial a lo largo de $\alpha$} es una correspondencia que a cada punto de $I$ le asocia un vector tangente a $\alpha$. Formalmente, es una sección del haz tangente restringido a $\alpha$, es decir, una función
+	\begin{align*}
+		Z:I\subset\R&\to TM|_{\alpha}\\
+		t&\mapsto z(t)\in T_{\alpha(t)}M
+	\end{align*}
+	con la propiedad de que el siguiente diagrama conmuta:
+	\[\begin{tikzcd}
+		&T|_{\alpha}M\arrow{d}{\pi}\\
+		I\arrow{r}{\Id}\arrow[dashed]{ur}{Z}&I
+	\end{tikzcd}\]
+	Es decir, $\pi\circ Z=\Id$. Denotamos por $\X(\alpha)$ la colección de campos vectoriales sobre $\alpha$.
+	
+	Una observación clave acerca de esta definición es que nos permite asociar dos vectores distintos a un mismo punto de una curva suave que se autointersecta.
+	
+	Como cuando definimos la noción de conexión usando las propiedades que satisface la derivada direccional de un campo vectorial en $\R^n$, ahora podemos generalizar la derivada a lo largo de una curva mediante la siguiente definición:
+	
+	\begin{defn}
+		La \textbf{derivada covariante} de un campo a lo largo de una curva $\alpha$ es una correspondencia
+		\begin{align*}
+			\X(\alpha)&\to\X(\alpha)\\
+			Z&\mapsto Z'=\frac{DZ}{dt}
+		\end{align*}
+		tal que 
+		\begin{enumerate}
+			\item \textbf{$\R$-lineal}
+			\item \textbf{Leibniz.} $(hZ)'=h'Z+hZ'$ para $h:I\to\R$.
+			\item \textbf{Compatibilidad con la conexión.} Si $Z$ es la restricción de un campo $V\in\X(M)$, es decir, $Z(t)=V_{\alpha(t)}$, \[(V\alpha)'(t)=D_{\alpha'(t)}V\]
+		\end{enumerate}
+		Decimos que un campo $Z\in\X(\alpha)$ es \textbf{paralelo} si $\frac{DZ}{dt}=0$, y que $\alpha$ es una \textbf{geodésica} si el campo $\alpha'$ es paralelo a lo largo de $\alpha$.
+	\end{defn}
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
