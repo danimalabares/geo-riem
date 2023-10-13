@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  13 OCT 2023 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  13 OCT 2023 09:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1536,16 +1536,23 @@ r/m/n/10 (\OML/cmm/m/it/10 V; W\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7! \OML/cmm/m
 /it/10 D[]W$ \OT1/ppl/m/n/10 cumple las propiedades
  []
 
-[57] [58] [59] [60] [61]
-<fig14.png, id=687, 478.78876pt x 480.79625pt>
+[57] [58] [59] [60]
+Overfull \hbox (0.3701pt too wide) in paragraph at lines 2140--2141
+[]\OT1/ppl/b/n/10 Ejemplo \OT1/ppl/m/n/10 (Cam-pos par-ale-los en $\OML/cmm/m/i
+t/10 S[]$\OT1/ppl/m/n/10 )\OT1/ppl/b/n/10 . []\OT1/ppl/m/n/10 Ver [][]\OT1/pcr/
+m/n/10 Transporte Paralelo en la Esfera.nb[][]\OT1/ppl/m/n/10 . 
+ []
+
+[61]
+<fig14.png, id=688, 478.78876pt x 480.79625pt>
 File: fig14.png Graphic file (type png)
 <use fig14.png>
-Package pdftex.def Info: fig14.png  used on input line 2146.
+Package pdftex.def Info: fig14.png  used on input line 2148.
 (pdftex.def)             Requested size: 154.66681pt x 155.31053pt.
  [62 <./fig14.png>]
 Chapter 4.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 2162--2162
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 2167--2167
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
@@ -1561,10 +1568,10 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38573 strings out of 476025
- 785584 string characters out of 5790018
+ 38571 strings out of 476025
+ 785547 string characters out of 5790018
  1875388 words of memory out of 5000000
- 58228 multiletter control sequences out of 15000+600000
+ 58226 multiletter control sequences out of 15000+600000
  535104 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,89p,1878b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1589,10 +1596,10 @@ e/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (63 pages, 1999610 bytes).
+Output written on geo-riem.pdf (63 pages, 1999912 bytes).
 PDF statistics:
- 843 PDF objects out of 1000 (max. 8388607)
- 714 compressed objects within 8 object streams
+ 844 PDF objects out of 1000 (max. 8388607)
+ 715 compressed objects within 8 object streams
  235 named destinations out of 1000 (max. 500000)
  335 words of extra memory for PDF output out of 10000 (max. 10000000)
 
