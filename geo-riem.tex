@@ -2092,19 +2092,72 @@
 	Como cuando definimos la noción de conexión usando las propiedades que satisface la derivada direccional de un campo vectorial en $\R^n$, ahora podemos generalizar la derivada a lo largo de una curva mediante la siguiente definición:
 	
 	\begin{defn}
-		La \textbf{derivada covariante} de un campo a lo largo de una curva $\alpha$ es una correspondencia
+		La \textbf{derivada covariante} de un campo a lo largo de una curva $\alpha$ en una variedad $M$ es una correspondencia
 		\begin{align*}
 			\X(\alpha)&\to\X(\alpha)\\
 			Z&\mapsto Z'=\frac{DZ}{dt}
 		\end{align*}
 		tal que 
 		\begin{enumerate}
-			\item \textbf{$\R$-lineal}
+			\item \textbf{$\R$-lineal.} $aZ_1+bZ_2)'=aZ_1'+bZ_2'$ para $a,b\in\R$ y $Z_1,Z_2\in\X(\alpha)$.
 			\item \textbf{Leibniz.} $(hZ)'=h'Z+hZ'$ para $h:I\to\R$.
 			\item \textbf{Compatibilidad con la conexión.} Si $Z$ es la restricción de un campo $V\in\X(M)$, es decir, $Z(t)=V_{\alpha(t)}$, \[(V\alpha)'(t)=D_{\alpha'(t)}V\]
+			\item Si $M$ es Riemanniana,
+			\[\frac{d}{dt}\langle Z_1,Z_2\rangle=\langle Z_1',Z_2\rangle+\langle Z_1,Z_2'\rangle\]
 		\end{enumerate}
 		Decimos que un campo $Z\in\X(\alpha)$ es \textbf{paralelo} si $\frac{DZ}{dt}=0$, y que $\alpha$ es una \textbf{geodésica} si el campo $\alpha'$ es paralelo a lo largo de $\alpha$.
 	\end{defn}
+	\begin{obs}
+		Se puede demostrar que la derivada covariante a lo largo de una curva en una variedad Riemanniana siempre existe.
+	\end{obs}
+	\begin{prop}
+		Dada una curva $\alpha:I\subset\R\to M$, con $t_0\in I$ y $v_0\in T_{\alpha(t_0)}M$, existe un único campo paralelo $V(t)$ a lo largo de $\alpha$.
+	\end{prop}
+	\begin{proof}
+		Basta solucionar $\frac{DV}{dt}=0$ con condición inical $V(t_0)=0$. Se trata de un sistema de ecuaciones diferenciales cuyas incógnitas son las funciones componentes de $V$.
+		
+		Suponiendo que en una vecindad coordenada $V=\sum V^j\frac{\partial}{\partial x^j}$, tenemos
+		\begin{align*}
+			\frac{DV}{dt}&=\frac{D}{dt}\sum V^j\frac{\partial}{\partial x^j}\\
+			&=\sum\frac{D}{dt}V^j\frac{\partial}{\partial x^j}\\
+			&=\sum_{j=1}^n\frac{dV^j}{dt}\frac{\partial}{\partial x^j}+\sum_{j=1}^nV^j\frac{D}{dt}\left(\frac{\partial}{\partial x^j}\right)
+		\end{align*}
+		En los campos básicos,
+		\begin{align*}
+			\frac{D}{dt}\left(\frac{\partial}{\partial x^j}\right)&=D_{\alpha'(t)}\frac{\partial}{\partial x^j}\\
+			&=D_{\sum_{i=1}^n\frac{dx^i}{dt}\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j}\\
+			&=\sum_{i=1}^n\frac{dx^i}{dt}D_{\frac{\partial}{\partial x^i}}\frac{\partial}{\partial x^j}\\
+			&=\sum_{i=1}^n\frac{dx^i}{dt}\sum_{k=1}^n\Gamma_{ij}^k\frac{\partial}{\partial x^k}
+		\end{align*}
+		De manera que
+		\[\frac{DV}{dt}=\sum_{k=1}^n\left(\frac{dV^k}{dt}+\sum_{j=1}^n\sum_{i=1}^nV^j\frac{dx^i}{dt}\Gamma_{ij}^j\right)\frac{\partial}{\partial x^k}=0\]
+		Así que el sistema de ecuaciones diferenciales es
+		\[\frac{dV^k}{dt}+\sum_{i,j}\Gamma^k_{ij}V^j\frac{dx^i}{dt}\]
+		y queremos encontrar $V^k$ para $k=1,\ldots,n$.
+	\end{proof}
+	
+	\begin{ejem}[Campos paralelos en $S^2$]
+		Estudiaremos en transporte paralelo al lo largo de un paralelo en la esfera. Nos referimos a una curva que se obtiene de intersectar la esfera con un plano paralelo al plano $XY$.
+		
+		Denotando por $\varphi$ al ángulo azimutal (en el plano XY) y $\theta$ al polar (respecto al eje Z), nuestra curva es de la forma
+		\[\alpha:=(x(t),y(t),z(t))=(\sen\theta_0\cos t,\sen\theta_0\sen t,\cos\theta_0)\]
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.4\linewidth]{fig14}
+			\caption{Ver \href{}{\texttt{Transporte Paralelo en la Esfera.nb}}}
+			\label{fig:fig14}
+		\end{figure}
+		
+		Así que tenemos las ecuaciones
+		\[\frac{dx}{dt}=-\sen\theta_0\sen t,\qquad\frac{dy}{dt}=\sen\theta_0\cos t,\qquad\frac{dz}{dt}=0\]
+	La métrica esférica con estas coordenadas está dada por
+		\begin{align*}
+		g_{11}=E=\left\langle \frac{\partial}{\partial \theta},\frac{\partial}{\partial \theta}\right\rangle=1,&\qquad g_{22}=G=\left\langle \frac{\partial}{\partial \varphi},\frac{\partial}{\partial \varphi}\right\rangle=\sen^2(\theta)\\
+		g_{12}=\left\langle \frac{\partial}{\partial \theta},\frac{\partial}{\partial \varphi}\right\rangle=g_{21}&=\left\langle \frac{\partial}{\partial \varphi},\frac{\partial}{\partial \theta}\right\rangle=F=0,
+	\end{align*}
+
+	\end{ejem}
+	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
