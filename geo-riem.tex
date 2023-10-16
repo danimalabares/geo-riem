@@ -41,6 +41,7 @@
 \usepackage{amsthm}%Mate
 \usepackage{amssymb}%Mate
 \usepackage{amsmath}%Mate
+\usepackage{mathtools}
 \usepackage{tikz}%Mate (diagramas)
 \usepackage{tikz-cd}
 \usetikzlibrary{%
@@ -1727,8 +1728,33 @@
 	\section{Ejercicios de campos tensoriales}
 	\begin{enumerate}
 		\item Una 1-forma $\theta$ es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$. Un campo vectorial es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$.
+		
 		\item (a) El corchete de Lie es $\R$-lineal como función $\X(M)\times\X(M)\to\X(M)$, pero no es un $(1,2)$-campo tensorial. (b) Resulta que si $\theta$ es una 1-forma, su derivada exterior satisface que $(d\theta)(X,Y)=X\theta Y-Y\theta X-\theta[X,Y]$ (prop. 20.13 \cite{Loring}). Mostrar a partir de esta fórmula que $d\theta$ es un campo tensorial.
+		
+		\item Regla de transformación para tensores. Sea $A$ un campo tensorial, digamos de tipo $(1,2)$. Sean $\xi$ y $\eta$ sistemas coordenados en $U\subset M$. Mostrar que las componentes de $A$ relativas a $\eta$ están determinados como sigue respecto a las componentes de $A$ relativas a $\xi$:
+		\[\prescript{\eta}{}{A}^c_{ab}=\sum_{i,j,k}\frac{\partial y^c}{\partial x^k}\frac{\partial x^i}{\partial y^a}\frac{\partial x^j}{\partial y^b}\prescript{\xi}{}{A}^k_{ij}\]
+		
+		\item Sea $\D$ una derivación tensorial en $M$. Respecto a algún sistema coordenado, (a) si $\D(\partial_i)=\sum F^i_j\partial_j$, mostrar que $\D(dx^j)=-\sum F^i_jdx^i$. (b) Si $A$ es un $(1,2)$-campo tensorial, encontrar una fórmula para las componentes de $\D A$ en términos de $F^j_i$ y de las componentes de $A$.
+		
+		\item Si $V\in\X(M)$ y $A\in\T^1_2(M)$, expresar las componentes de la derivada de Lie $L_VA$ en términos de las componentes de $A$ y de $V$ respecto a algún sistema coordenado.
 	\end{enumerate}
+	
+	\begin{proof}[Solución]
+		\leavevmode
+		\begin{enumerate}
+			\item 
+			\item 
+			\item De las tres igualdades
+			\[dy^c=\sum_k\frac{\partial y^c}{\partial x^k}dx^k,\qquad \frac{\partial}{\partial y^a}=\sum_i\frac{\partial x^i}{\partial y^a}\frac{\partial}{\partial x^i},\qquad \frac{\partial}{\partial y^b}=\sum_j\frac{\partial x^j}{\partial y^b}\frac{\partial}{\partial x^j}\]
+			obtenemos
+			\begin{align*}
+				\prescript{\eta}{}{A}^c_{ab}&=A\left(dy^c,\frac{\partial}{\partial y^a},\frac{\partial}{\partial y^b}\right)\\
+				&=A\left(\sum_k\frac{\partial y^c}{\partial x^k}dx^k,\sum_i\frac{\partial x^i}{\partial y^a}\frac{\partial}{\partial x^i},\sum_j\frac{\partial x^j}{\partial y^b}\frac{\partial}{\partial x^j}\right)\\
+				&=\sum_{i,j,k}\frac{\partial y^c}{\partial x^k}\frac{\partial x^i}{y^a}\frac{\partial x^j}{\partial y^b}A\left(dx^k,\frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j}\right)\\
+				&=\sum_{i,j,k}\frac{\partial y^c}{\partial x^k}\frac{\partial x^i}{y^a}\frac{\partial x^j}{\partial y^b}\prescript{\xi}{}{A}^k_{ij}
+			\end{align*}
+		\end{enumerate}
+	\end{proof}
 	\subsection{Más sobre campos tensoriales}
 	La fórmula sobre la derivada exterior tiene la siguiente generalización:
 	\begin{teo}[Fórmula global para la derivada exterior, teo. 20.14 \cite{Loring}]
@@ -2046,7 +2072,7 @@
 	
 	\begin{prop}
 		Si $x^1,\ldots,x^n$, son coordenadas en una vecindad $U$,
-		\[\Gamma_{ij}^k = \frac{1}{2} g^{km}\sum_m \left( \frac{\partial g_{jm}}{\partial x^i} + \frac{\partial g_{im}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^m} \right)\]
+		\[\Gamma_{ij}^k = \frac{1}{2} \sum_m g^{km}\left( \frac{\partial g_{jm}}{\partial x^i} + \frac{\partial g_{im}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^m} \right)\]
 		donde las funciones $g^{km}$ son las entradas de la matrix inversa de $(g_{ij})$ en cada punto.
 	\end{prop}
 	\begin{proof}
@@ -2160,9 +2186,18 @@
 	\end{align*}
 	Y los símbolos de Christoffel son
 	\begin{align*}
-		\Gamma_{11}^1=\Gamma^2_{12}=\Gamma^1_{22}=\Gamma_{22}^2=0\\
-		\Gamma^2_{11}=\sen^2\theta,\qquad \Gamma_{12}^1=\cot\theta
+		\Gamma_{11}^1=\Gamma^2_{11}=\Gamma^2_{12}=\Gamma_{22}^2=0,		\qquad \Gamma_{12}^2=\cot\theta,\qquad\Gamma^1_{22}=-\sen\theta\cos\theta
 	\end{align*}
+	Definamos un campo vectorial a lo largo de esta curva
+	\[W=a(\varphi)\frac{\partial}{\partial\theta}\Big|_{\alpha(\varphi)}+b(\varphi)\frac{\partial}{\partial \varphi}\Big|_{\alpha(\varphi)}\]
+	Y tratemos de encontrar las funciones $a$ y $b$ mediante la ecuación
+	\[D_{\alpha'}W=0\]
+	suponiendo que $W$ es paralelo. Obtenemos
+	\begin{align*}
+		D_{\frac{\partial}{\partial\varphi}}a(\varphi)\frac{\partial}{\partial\theta}+b(\varphi)\frac{\partial}{\partial\varphi}=0\\
+		\implies a'\frac{\partial}{\partial\theta}+aD_{\frac{\partial}{\partial \varphi}}\frac{\partial}{\partial \theta}+b'\frac{\partial}{\partial\varphi}+bD_{\frac{\partial}{\partial \varphi}}\frac{\partial}{\partial\varphi}=0
+	\end{align*}
+	con condiciones iniciales $a(0)=0$ y $b(0)=1$.
 	\end{ejem}
 	
 	\chapter{Referencias}

@@ -150,28 +150,6 @@
     \field{year}{2013}
   \endentry
 
-  \entry{Lee-intro-curv}{inproceedings}{}
-    \name{author}{1}{}{%
-      {{hash=LicJM}{%
-         prefix={Lee\bibnamedelima (intro},
-         prefixi={L\bibinitperiod\bibinitdelim i\bibinitperiod},
-         family={curv)},
-         familyi={c\bibinitperiod},
-         given={John\bibnamedelima M.},
-         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{LicJM1}
-    \strng{fullhash}{LicJM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{L}
-    \field{sortinithash}{L}
-    \true{singletitle}
-    \field{title}{Riemannian Manifolds: An Introduction to Curvature}
-    \field{year}{1997}
-  \endentry
-
   \entry{Lee-riem}{book}{}
     \name{author}{1}{}{%
       {{hash=LrJ}{%
