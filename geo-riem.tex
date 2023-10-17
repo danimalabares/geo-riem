@@ -2198,7 +2198,86 @@
 		\implies a'\frac{\partial}{\partial\theta}+aD_{\frac{\partial}{\partial \varphi}}\frac{\partial}{\partial \theta}+b'\frac{\partial}{\partial\varphi}+bD_{\frac{\partial}{\partial \varphi}}\frac{\partial}{\partial\varphi}=0
 	\end{align*}
 	con condiciones iniciales $a(0)=0$ y $b(0)=1$.
+	
+	Sustituyendo con los símbolos de Christoffel, obtenemos que
+	\begin{align*}
+		D_{\frac{\partial}{\partial \varphi}}\frac{\partial}{\partial \theta}&=\cot\theta\frac{\partial}{\partial \varphi}\\
+		D_{\frac{\partial}{\partial \varphi}}\frac{\partial}{\partial \varphi}&=-\sen\theta\cos\theta\frac{\partial}{\partial \theta}\\
+	\end{align*}
+	Así que
+	\[a'\frac{\partial}{\partial\theta}+a\cot\theta\frac{\partial}{\partial \varphi}+b'\frac{\partial}{\partial\varphi}-b\sen\theta\cos\theta\frac{\partial}{\partial \theta}=0\]
+	Y nuestro problema se reduce a solucionar el sistema
+	\[\begin{cases}
+		a'-b\sen\theta_0\cos\theta_0=0\\
+		b'+a\cot\theta_0=0
+	\end{cases}\]
+	fijando $\theta_0$ por tratarse de un parelelo, por lo que las funciones $a$ y $b$ dependen de $\varphi$. Derivando respecto a $\varphi$ y sustituyendo obtenemos
+	\begin{align*}
+		b''+a'\cot\theta_0=0\\
+		b''+b\sen\theta_0\cos\theta_0\frac{\cos\theta_0}{\sen\theta_0}=0\\
+		b''+b\cos^2\theta_0=0
+	\end{align*}
+	Que es un oscilador armónico, cuya solución es
+	\begin{align*}
+		b(\varphi)=\cos(\cos\theta_0\varphi)
+	\end{align*}
+	Y al sustituir para $a$ obtenemos
+	\begin{align*}
+		a'=\cos(\cos\theta_0\varphi)\sen\theta_0\cos\theta_0\\
+		a(\varphi)=\sen\theta_0\sen(\cos\theta_0\varphi)
+	\end{align*}
+	
+	\begin{figure}[H]
+	\begin{center}
+		\begin{subfigure}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{fig15a}
+			\caption*{$\varphi=0$}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{fig15b}
+			\caption*{$\varphi=2\pi/8$}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{fig15c}
+			\caption*{$\varphi=2\pi/4$}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{fig15d}
+			\caption*{$\varphi=\pi$}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{fig15e}
+			\caption*{$\varphi=3\pi/2$}
+		\end{subfigure}
+		\begin{subfigure}[t]{0.4\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{fig15f}
+			\caption*{$\varphi=2\pi$}
+		\end{subfigure}
+	\end{center}
+	\caption*{El transporte paralelo de $W$ (verde) a lo largo del paralelo con $\theta=\pi/5$. Los vectores en rojo son la base canónica.}
+\end{figure}
 	\end{ejem}
+	
+	Ahora tratemos de encontrar una ecuación general para describir esta situación:
+	\begin{align*}
+		D_{\frac{d x^1}{d x^1}+\frac{d x^2}{d t}\frac{\partial}{\partial x^2}}W=0\\
+		\frac{d x^1}{dt}D_{\frac{\partial}{\partial x^1}}W+\frac{dx^2}{dt}D_{\frac{\partial}{\partial x^2}}W=0
+	\end{align*}
+	Luego
+	\begin{align*}
+		\frac{dx^1}{dt}D_{\frac{\partial}{\partial x^1}}\left(a_1\frac{\partial}{\partial x^1}+a_2\frac{\partial}{\partial x^2}\right)+\frac{dx^2}{dt}D_{\frac{\partial}{\partial x^2}}\left(a_1\frac{\partial}{\partial x^1}+a_2\frac{\partial}{\partial x^2}\right)=&0\\
+		\implies \frac{dx^1}{dt}\left(\frac{\partial a_1}{\partial x^1}\frac{\partial}{\partial x^1}+a_1D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^1}+
+		\frac{\partial a_2}{\partial x^1}\frac{\partial}{\partial x^2}+a_2D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^2}\right)\\
+		+ \frac{dx^2}{dt}\left(\frac{\partial a_1}{\partial x^1}\frac{\partial}{\partial x^1}+a_1D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^1}+
+		\frac{\partial a_2}{\partial x^1}\frac{\partial}{\partial x^2}+a_2D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^2}\right)&=0
+	\end{align*}
+
 	
 	\chapter{Referencias}
 	\printbibliography[heading=none]

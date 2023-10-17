@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  16 OCT 2023 10:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  17 OCT 2023 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1573,16 +1573,53 @@ File: fig14.png Graphic file (type png)
 <use fig14.png>
 Package pdftex.def Info: fig14.png  used on input line 2176.
 (pdftex.def)             Requested size: 154.66681pt x 155.31053pt.
- [63 <./fig14.png>] [64]
+ [63 <./fig14.png>]
+<fig15a.png, id=706, 360.34625pt x 370.38374pt>
+File: fig15a.png Graphic file (type png)
+<use fig15a.png>
+Package pdftex.def Info: fig15a.png  used on input line 2234.
+(pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
+<fig15b.png, id=707, 360.34625pt x 370.38374pt>
+File: fig15b.png Graphic file (type png)
+<use fig15b.png>
+Package pdftex.def Info: fig15b.png  used on input line 2239.
+(pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
+<fig15c.png, id=708, 360.34625pt x 370.38374pt>
+File: fig15c.png Graphic file (type png)
+<use fig15c.png>
+Package pdftex.def Info: fig15c.png  used on input line 2244.
+(pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
+<fig15d.png, id=709, 360.34625pt x 370.38374pt>
+File: fig15d.png Graphic file (type png)
+<use fig15d.png>
+Package pdftex.def Info: fig15d.png  used on input line 2249.
+(pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
+<fig15e.png, id=710, 360.34625pt x 370.38374pt>
+File: fig15e.png Graphic file (type png)
+<use fig15e.png>
+Package pdftex.def Info: fig15e.png  used on input line 2254.
+(pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
+<fig15f.png, id=711, 360.34625pt x 370.38374pt>
+File: fig15f.png Graphic file (type png)
+<use fig15f.png>
+Package pdftex.def Info: fig15f.png  used on input line 2259.
+(pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
+ [64]
+Overfull \vbox (7.44443pt too high) has occurred while \output is active []
+
+
+[65 <./fig15a.png (PNG copy)> <./fig15b.png (PNG copy)> <./fig15c.png (PNG copy
+)> <./fig15d.png (PNG copy)> <./fig15e.png (PNG copy)> <./fig15f.png (PNG copy)
+>] [66]
 Chapter 4.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 2204--2204
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 2283--2283
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
  []
 
-[65
+[67
 
 ] (./geo-riem.aux)
 Package rerunfilecheck Info: File `geo-riem.out' has not changed.
@@ -1592,10 +1629,10 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39203 strings out of 476025
- 797217 string characters out of 5790018
+ 39266 strings out of 476025
+ 798153 string characters out of 5790018
  1875388 words of memory out of 5000000
- 58841 multiletter control sequences out of 15000+600000
+ 58901 multiletter control sequences out of 15000+600000
  535104 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,89p,1878b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1620,10 +1657,10 @@ e/2023/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2023/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fon
 ts/type1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (65 pages, 2006086 bytes).
+Output written on geo-riem.pdf (67 pages, 2961199 bytes).
 PDF statistics:
- 859 PDF objects out of 1000 (max. 8388607)
- 728 compressed objects within 8 object streams
- 242 named destinations out of 1000 (max. 500000)
- 335 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 875 PDF objects out of 1000 (max. 8388607)
+ 736 compressed objects within 8 object streams
+ 245 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
