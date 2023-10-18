@@ -2165,7 +2165,7 @@
 	\begin{ejem}[Campos paralelos en $S^2$]
 		
 		
-		Ver \href{https://github.com/danimalabares/geo-riem/blob/main/Transporte%20Paralelo%20en%20la%20Esfera.nb}{\texttt{Transporte Paralelo en la Esfera.nb}} y \href{https://github.com/danimalabares/curvas-superficies/blob/main/curvas-superficies.pdf}{\texttt{curvas-superficies.pdf}}, pág. 51.
+		Ver \href{https://github.com/danimalabares/geo-riem/blob/main/Transporte%20Paralelo%20en%20la%20Esfera.nb}{\texttt{Transporte Paralelo en la Esfera.nb}}.
 		
 		Estudiaremos en transporte paralelo al lo largo de un paralelo en la esfera. Nos referimos a una curva que se obtiene de intersectar la esfera con un plano paralelo al plano $XY$.
 		
@@ -2224,7 +2224,7 @@
 	Y al sustituir para $a$ obtenemos
 	\begin{align*}
 		a'=\cos(\cos\theta_0\varphi)\sen\theta_0\cos\theta_0\\
-		a(\varphi)=\sen\theta_0\sen(\cos\theta_0\varphi)
+		a(\varphi)=\sen\theta_0\sen(\varphi\cos\theta_0)
 	\end{align*}
 	
 	\begin{figure}[H]
@@ -2264,6 +2264,16 @@
 \end{figure}
 	\end{ejem}
 	
+	\begin{ejem}[Transporte paralelo en $S^2$ usando el cono tangente]
+		También es posible calcular el transporte paralelo a lo largo de este paralalo usando una isometría local con el cono tangente a la esfera a lo largo de la curva. Una demostración muy detallada está en \href{https://github.com/danimalabares/curvas-superficies/blob/main/curvas-superficies.pdf}{\texttt{curvas-superficies.pdf}}, pág. 51.
+	\begin{figure}[H]
+	\begin{center}
+			\centering
+			\includegraphics[width=0.5\linewidth]{fig16}
+	\end{center}
+	\end{figure}
+	\end{ejem}
+	
 	Ahora tratemos de encontrar una ecuación general para describir esta situación:
 	\begin{align*}
 		D_{\frac{d x^1}{d x^1}+\frac{d x^2}{d t}\frac{\partial}{\partial x^2}}W=0\\
@@ -2277,6 +2287,7 @@
 		+ \frac{dx^2}{dt}\left(\frac{\partial a_1}{\partial x^1}\frac{\partial}{\partial x^1}+a_1D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^1}+
 		\frac{\partial a_2}{\partial x^1}\frac{\partial}{\partial x^2}+a_2D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^2}\right)&=0
 	\end{align*}
+
 
 	
 	\chapter{Referencias}
