@@ -2158,7 +2158,7 @@
 		De manera que
 		\[\frac{DV}{dt}=\sum_{k=1}^n\left(\frac{dV^k}{dt}+\sum_{j=1}^n\sum_{i=1}^nV^j\frac{dx^i}{dt}\Gamma_{ij}^j\right)\frac{\partial}{\partial x^k}=0\]
 		Así que el sistema de ecuaciones diferenciales es
-		\[\frac{dV^k}{dt}+\sum_{i,j}\Gamma^k_{ij}V^j\frac{dx^i}{dt}\]
+		\[\frac{dV^k}{dt}+\sum_{i,j}\Gamma^k_{ij}V^j\frac{dx^i}{dt}=0\]
 		y queremos encontrar $V^k$ para $k=1,\ldots,n$.
 	\end{proof}
 	
@@ -2276,7 +2276,7 @@
 	
 	Ahora tratemos de encontrar una ecuación general para describir esta situación:
 	\begin{align*}
-		D_{\frac{d x^1}{d x^1}+\frac{d x^2}{d t}\frac{\partial}{\partial x^2}}W=0\\
+		D_{\frac{d x^1}{dt}\frac{\partial}{\partial x^1}+\frac{d x^2}{d t}\frac{\partial}{\partial x^2}}W=0\\
 		\frac{d x^1}{dt}D_{\frac{\partial}{\partial x^1}}W+\frac{dx^2}{dt}D_{\frac{\partial}{\partial x^2}}W=0
 	\end{align*}
 	Luego
@@ -2287,8 +2287,76 @@
 		+ \frac{dx^2}{dt}\left(\frac{\partial a_1}{\partial x^1}\frac{\partial}{\partial x^1}+a_1D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^1}+
 		\frac{\partial a_2}{\partial x^1}\frac{\partial}{\partial x^2}+a_2D_{\frac{\partial}{\partial x^1}}D\frac{\partial}{\partial x^2}\right)&=0
 	\end{align*}
-
-
+	
+	\begin{defn}
+		Dado un vector $W_0\in T_pM$ a lo largo de una curva $\gamma$ en una variedad $M$ con $\gamma(t_0)=p$, el vector en $W_1\in T_qM$ que se obtiene al recorrer la curva $\gamma$ hasta el punto $\gamma(t_1)=q$ se llama \textbf{transporte paralelo de $W_0$}.
+	\end{defn}
+	
+	\begin{prop}[\cite{Loring-dif}\textbf{, prop. 14.6}]
+		Si $M$ es Riemanniana, transporte paralelo preserva el producto interno en el sentido de que si $V_0,W_0\in T_pM$, entonces $\langle V_0,W_0\rangle=\langle V_1,W_1\rangle$ con la notación de la definición anterior.
+	\end{prop}
+	\begin{proof}
+		Por la compatibilidad de la métrica Riemanniana
+		\[\frac{d}{dt}\left\langle V(t),W(t)\right\rangle=\left\langle \frac{DV}{dt},W\right\rangle+\left\langle V,\frac{DW}{dt}\right\rangle=0\]
+		ya que $V$ y $W$ son paralelos.
+	\end{proof}
+	
+	\section{Geodésicas}
+	En la sección anterior definimos una curva $\gamma:I\to M$ como geodésica si su campo de velocidades $\gamma'\in\X(\gamma)$ es paralelo, es decir, si $\frac{d\gamma'}{dt}=0$.
+	
+	Suponiendo que las coordenadas de $\gamma$ son $h\circ\gamma(t)=x^1(t),\ldots,x^n(t)$ para alguna carta coordenada $h$, podemos el campo de velocidades como
+	\[\gamma'=\sum_{i=1}^n\frac{dx^i}{dt}\frac{\partial}{\partial x^i}\]
+	y la condición de ser geodésica como
+	\begin{gather*}
+		\frac{d^2x^1}{dt^2}+\sum_{i,j=1}^n\Gamma_{ij}^1\frac{dx^i}{dt}\frac{dx^j}{dt}=0\\
+		\vdots\\
+		\frac{d^2x^n}{dt^2}+\sum_{i,j=1}^n\Gamma_{ij}^n\frac{dx^i}{dt}\frac{dx^j}{dt}=0
+	\end{gather*}
+	Introduciendo las variables
+	\begin{gather*}
+		\frac{dx^1}{dt}=y^1,\qquad	\ldots \qquad
+		\frac{dx^n}{dt}=y^n
+	\end{gather*}
+	Obtenemos el sistema
+	\begin{gather*}
+		\frac{dy^1}{dt}+\sum\Gamma_{ij}^1y^iy^j=0\\
+		\vdots\\
+		\frac{dy^n}{dt}+\sum\Gamma_{ij}^ny^iy^j=0
+	\end{gather*}
+	De hecho podemos considerar la curva $\tilde{\gamma}(t)=\gamma'(t)$ en el haz tangente $TM$,
+	\[\begin{tikzcd}
+		I\arrow{r}{\tilde{\gamma}}\arrow[swap]{rd}{\tilde{h}\circ\tilde{\gamma}}& TM\arrow{d}{\tilde{h}}\\
+			&\R^{2n}		
+	\end{tikzcd}\]
+	que dará lugar al \textbf{\textit{flujo geodésico}}.
+	
+	\begin{ejem}
+		En el plano hiperbólico $\Hy^2$ con símbolos de Christoffel
+		\[\Gamma^1_{11}=\Gamma^2_{12}=\Gamma^1_{22}=0,\qquad \Gamma_{11}^2=\frac{1}{y},\qquad \Gamma_{22}^2=\Gamma^1_{12}=-\frac{1}{y}\]
+		obtenemos las ecuaciones
+		\begin{align*}
+			\frac{d^2x}{dt^2}+\Gamma_{12}^1\frac{dx}{dt}\frac{dy}{dt}+\Gamma^1_{21}\frac{dy}{dt}\frac{dx}{dt}=0\\
+			\frac{d^2y}{dt^2}+\Gamma_{11}^2\frac{dx}{dt}\frac{dx}{dt}+\Gamma^2_{22}\frac{dy}{dt}\frac{dy}{dt}=0
+		\end{align*}
+		y sustituyendo
+		\begin{align*}
+			\frac{d^2x}{dt^2}-2\frac{1}{y}\frac{dx}{dt}\frac{dy}{dt}&=0\\
+			\frac{d^2y}{dt^2}+\frac{1}{y}\left(\frac{dx}{dt}\right)^2-\frac{1}{y}\left(\frac{dy}{dt}\right)^2&=0
+		\end{align*}
+		Ahora si una curva $\gamma(t)=(x(t),y(t))$ es geodésica y $x(t)=0$, tenemos 
+		\[\frac{d^2y}{dt^2}-\frac{1}{y}\left(\frac{dy}{dt}\right)^2=0\]
+		cuya solución es, de hecho, $y(t)=e^t$. Para verlo simplemente notemos que en este caso $\left(\frac{dy}{dt}\right)^2=e^{2t}$ y luego $\frac{1}{y}\left(\frac{dy}{dt}\right)^2=e^t$. Entonces, $\gamma$ es una curva vertical recorrida a velocidad exponencial, $\gamma(t)=(0,e^t)$.
+		
+			\[\begin{tikzpicture}
+			% Axes
+			\draw[->] (-3,0) -- (3,0) node[right] {};
+			\draw[->] (0,-2) -- (0,3) node[above] {};
+			
+			% Function plot
+			\draw[blue, very thick, domain=0:2.8] plot (0,\x);
+		\end{tikzpicture}\]
+		
+	\end{ejem}
 	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
