@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  23 OCT 2023 09:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  23 OCT 2023 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1631,10 +1631,17 @@ Package pdftex.def Info: fig16.png  used on input line 2272.
 LaTeX Warning: Hyper reference `ejem:chsitorffel-hip' on page 67 undefined on i
 nput line 2312.
 
-[67] [68] [69]
+[67] [68]
+Overfull \hbox (43.81406pt too wide) in paragraph at lines 2388--2389
+[]\OT1/ppl/b/n/10 Ejercicio \OT1/ppl/m/n/10 (Geod[]esicas en una su-per-fi-cie 
+de rev-oluci[]on)\OT1/ppl/b/n/10 . []\OT1/ppl/m/n/10 (Ver [][]\OT1/pcr/m/n/10 G
+eod[]esicas en una superficie
+ []
+
+[69]
 Chapter 4.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 2415--2415
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 2416--2416
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
@@ -1653,8 +1660,8 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39336 strings out of 476025
- 799532 string characters out of 5790018
+ 39335 strings out of 476025
+ 799526 string characters out of 5790018
  1875388 words of memory out of 5000000
  58958 multiletter control sequences out of 15000+600000
  536207 words of font info for 100 fonts, out of 8000000 for 9000
@@ -1682,10 +1689,10 @@ texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (70 pages, 3184007 bytes).
+Output written on geo-riem.pdf (70 pages, 3184599 bytes).
 PDF statistics:
- 913 PDF objects out of 1000 (max. 8388607)
- 768 compressed objects within 8 object streams
- 256 named destinations out of 1000 (max. 500000)
+ 914 PDF objects out of 1000 (max. 8388607)
+ 769 compressed objects within 8 object streams
+ 255 named destinations out of 1000 (max. 500000)
  386 words of extra memory for PDF output out of 10000 (max. 10000000)
 
