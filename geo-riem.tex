@@ -106,7 +106,7 @@
 
 \title{Geometría Riemanniana}
 
-\author{Semestre 2024-1\\ \\ \href{https://github.com/danimalabares/geo-riem/blob/main/geo-riem.pdf}{github.com/danimalabares/geo-riem}}
+\author{Semestre 2024-1\\ \\ \href{https://github.com/dan-gc/geo-riem/blob/main/geo-riem.pdf}{github.com/dan-gc/geo-riem}}
 \begin{document}
 	\maketitle
 	\phantomsection
@@ -2034,7 +2034,7 @@
 	\end{equation}
 	
 	 Veamos el siguiente ejemplo:
-	\begin{ejem}[Símbolos de Christoffel en $\Hy^2$]
+	\begin{ejem}[Símbolos de Christoffel en $\Hy^2$]\label{ejem:christoffel-hip}
 		Dada la métrica en el semiplano superior
 		\begin{align*}
 			g_{11}=E=\left\langle \frac{\partial}{\partial x},\frac{\partial}{\partial x}\right\rangle=\frac{1}{y^2_0},&\qquad g_{22}=G=\left\langle \frac{\partial}{\partial y},\frac{\partial}{\partial y}\right\rangle=\frac{1}{y^2_0}\\
@@ -2301,6 +2301,34 @@
 		ya que $V$ y $W$ son paralelos.
 	\end{proof}
 	
+	\subsection{Ejercicios 20 de octubre}
+	Con la métrica en el semiplano superior dada por $g_{11}=g_{22}=\frac{1}{y^2}$ y $g_{12}=0$,
+	\begin{enumerate}
+		\item Encuentra los símbolos de Christoffel.
+		\item Sea $v_0=(0,1)$ un vector tangente al punto $(0,1)\in\Hy^2$, considera el transporte paralelo $v(t)$ a lo largo de la curva $x=t$, $y=1$. Muestra que el ángulo entre $v(t)$ y la dirección vertical en sentido de las manecillas del reloj es $t$.
+	\end{enumerate}
+	\begin{proof}[Solución]\leavevmode
+		\begin{enumerate}
+			\item Con cuentas análogas a \hyperref[ejem:chsitorffel-hip]{las que hicimos antes} obtenemos que
+		\[\Gamma^1_{11}=\Gamma^2_{12}=\Gamma^1_{22}=0,\qquad \Gamma_{11}^2=\frac{1}{y},\qquad \Gamma_{22}^2=\Gamma^1_{12}=-\frac{1}{y}\]
+%			\item Tenemos las ecuaciones
+%			\begin{align*}
+%				\frac{da}{dt}-\frac{b}{y}=0\qquad
+%				\frac{db}{dt}+\frac{a}{y}=0
+%			\end{align*}
+%			que en nuestra curva se traducen a
+%			\begin{align*}
+%				\frac{da}{dt}-b=0\qquad
+%				\frac{db}{dt}+a=0
+%			\end{align*}
+%			Tomando
+%			\[a=\sen(\theta(t))\qquad b=\cos(\theta(t))\]
+%			obtenemos
+%			\[a'=\cos(\theta(t))\theta'(t)\qquad b'=-\sen(\theta(t))\theta'(t)\]
+%			y con $\theta=t$ tenemos la solución.
+		\end{enumerate}
+	\end{proof}
+	
 	\section{Geodésicas}
 	En la sección anterior definimos una curva $\gamma:I\to M$ como geodésica si su campo de velocidades $\gamma'\in\X(\gamma)$ es paralelo, es decir, si $\frac{d\gamma'}{dt}=0$.
 	
@@ -2355,9 +2383,34 @@
 			% Function plot
 			\draw[blue, very thick, domain=0:2.8] plot (0,\x);
 		\end{tikzpicture}\]
-		
 	\end{ejem}
 	
+	\begin{ejer}
+		Una superficie de revolución parametrizada por
+		\begin{align*}
+			(u,v)\mapsto(x,y,z):=(f(v)\cos u,f(v)\sen u,g(v))
+		\end{align*}
+		tiene métrica
+		\begin{align*}
+			E=f^2(v),\qquad F=0,\qquad G=(f'(v))^2+(g'(v))^2
+		\end{align*}
+		y símbolos de Christoffel
+		\begin{gather*}
+			\Gamma^1_{11}=\Gamma^1_{22}=\Gamma^2_{12}=0\\
+			\Gamma^1_{12}=\frac{f(v)f'(v)}{f^(v)},\qquad \Gamma^2_{11}=-\frac{f(v)f'(v)}{(f'(v))^2+(g'(v))^2},\qquad \Gamma^2_{22}=\frac{f'f''+g'g''}{(f')^2+(g')^2} 
+		\end{gather*}
+		Así que las ecuaciones de las geodésicas son
+%		\begin{align*}
+%			\frac{d^2u}{dt}+\Gamma^1_11\left(\frac{du}{dt}\right)^2+\Gamma^1_{12}\frac{du}{dt}\frac{dv}{dt}+\Gamma^2_{22}\left(\frac{dv}{dt}\right)^2&=0\\
+%			\frac{d^2v}{dt}+\Gamma^2_{11}\left(\frac{du}{dt}\right)^2+2\Gamma^2_{12}\frac{du}{dt}\frac{dv}{dt}+\Gamma^2_{22\left(\frac{dv}{dt}\right)^2&=0
+%		\end{align*}
+		
+		\begin{align*}
+			\frac{d^2}{dt^2}+2\frac{f(v)f'(v)}{f^2(v)}\frac{du}{dt}\frac{dv}{dt}&=0\\
+			\frac{d^2v}{dt^2}-\frac{f(v)f'(v)}{(f'(v))^2+(g'(v))^2}\left(\frac{du}{dt}\right)^2+\frac{f'(v)f''(v)+g'(v)g''(v)}{(f'(v))^2+(g'(v))^2}\left(\frac{du}{dt}\right)^2&=0
+		\end{align*}
+		Los meridianos en una superficie de revolución son curvas con $u(t)=u_0$, por lo que la primera ecuación se satisface trivialmente. 
+	\end{ejer}	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
