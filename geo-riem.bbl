@@ -48,6 +48,31 @@
     \field{year}{1992}
   \endentry
 
+  \entry{DoCarmo-sup}{book}{}
+    \name{author}{1}{}{%
+      {{hash=dCM}{%
+         prefix={do},
+         prefixi={d\bibinitperiod},
+         family={Carmo},
+         familyi={C\bibinitperiod},
+         given={M.P.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Prentice Hall}%
+    }
+    \strng{namehash}{dCM1}
+    \strng{fullhash}{dCM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \true{singletitle}
+    \field{title}{Differential geometry of curves and surfaces.}
+    \field{year}{1976}
+  \endentry
+
   \entry{DoCarmo}{book}{}
     \name{author}{1}{}{%
       {{hash=DCM}{%
