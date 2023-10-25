@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  24 OCT 2023 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  25 OCT 2023 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1346,7 +1346,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [14] [15
 
 ] [16]
-<fig1.png, id=306, 459.7175pt x 470.75874pt>
+<fig1.png, id=311, 459.7175pt x 470.75874pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
 Package pdftex.def Info: fig1.png  used on input line 635.
@@ -1357,7 +1357,7 @@ Overfull \hbox (0.72678pt too wide) in paragraph at lines 700--701
 /m/n/10 , con-sid-er-e-mos su dis-tan-cia al en-tero menor
  []
 
-<fig9.png, id=322, 361.35pt x 363.3575pt>
+<fig9.png, id=327, 361.35pt x 363.3575pt>
 File: fig9.png Graphic file (type png)
 <use fig9.png>
 Package pdftex.def Info: fig9.png  used on input line 712.
@@ -1385,12 +1385,12 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 8
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<fig6.png, id=369, 361.35pt x 354.32375pt>
+<fig6.png, id=374, 361.35pt x 354.32375pt>
 File: fig6.png Graphic file (type png)
 <use fig6.png>
 Package pdftex.def Info: fig6.png  used on input line 889.
 (pdftex.def)             Requested size: 174.00163pt x 170.61952pt.
-<fig7.png, id=370, 361.35pt x 354.32375pt>
+<fig7.png, id=375, 361.35pt x 354.32375pt>
 File: fig7.png Graphic file (type png)
 <use fig7.png>
 Package pdftex.def Info: fig7.png  used on input line 894.
@@ -1401,7 +1401,7 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 887--897
  []
 
 [24]
-<fig8.png, id=383, 361.35pt x 354.32375pt>
+<fig8.png, id=388, 361.35pt x 354.32375pt>
 File: fig8.png Graphic file (type png)
 <use fig8.png>
 Package pdftex.def Info: fig8.png  used on input line 922.
@@ -1415,12 +1415,12 @@ nadas cil[]^^Pndricas a carte-sianas manda $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r
 ; ^^R; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7!
  []
 
-<fig10.png, id=397, 361.35pt x 401.5pt>
+<fig10.png, id=402, 361.35pt x 401.5pt>
 File: fig10.png Graphic file (type png)
 <use fig10.png>
 Package pdftex.def Info: fig10.png  used on input line 979.
 (pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
-<fig11.png, id=398, 361.35pt x 401.5pt>
+<fig11.png, id=403, 361.35pt x 401.5pt>
 File: fig11.png Graphic file (type png)
 <use fig11.png>
 Package pdftex.def Info: fig11.png  used on input line 984.
@@ -1430,7 +1430,7 @@ Overfull \hbox (1.90001pt too wide) in paragraph at lines 977--987
 [][] [] 
  []
 
-<fig12.png, id=399, 361.35pt x 401.5pt>
+<fig12.png, id=404, 361.35pt x 401.5pt>
 File: fig12.png Graphic file (type png)
 <use fig12.png>
 Package pdftex.def Info: fig12.png  used on input line 990.
@@ -1469,7 +1469,7 @@ Overfull \hbox (14.01784pt too wide) in paragraph at lines 1325--1327
  []
 
 [38]
-<fig13.png, id=510, 1041.8925pt x 469.755pt>
+<fig13.png, id=515, 1041.8925pt x 469.755pt>
 File: fig13.png Graphic file (type png)
 <use fig13.png>
 Package pdftex.def Info: fig13.png  used on input line 1353.
@@ -1575,38 +1575,38 @@ m/n/10 Transporte Paralelo en la Esfera.nb[][]\OT1/ppl/m/n/10 .
  []
 
 [62]
-<fig14.png, id=713, 478.78876pt x 480.79625pt>
+<fig14.png, id=718, 478.78876pt x 480.79625pt>
 File: fig14.png Graphic file (type png)
 <use fig14.png>
 Package pdftex.def Info: fig14.png  used on input line 2176.
 (pdftex.def)             Requested size: 154.66681pt x 155.31053pt.
  [63 <./fig14.png>]
-<fig15a.png, id=720, 360.34625pt x 370.38374pt>
+<fig15a.png, id=725, 360.34625pt x 370.38374pt>
 File: fig15a.png Graphic file (type png)
 <use fig15a.png>
 Package pdftex.def Info: fig15a.png  used on input line 2234.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15b.png, id=721, 360.34625pt x 370.38374pt>
+<fig15b.png, id=726, 360.34625pt x 370.38374pt>
 File: fig15b.png Graphic file (type png)
 <use fig15b.png>
 Package pdftex.def Info: fig15b.png  used on input line 2239.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15c.png, id=722, 360.34625pt x 370.38374pt>
+<fig15c.png, id=727, 360.34625pt x 370.38374pt>
 File: fig15c.png Graphic file (type png)
 <use fig15c.png>
 Package pdftex.def Info: fig15c.png  used on input line 2244.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15d.png, id=723, 360.34625pt x 370.38374pt>
+<fig15d.png, id=728, 360.34625pt x 370.38374pt>
 File: fig15d.png Graphic file (type png)
 <use fig15d.png>
 Package pdftex.def Info: fig15d.png  used on input line 2249.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15e.png, id=724, 360.34625pt x 370.38374pt>
+<fig15e.png, id=729, 360.34625pt x 370.38374pt>
 File: fig15e.png Graphic file (type png)
 <use fig15e.png>
 Package pdftex.def Info: fig15e.png  used on input line 2254.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15f.png, id=725, 360.34625pt x 370.38374pt>
+<fig15f.png, id=730, 360.34625pt x 370.38374pt>
 File: fig15f.png Graphic file (type png)
 <use fig15f.png>
 Package pdftex.def Info: fig15f.png  used on input line 2259.
@@ -1621,7 +1621,7 @@ Overfull \vbox (7.44443pt too high) has occurred while \output is active []
 [65 <./fig15a.png (PNG copy)> <./fig15b.png (PNG copy)> <./fig15c.png (PNG copy
 )> <./fig15d.png (PNG copy)> <./fig15e.png (PNG copy)> <./fig15f.png (PNG copy)
 >]
-<fig16.png, id=736, 395.4775pt x 396.48125pt>
+<fig16.png, id=741, 395.4775pt x 396.48125pt>
 File: fig16.png Graphic file (type png)
 <use fig16.png>
 Package pdftex.def Info: fig16.png  used on input line 2272.
@@ -1632,41 +1632,55 @@ LaTeX Warning: Hyper reference `ejem:chsitorffel-hip' on page 67 undefined on i
 nput line 2312.
 
 [67] [68]
-<fig17.png, id=759, 682.55pt x 680.5425pt>
+<fig17.png, id=764, 682.55pt x 680.5425pt>
 File: fig17.png Graphic file (type png)
 <use fig17.png>
 Package pdftex.def Info: fig17.png  used on input line 2392.
 (pdftex.def)             Requested size: 193.33647pt x 192.76244pt.
+<fig18.jpeg, id=765, 1171.37625pt x 1188.44pt>
+File: fig18.jpeg Graphic file (type jpg)
+<use fig18.jpeg>
+Package pdftex.def Info: fig18.jpeg  used on input line 2402.
+(pdftex.def)             Requested size: 154.66681pt x 156.91446pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [69 <./fig17.png>]
+<fig19.png, id=774, 600.2425pt x 261.97874pt>
+File: fig19.png Graphic file (type png)
+<use fig19.png>
+Package pdftex.def Info: fig19.png  used on input line 2408.
+(pdftex.def)             Requested size: 193.33647pt x 84.38255pt.
+ [70 <./fig18.jpeg> <./fig19.png>] [71] [72]
 Chapter 4.
-[70
+[73
 
 ]
 Chapter 5.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 2422--2422
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 2494--2494
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
  []
 
-[71
+[74
 
 ] (./geo-riem.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `geo-riem.out' has not changed.
-(rerunfilecheck)             Checksum: 060B144FD5A58181E7DB25AFE1F90C07;5993.
+(rerunfilecheck)             Checksum: 58A1B410BCCD598EFF152CCBD9F09D07;6181.
 Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 \openout1 = `geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39359 strings out of 476025
- 799999 string characters out of 5790018
+ 39401 strings out of 476025
+ 800547 string characters out of 5790018
  1875388 words of memory out of 5000000
- 58977 multiletter control sequences out of 15000+600000
+ 59004 multiletter control sequences out of 15000+600000
  536207 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,89p,1878b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1692,10 +1706,10 @@ texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (71 pages, 3226655 bytes).
+Output written on geo-riem.pdf (74 pages, 3326380 bytes).
 PDF statistics:
- 929 PDF objects out of 1000 (max. 8388607)
- 781 compressed objects within 8 object streams
- 260 named destinations out of 1000 (max. 500000)
- 399 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 970 PDF objects out of 1000 (max. 8388607)
+ 814 compressed objects within 9 object streams
+ 272 named destinations out of 1000 (max. 500000)
+ 417 words of extra memory for PDF output out of 10000 (max. 10000000)
 

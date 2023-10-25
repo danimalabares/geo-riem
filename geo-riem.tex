@@ -2394,6 +2394,78 @@
 		\end{figure}
 	\end{ejer*}	
 	
+	\section{La aplicación exponencial}
+	Queremos generalizar la siguiente idea:
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\linewidth]{fig18}
+	\end{figure}
+	El chiste es que el espacio tangente en un punto nos da un parámetro para desplazarnos sobre la variedad:
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{fig19}
+		\caption*{(Imagen de \cite{Lee} donde la variedad es un grupo de Lie.)
+			%En este caso se toma el espacio tangente a la identidad, y el espacio tangente es un álgebra de Lie. (En este curso no veremos más sobre esta construcción)
+		}
+	\end{figure}
+	Nos gustaría definir algo así:
+	\begin{align*}
+		\exp_p:T_pM&\to M\\
+		v&\mapsto \gamma(1)
+	\end{align*}
+	donde $\gamma$ es la única geodésica que pasa por $p$ con velocidad $v$ (que existe por ser la solución de una ecuación diferencial). Pero, ¿está bien definida? La respuesta es que no siempre. Por ejemplo, si la variedad es un cono menos su vértice y tomamos un vector en la dirección de un meridiano muy cerca del vértice, es posible que la geodésica no esté definida en 1.
+	
+	Para definir correctamente la exponencial debemos restringir el dominio dentro del espacio tangente. El truco es tomar una vecindad muy pequeña cerca del origen para que los vectores tengan magnitud pequeña, así las geodésicas pasarán por el punto a velocidad muy pequeña y cuando las evaluemos en 1 no se habrán ido muy lejos.
+	
+	\textit{Las referencias a \cite{DoCarmo} que usaremos en esta sección corresponden al capítulo III.}
+	
+	\begin{prop}[Teos. 2.7 \cite{DoCarmo} y 14.8 \cite{Loring-dif}]
+		Dado $p\in M$, existe una vecindad $U$ de $p$ en $M$ y un número $\varepsilon>0$ tal que para cualquier $q\in U$ y $v\in T_qM$ con $|v|<\varepsilon$ hay una única geodésica $\gamma:(-2,2)\to M$ con $\gamma(0)=q$ y $\gamma'(0)=v$.
+	\end{prop}
+	De hecho, la demostración de esta proposición ya casi está. Por el teorema de existencia y unicidad de ecuaciones diferenciales, sabemos que existen estas geodésicas definidas en algún intervalo, digamos $\gamma:(-\delta,\delta)\to M$ para algún $\delta>0$. Sólo debemos reajustar el dominio, para lo cual usaremos el siguiente lema:
+	
+	\begin{lema}[De homogeneidad de geodésicas. Lema 2.6 \cite{DoCarmo}, Coro. 14.6 \cite{Loring-dif}]
+		Sea $a\in\R$. Si una geodésica $\gamma_v:(-\delta,\delta)\to M$ tiene punto inicial $q$ y velocidad inicial $v$, entonces la curva
+		\[\gamma_{av}(t)=\gamma(at)\]
+		es una geodésica $\gamma_{av}:(-\frac{\delta}{a},\frac{\delta}{a})\to M$ con punto inicial $q$ y velocidad inicial $av$.
+	\end{lema}
+	\begin{proof}
+		Es claro que $\gamma_{av}(0)=q$ y $\gamma_{av}'(0)=a\gamma_v'(t)=av$. Para ver que es una godésica hacemos
+		\[\frac{D}{dt}\frac{d\gamma_v}{dt}=D_{{\gamma_{av}'}(t)}\gamma_{av}'(t)=D_{a\gamma_v'(t)}a\gamma_v'(t)=a^2D_{\gamma'(t)}\gamma_v'(t)=0\]
+	\end{proof}
+	
+	Así que la demostración de la proposición anterior queda así: como (por ecuaciones diferenciales) para vectores $|v|<\hat{\varepsilon}$ hay geodésicas $\gamma_v:(-\delta,\delta)\to M$ que inician en $q$ con velocidad inicial $v$, entonces la geodésica $\gamma_{(\delta/2)v}(t)=(\delta/2t)$ está bien definida para vectores con $|v|<\varepsilon:=\hat{\varepsilon}\delta/2$.
+	
+	Ahora sí,
+	\begin{align*}
+		\exp_p:B_{\varepsilon}(0)\subset T_pM&\to M\\
+		v&\mapsto \gamma(1)
+	\end{align*}
+	donde $\gamma=\gamma_{(\delta/2)v}$ como arriba.
+	\begin{obs}
+		Do Carmo hace la construcción directamente en el haz tangente $TM$, de manera que la exponencial está definida en una vecindad $\mathcal{U}\subset TM$ que son las bolas de radio $<\varepsilon$ en el espacio tangente de puntos $q\in U$ para alguna vecindad de $p$. Para un campo vectorial en $U$ con vectores de tamaño $<\varepsilon$, esta construcción es justamente lo que llamamos \textbf{\textit{flujo geodésico}}.
+	\end{obs}
+	
+	Ahora calculamos la diferencial de esta aplicación. Recordemos que los vectores tangentes en un punto $p$ de una variedad se pueden definir como velocidades de curvas, es decir, son los operadores $f\mapsto \frac{d}{dt}\big|_0f\circ\alpha:=\alpha'(0)f$ para $f\in\Cinf(M,\R)$ y $\alpha:I\to M$ una curva suave que pasa por $p$ en el tiempo 0. En este sentido la diferencial de una función suave $\varphi:M\to N$ manda $v\mapsto (\varphi\circ\alpha)'(0)$ para una curva tal que $\alpha'(0)=v$.
+	
+	\begin{prop}
+		Identificando $T_pM\approx T_0(T_pM)$, la diferencial de la exponencial en el origen del espacio tangente es la identidad $\Id:T_pM\to T_pM$.
+	\end{prop}
+	\begin{proof}
+		Buscamos una curva cuya velocidad inicial sea $v\in T_pM$ y pase por $0$ en el tiempo $0$. Escogiendo $\alpha(t)=vt$,
+		\begin{align*}
+			d(\exp_p)_0(v)&=d(\exp_p)_0(\alpha'(0))\\
+			&=(\exp_p\circ\alpha)'(0)\\
+			&=\frac{d}{dt}\Big|_0\exp_p(\alpha(t))\\
+			&=\frac{d}{dt}\Big|_0\exp_p(vt)\\
+			&=\frac{d}{dt}\Big|_0\gamma_{vt}(1)\\
+			&=\frac{d}{dt}\Big|_0\gamma_v(t)\\
+			&=v
+		\end{align*}
+	\end{proof}
+	
 	\chapter{Curvatura}
 	\begin{defn}
 		Sea $(M,g)$ una variedad semi-Riemanniana con conexión de Levi-Civita $D$. Definimos el \textbf{tensor de curvatura Riemanniana} como el operador
