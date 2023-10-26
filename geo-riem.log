@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  25 OCT 2023 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  26 OCT 2023 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1677,7 +1677,7 @@ Chapter 4.
 ]
 Chapter 5.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 2641--2641
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 2648--2648
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
@@ -1696,8 +1696,8 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39497 strings out of 476025
- 802406 string characters out of 5790018
+ 39500 strings out of 476025
+ 802445 string characters out of 5790018
  1875388 words of memory out of 5000000
  59082 multiletter control sequences out of 15000+600000
  536207 words of font info for 100 fonts, out of 8000000 for 9000
@@ -1725,10 +1725,10 @@ texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (78 pages, 3998571 bytes).
+Output written on geo-riem.pdf (78 pages, 3998877 bytes).
 PDF statistics:
- 1022 PDF objects out of 1200 (max. 8388607)
- 860 compressed objects within 9 object streams
- 290 named destinations out of 1000 (max. 500000)
+ 1028 PDF objects out of 1200 (max. 8388607)
+ 866 compressed objects within 9 object streams
+ 293 named destinations out of 1000 (max. 500000)
  427 words of extra memory for PDF output out of 10000 (max. 10000000)
 

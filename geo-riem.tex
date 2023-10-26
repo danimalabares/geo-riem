@@ -2385,7 +2385,7 @@
 		\end{tikzpicture}\]
 	\end{ejem}
 	
-	\begin{ejer*}[Geodésicas en una superficie de revolución] Este ejercicio corresponde al ejemplo 5 del capítulo 4.4 del \cite{DoCarmo-sup} de curvas y superficies. También fue desarrollado en \href{https://github.com/dan-gc/curvas-superficies/blob/main/curvas-superficies.pdf}{\texttt{curvas-superficies.pdf}} p. 54). %\href{https://github.com/dan-gc/geo-riem/blob/main/geo-sup-rev.nb}{\texttt{geo-sup-rev.nb}}
+	\begin{ejer*}[Geodésicas en una superficie de revolución] Este ejercicio corresponde al ejemplo 5 del capítulo 4.4 del \cite{DoCarmo-sup} de curvas y superficies. También fue desarrollado en \href{https://github.com/dan-gc/curvas-superficies/blob/main/curvas-superficies.pdf}{\texttt{curvas-superficies.pdf}} p. 54. %\href{https://github.com/dan-gc/geo-riem/blob/main/geo-sup-rev.nb}{\texttt{geo-sup-rev.nb}}
 		\begin{figure}[H]
 			\begin{center}
 				\centering
@@ -2515,11 +2515,11 @@
 	Ahora vamos al resultado central de esta sección: las geodésicas minimizan la distancia localmente.
 	
 	\begin{defn}
-		Un segmento de geodésica $\gamma:[a,b]\to M$ es \textbf{minimizante} si $\ell{\gamma}<\ell(\alpha)$ para cualquier curva $\alpha$ diferenciable (por pedazos) que une $\gamma(a)$ con $\gamma(b)$.
+		Un segmento de geodésica $\gamma:[a,b]\to M$ es \textbf{minimizante} si $\ell(\gamma)<\ell(\alpha)$ para cualquier curva $\alpha$ diferenciable (por pedazos) que une $\gamma(a)$ con $\gamma(b)$.
 	\end{defn}
 	
 	\begin{prop}[\cite{Lee-riem}\textbf{, 6.11}]
-		Sea $(M,g)$ una variedad Riemanniana, $p\in M$ y $B$ una bola geodésica (=normal) alrededor de $p$. Salvo reparametrizaciones, la geodésica $\gamma:[0,c]\to B$ es la única curva que minimiza la distancia entre $\gamma(0)$ y $\gamma(c)$.
+		Sea $(M,g)$ una variedad Riemanniana, $p\in M$ y $B$ una bola geodésica alrededor de $p$. Salvo reparametrizaciones, la geodésica $\gamma:[0,c]\to B$ es la única curva que minimiza la distancia entre $\gamma(0)$ y $\gamma(c)$.
 		
 		%Supongamos que $p\in M$ y $q$ está contenido en una bola geodésica alrededor de $p$. Entonces (salvo reparametrizaciones) la única geodésica que une $p$ y $q$ es la curva que minimiza la distancia entre $p$ y $q$.
 	\end{prop}
@@ -2533,7 +2533,7 @@
 			\includegraphics[width=0.4\linewidth]{fig21}
 		\end{figure}
 
-		Notemos que el punto $\gamma(c)$ tiene coordenadas $cv$, así que $r(\gamma(c))=|rv|=c$. Además, la función $r\circ\sigma$ es continua en $[a_0,b_0]$ y suave (por pedazos si $\sigma$ es suave por pedazos). Esto nos permite calcular:
+		Notemos que el punto $\gamma(c)$ tiene coordenadas $cv$, así que $r(\gamma(c))=|cv|=c$. Además, la función $r\circ\sigma$ es continua en $[a_0,b_0]$ y suave (por pedazos si $\sigma$ es suave por pedazos). Esto nos permite calcular:
 		\begin{align*}
 			\ell(\gamma)&=c\\
 			&=r(\gamma(c))\\
@@ -2551,7 +2551,7 @@
 			\ell(\gamma)&=\int_{a_0}^{b_0}\langle\partial_r,\sigma'(t)\rangle dt\\
 			&\leq\int_{a_0}^{b_0}|\partial_r||\sigma'(t)|dt\\
 			&=\int_{a_0}^{b_0}|\sigma'(t)|dt\qquad\text{ por el Lema de Gauss, }|\partial_r|=1\\
-			&=\ell(\sigma|_[a_0,b_0])\leq\ell(\sigma)
+			&=\ell(\sigma|_{[a_0,b_0]})\leq\ell(\sigma)
 		\end{align*}
 		Para mostrar unicidad, supongamos que $\ell(\sigma)=c$. Esto obliga a las dos desigualdades en la ecuación anterior a ser igualdades. Como supusimos que ambas curvas están parametrizadas por longitud de arco, $a_0=0$ y $b_0=c$. Además, tendríamos que $\langle \partial_r,\sigma'(t)\rangle=|\partial_r||\sigma'(t)|$ así que estos dos vectores son paralelos y de norma 1, es decir son iguales y las ambas curvas son la solución del mismo sistema de ecuaciones diferenciales.
 		
@@ -2568,16 +2568,16 @@
 		
 		Primero, como $\langle \nabla f, X\rangle=df(X)=Xf$,
 		\[|X|^2=\langle X,X\rangle=Xf=\langle\nabla f,X\rangle.\]
-		Para usar que $X$ es ortogonal a los conjuntos de nivel tomamos una curva $\alpha:(-\delta,\delta)\to f^{-1}(c)$ cuya velocidad inicial $Y=\alpha'(0)$ es tangente al conjunto de nivel. Luego $f\circ\alpha\equiv c$, así que 
+		Para usar que $X$ es ortogonal a los conjuntos de nivel tomamos una curva $\alpha:(-\delta,\delta)\to f^{-1}(c)$, cuya velocidad inicial $Y=\alpha'(0)$ es un vector tangente al conjunto de nivel. Luego $f\circ\alpha\equiv c$, así que 
 		\[0=(f\circ\alpha)'(0)=df_{\alpha(0)}\alpha'(0)=\langle\nabla f_{\alpha(0)}, \alpha'(0)\rangle\]
 		Es decir, el gradiente es ortogonal a los conjuntos de nivel. Como $X$ también,
 		\[\nabla f=\lambda X\]
-		sustituyendo en la ecuación anterior concluimos que $\lambda=1$.
+		sustituyendo en la otra ecuación concluimos que $\lambda=1$.
 		
 	\end{proof}
 	
 	\begin{proof}
-		(de la afirmación) Para ver que $\nabla r=\partial_r$ basta mostrar que $\partial_r$ es ortogonal a los conjuntos de nivel de $r$ (el lema de Gauss) y que $|\partial_r|^2=\partial_rr$. Otra vez por el lema de gauss $\partial_r$ es unitario, y de hecho
+		(de la afirmación) Para ver que $\nabla r=\partial_r$ basta mostrar que $\partial_r$ es ortogonal a los conjuntos de nivel de $r$ (el lema de Gauss) y que $|\partial_r|^2=\partial_rr$. Otra vez por el lema de Gauss $\partial_r$ es unitario, y de hecho
 		\[(\partial_r)_xr=\sum_i\frac{x^i}{r(x)}\frac{\partial r}{\partial x^i}\Big|_x=\sum_i\frac{x^i}{r(x)}\frac{1}{2}\frac{2x^i}{r(x)}=1\]
 	\end{proof}
 	
@@ -2603,8 +2603,15 @@
 		Una variedad es completa si y sólo si es un espacio métrico completo respecto a la métrica dada por el ínfimo de las longitudes de curvas que unen dos puntos.
 	\end{teo}
 	
-	\begin{coro}
+	\begin{coro}[\cite{DoCarmo}\textbf{, Cap VII, 2.9}]
 		Si $M$ es compacta entonces es completa.
+	\end{coro}
+	
+	\begin{coro}[\cite{Lee-riem}\textbf{, 6.20}]
+		Si $M$ es una variedad Riemanniana conexa y $p\in M$ tal que $\exp_p$ está definida en todo el espacio tangente $T_pM$, entonces $M$ es completa.
+	\end{coro}
+	\begin{coro}[\cite{Lee-riem}\textbf{, 6.21}]
+		Si $M$ es una variedad Riemanniana conexa y completa, cualesquiera dos puntos se pueden unir con una geodésica.
 	\end{coro}
 	
 	Y volviendo a la topología,
