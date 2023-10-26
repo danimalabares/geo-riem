@@ -34,5 +34,5 @@
 \contentsline {subsection}{\numberline {3.4.1}Ejercicios 20 de octubre}{67}{subsection.3.4.1}%
 \contentsline {section}{\numberline {3.5}Geodésicas}{67}{section.3.5}%
 \contentsline {section}{\numberline {3.6}La aplicación exponencial}{69}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Curvatura}{73}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Referencias}{74}{chapter.5}%
+\contentsline {chapter}{\numberline {4}Curvatura}{77}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Referencias}{78}{chapter.5}%
