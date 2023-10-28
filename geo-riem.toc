@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {2.8}Contracción}{45}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Derivaciones de campos tensoriales}{48}{section.2.9}%
 \contentsline {section}{\numberline {2.10}Interpretaciones}{50}{section.2.10}%
-\contentsline {section}{\numberline {2.11}Ejercicios de campos tensoriales}{50}{section.2.11}%
+\contentsline {section}{\numberline {2.11}Ejercicios de campos tensoriales}{51}{section.2.11}%
 \contentsline {subsection}{\numberline {2.11.1}Más sobre campos tensoriales}{52}{subsection.2.11.1}%
 \contentsline {chapter}{\numberline {3}Variedades Riemannianas}{54}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Métrica Riemanniana}{54}{section.3.1}%
@@ -35,4 +35,5 @@
 \contentsline {section}{\numberline {3.5}Geodésicas}{67}{section.3.5}%
 \contentsline {section}{\numberline {3.6}La aplicación exponencial}{69}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Curvatura}{77}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Referencias}{78}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Simetrías del tensor de curvatura}{77}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Referencias}{80}{chapter.5}%

@@ -1068,14 +1068,14 @@
 		\[T:V^k\to\R\]
 	\end{defn}
 	\begin{obs}
-		El conjunto de $k$-tensores $\tau^k(V)$  tiene estructura de espacio vectorial con las operaciones
+		El conjunto de $k$-tensores $T^k(V)$  tiene estructura de espacio vectorial con las operaciones
 		\begin{align*}
 			(S+T)(v_1,\ldots,v_k)=S(v_1,\ldots,v_k)+T(v_1,\ldots,v_k)\\
 			(\lambda T)(v_1,\ldots,v_k)=\lambda T(v_1,\ldots,v_k)
 		\end{align*}
 	\end{obs}
 	\begin{defn}
-		Para  el \textbf{producto tensorial} de $S\in\tau^k(V)$ y $T\in\tau^\ell(V)$ es el tensor $S\otimes T\in\tau^{k+\ell}(V)$ dado por
+		Para  el \textbf{producto tensorial} de $S\in T^k(V)$ y $T\in T^\ell(V)$ es el tensor $S\otimes T\in\tau^{k+\ell}(V)$ dado por
 		\begin{align*}
 			S\otimes T:V^k\times V^\ell&\to\R\\
 			(v_1,\ldots,v_k,v_{k+1},\ldots,v_{k+\ell})&\mapsto S(v_1,\ldots,v_k)\otimes T(v_{k+1},\ldots,v_{k+\ell})
@@ -1093,12 +1093,12 @@
 				1\qquad\text{si }i=j
 			\end{cases}
 		\end{align*}
-		Entonces, los productos de la forma $\varphi_{i_1}\otimes\ldots\otimes\varphi_{i_k}$ son una base de $\tau^k(V)$.
+		Entonces, los productos de la forma $\varphi_{i_1}\otimes\ldots\otimes\varphi_{i_k}$ son una base de $T^k(V)$.
 	\end{prop}
 	\begin{obs}\label{pullback}
 		Dada una transformación lineal entre espacios vectoriales $f:V\to W$, tenemos la transformación lineal 
 		\begin{align*}
-			f^*:\tau^k(W)&\to\tau^k(V)\\
+			f^*:T^k(W)&\to T^k(V)\\
 			T(v_1,\ldots,v_k)&\mapsto T(f(v_1),\ldots,f(v_k))
 		\end{align*}
 	\end{obs}
@@ -1107,13 +1107,13 @@
 		\[T(v_1,\ldots,v_i,\ldots,v_j,\ldots,v_k)=-T(v_1,\ldots,v_j,\ldots,v_i,\ldots,v_k)\]
 		Y denotaremos al conjunto de $k$-tensores alternantes por $\Lambda^k(V)$.
 	\end{defn}
-	Para $T\in\tau^k(V)$, definamos
+	Para $T\in T^k(V)$, definamos
 	\[	\Alt(T)=\frac{1}{k!}\sum_{\sigma\in S_k}\sgn\sigma T(v_{\sigma(1)},\ldots,v_{\sigma(k)})\]
 	\begin{prop}\leavevmode
 		\begin{enumerate}
-			\item Si $T\in\tau^k(V)$, entonces $\Alt(T)\in\Lambda^k(V)$.
+			\item Si $T\in T^k(V)$, entonces $\Alt(T)\in\Lambda^k(V)$.
 			\item Si $\omega\in\Lambda^k(V)$, entonces $\Alt(\omega)=\omega$.
-			\item  Si $T\in\tau^k(V)$, entonces $\Alt(\Alt(T))=\Alt(T)$.
+			\item  Si $T\in T^k(V)$, entonces $\Alt(\Alt(T))=\Alt(T)$.
 		\end{enumerate}
 	\end{prop}
 	El producto tensorial de dos tensores alternantes no necesariamente es alternante, por lo que definimos
@@ -1382,7 +1382,7 @@
 	La condición 2 en este ejercicio es equivalente a la definición de \cite{DoCarmo} para que una función preserve orientación.
 	
 	Agregamos un resultado interesante:
-	\begin{prop}[\cite{Lee-riem}\textbf{, 2.41. La forma Riemanniana de volumen}]
+	\begin{prop}[\textbf{La forma Riemanniana de volumen}, \cite{Lee-riem}\textbf{, 2.41.}]
 		
 		Sea $(M,g)$ una variedad Riemanniana orientada de dimensión $n>1$. Entonces existe una única $n$-forma $dV$ en $M$ que llamaremos \textbf{forma de volumen} que satisface cualquiera de las siguientes propiedades equivalentes:
 		
@@ -1442,7 +1442,7 @@
 		Supongamos que un grupo de Lie \textbf{discreto} $\Gamma$ actúa continua y libremente en una variedad $E$. La acción es propia si y sólo si se satisfacen las dos siguientes condiciones:
 		\begin{enumerate}
 			\item [\textit{(i)}] Cualquier punto $p\in E$ tiene una vecindad $U$ tal que para $(g\cdot U)\cap U=\varnothing$ a menos que $g=e$.
-			\item [\textit{(ii)}] Si $p, p'\in E$ no están en la misma órbita, existen vecindades $V$ de $p$ y $V'$ de $p'$ tales que $(g\cdot V)\cap V'0\varnothing$ para toda $g\in\Gamma$.
+			\item [\textit{(ii)}] Si $p, p'\in E$ no están en la misma órbita, existen vecindades $V$ de $p$ y $V'$ de $p'$ tales que $(g\cdot V)\cap V'=\varnothing$ para toda $g\in\Gamma$.
 		\end{enumerate}
 	\end{lema}
 	Un grupo de Lie es discreto si tiene la topología discreta, es decir, cualquier subconjunto es abierto.
@@ -1721,10 +1721,21 @@
 	En adelante denotaremos indistintamente $A$ y $\bar{A}$.
 	
 	Comparemos con el siguiente resultado para tensores (no campos tensoriales):
-	\begin{ejer*}[\cite{Lee}\textbf{, 12-4}]
-		Sea $V$ un espacio vectorial de dimensión finita. Existe un isomorfismo natural (independiente de la base) entre los tensores $\tau^{k+1}_\ell$ y los mapeos multilineales de la forma
-		\[T:(V^*)^k\times V^\ell\to V\]
-	\end{ejer*}
+	\begin{prop}[\cite{Lee-riem}\textbf{, B-1}]
+		Sea $V$ un espacio vectorial de dimensión finita. Existe un isomorfismo natural (independiente de la base) entre los tensores $T^{(k+1,l)}$ y los mapeos multilineales de la forma
+		\[T:\underbrace{V^*\times\ldots\times V^*}_{k\text{ veces}}\times \underbrace{V\times\ldots\times V}_{l\text{ veces}}\to V\]
+	\end{prop}
+	
+	Podemos usar esta proposición para definir rápidamente las contracciones como la traza de una matriz (ver \cite{Lee-riem}, Apéndice B, p. 395). Definimos el operador $\operatorname{tr}:T^{(1,1)}(V)\to\R$ como la traza del endomorfismo asociado a cada tensor visto como una matriz. Como la traza es invariante bajo cambios de coordenadas, este operador está bien definido.
+	
+	En general, podemos definir
+	\[\operatorname{tr}:T^{(k+1,l+1)}(V)\to T^{(k,l)}\]
+	declarando que $(\operatorname{tr}F)(\omega^1,\ldots,\omega^k,v_1,\ldots,v_l)$ sea la traza el $(1,1)$ tensor dado al fijar todas las entradas salvo una covariante y una contravariante de $F$:
+	\[F(\omega^1,\ldots,\omega^k,\bullet,v_1,\ldots,v_l,\bullet)\in T^{(1,1)}\]
+	
+	\begin{ejer}[\cite{Lee-riem}\textbf{, B.3}]
+		Muestra que la traza respecto a cualesquiera dos índices (uno arriba y uno abajo) es un mapeo lineal bien definido de $T^{(k+1,l+1)}(V)$ en $T^{(k,l)}(V)$.
+	\end{ejer}
 	\section{Ejercicios de campos tensoriales}
 	\begin{enumerate}
 		\item Una 1-forma $\theta$ es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$. Un campo vectorial es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$.
@@ -2643,6 +2654,100 @@
 		\end{align*}
 		Haciendo la suma se cancelan los términos y obtenemos el resultado.
 	\end{proof}
+	
+	\section{Simetrías del tensor de curvatura}
+	\begin{prop}[\cite{ONeill}\textbf{, Cap. 4, 36}]
+		Sea $(M,g)$ una variedad Riemanniana. Para cualesquiera $x,y\in T_pM$, el operador
+		\begin{align*}
+			T_pM&\to T_pM\\
+			z&\mapsto R_{xy}z
+		\end{align*}
+		que en algunos textos se llama el \textbf{endomorfismo de curvatura}, satisface
+		\begin{enumerate}
+			\item $R_{xy}=-R_{yx}$
+			\item $\langle R_{xy}v,w\rangle=-\langle R_{xy}w,v\rangle$.
+			\item $R_{xy}z+R_{yz}x+R_{zx}y=0$
+			\item $\langle R_{xy}v,w\rangle=\langle R_{vw}x,y\rangle$.
+		\end{enumerate}
+	\end{prop}
+	\begin{proof}
+		Como hemos demostrado que los objetos son tensores, podemos evaluar tanto en puntos como en campos vectoriales. Es posible suponer que los corchetes son cero, en cuyo caso $R_{XY}Z$ se reduce a $D_Y(D_YZ)-D_X(D_YZ)$.
+		\begin{enumerate}
+			\item Tenemos
+			\begin{align*}
+				R_{XY}Z&=-[D_X,D_Y]Z\\
+				&=-D_XD_YZ-D_YD_XZ\\
+				&=-(D_XD_YZ-D_YD_XZ)\\
+				&=-(-[D_Y,D_X]Z)\\
+				&=-R_{YX}Z
+			\end{align*}
+			Antes de continuar, necesitaremos
+			\begin{lema}
+				$\langle R_{xy}u,u\rangle=0$
+			\end{lema}
+			\begin{proof}[Demostración del lema]
+				\begin{align*}
+					\langle R_{XY}U,U\rangle&=\langle -[D_X,D_Y]U,U\rangle\\
+					&=-\langle D_XD_YU-DYD_XU,U\rangle\\
+					&=-\langle D_XD_YU,U\rangle+\langle D_YD_XU,U\rangle
+				\end{align*}
+				Recordemos que
+				\[X\langle V,W\rangle=\langle D_XV,W\rangle+\langle V,D_XW\rangle\]
+				tomando $W=D_YU$,
+				\begin{align*}
+					X\langle W,U\rangle&=X\langle D_YU,U\rangle\\
+					&=-\langle D_XW,U\rangle+\langle W,D_XU\rangle\\
+					&=-\langle D_XD_YU,U\rangle+\langle D_YU,D_XU\rangle\\
+					\iff&-\langle D_XD_YU,U\rangle=-X\langle D_YU,U\rangle+\langle D_YU,D_XU\rangle
+				\end{align*}
+				Por otra parte,
+				\begin{align*}
+					&Y\langle D_XU,U\rangle=\langle D_YD_XU,U\rangle+\langle D_XU,D_YU\rangle\\
+					\iff&\langle D_YD_XU,U\rangle=Y\langle D_X,U\rangle-\langle D_XU,D_YU\rangle
+				\end{align*}
+				Sumando,
+				\[\langle R_{XY}U,U\rangle=Y\langle D_XU,U\rangle-X\langle D_YU,U\rangle\]
+				Y como
+				\[X\langle U,U\rangle=2\langle D_XU,U\rangle\iff\frac{1}{2}X\langle U,U\rangle=\langle D_XU,U\rangle\]
+				Y también
+				\[\frac{1}{2}Y\langle U,U\rangle=\langle D_YU,U\rangle\]
+				Restando,
+				\[Y\langle D_XU,U\rangle=-X\langle D_YU,U\rangle=\frac{1}{2}[Y,X]\langle U,U\rangle\]
+				Pero $[X,Y]=0$, así que
+				\[Y\langle D_XU,U\rangle-X\langle D_YU,U\rangle=0\]
+			\end{proof}
+			Ahora continuemos con nuestra demostración.
+			\item Tenemos que 
+			\begin{align*}
+				U&=V+W\\
+				\langle R_{XY}U,U\rangle&=0\\
+				\langle R_{XY}(V+W),V+W\rangle&=0\\
+				\langle R_{XY}V+R_{XY}X,V+W\rangle&=0\\
+				\langle R_{XY},V\rangle+\langle R_{XY}V,W\rangle+\langle R_{XY}W,V\rangle+\langle R_{XY}V,W\rangle&=0
+			\end{align*}
+			Y la primera y la última se anulan por el lema, así que
+			\[\langle R_{XY}V,W\rangle=-\langle R_{XY}W,V\rangle\]
+			
+			\item Tenemos
+			\begin{align*}
+				R_{XY}Z&=-[D_X,D_Y]Z\\
+				&=-D_XD_YZ+D_YD_XZ,\\
+				R_{YZ}X&=-D_YD_ZX+D_ZD_YX,\\
+				R_{ZX}Y&=-D_ZD_XY+D_XD_ZY
+			\end{align*}
+			Sumando,
+			\begin{align*}
+				R_{XY}Z+R_{YZ}X+R_{ZX}Y=&-D_XD_YZ+D_YD_XZ\\
+				&-D_YD_ZX+D_ZD_YX\\
+				&-D_ZD_XY+D_XD_ZY
+			\end{align*}
+		\end{enumerate}
+	\end{proof}
+	
+	\begin{obs}
+		Para una demostración alternativa usando formas diferenciales, ver Secs. 22.3 y 22.4 de \cite{Loring-dif}. La propiedad 3, llamada \textbf{primera ideantidad de Bianchi} (o \textbf{identidad de Bianchi algebraica}) se sigue de que la cuña de formas es alternante.
+	\end{obs}
+
 	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
