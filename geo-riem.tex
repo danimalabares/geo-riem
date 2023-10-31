@@ -2747,8 +2747,72 @@
 	\begin{obs}
 		Para una demostración alternativa usando formas diferenciales, ver Secs. 22.3 y 22.4 de \cite{Loring-dif}. La propiedad 3, llamada \textbf{primera ideantidad de Bianchi} (o \textbf{identidad de Bianchi algebraica}) se sigue de que la cuña de formas es alternante.
 	\end{obs}
-
 	
+	\begin{lema}
+		Sean $x^1,\ldots x^n$ coordenadas locales tales que
+		\[R_{\partial_k\partial_\ell}\partial_j=\sum_jR^i_{jk\ell}\partial_i\]
+		donde $\partial_i$ denota $\frac{\partial}{\partial x^i}$. Entonces, las funciones componentes son de la forma
+		\[R_{jk\ell}^i=\frac{\partial}{\partial x^\ell}\Gamma_{jk}^i-\frac{\partial}{\partial x^k}\Gamma_{jk}^i+\sum_m\Gamma_{\ell m}^i\Gamma_{kj}^m-\sum_m\Gamma_{km}^i\Gamma_{\ell j}^m\]
+	\end{lema}
+	\begin{proof}
+		Recordemos que para el caso de los campos vectoriales básicos el corchete es cero. Entonces,
+		\begin{align*}
+			R_{\partial_k\partial_\ell}\partial_j&=-D_{\partial k}D_{\partial_\ell}\frac{\partial}{\partial x^j}+D_{\partial_\ell}D_{\partial_k}\frac{\partial}{\partial x^j}
+%			\\&=-D_{\partial k}D_{\partial_\ell}\frac{\partial}{\partial x^j}+D_{\partial_\ell}\left(\sum_m\Gamma_{kj}^m\frac{\partial}{\partial x^m}\right)\\
+%			&=-D_{\partial k}D_{\partial_\ell}\frac{\partial}{\partial x^j}+\sum_mD_{\partial_\ell}\left(\Gamma_{kj}^m\frac{\partial}{\partial x^m}\right)\\
+%			&=-D_{\partial k}D_{\partial_\ell}\frac{\partial}{\partial x^j}+\sum_m\left(\frac{\partial}{\partial x^\ell}\Gamma_{kj}^m\right)\frac{\partial}{\partial x^m}+\sum_m\Gamma^m_{kj}D_{\partial_\ell}\frac{\partial}{\partial x^m}
+		\end{align*}
+		El sumando de la derecha resultará ser
+		\[D_{\partial_\ell\partial_k}\partial_j=\sum_i\left(\frac{\partial}{\partial x^\ell}\Gamma^i_{kj}\right)\frac{\partial}{\partial x^i}+\sum_i\left(\sum_m\Gamma^m_{kj}\Gamma^i_{\ell m}\right)\frac{\partial}{\partial x^i}\]
+		Y análogamente
+		\[D_{\partial_k\partial_\ell}\partial_j=\sum_i\left(\frac{\partial}{\partial x^k}\Gamma^i_{\ell j}\right)\frac{\partial}{\partial x^i}+\sum_i\left(\sum_m\Gamma^m_{\ell j}\Gamma^i_{k m}\right)\frac{\partial}{\partial x^i}\]
+		De donde se sigue el resultado.
+	\end{proof}
+	
+	\section{Curvatura seccional}
+	\begin{defn}
+		En una variedad Riemanniana $M$ con $p\in M$, dados dos vectores linealmente independientes $v,w\in T_pM$ definimos
+		\[K(v,w)=\frac{\langle R_{vw}v,w\rangle}{Q(v,w)}\]
+		donde $Q(v,w)=\langle v,v\rangle\langle w,w\rangle-\langle v,w\rangle^2$.
+	\end{defn}
+	\begin{prop}
+		$K(v,w)$ no depende de la elección de la base sino sólo del plano $\Pi=\langle v,w\rangle$.
+	\end{prop}
+	\begin{proof}
+		Tomemos otra base $\{x,y\}$ de $\Pi$ y supongamos que
+		\begin{align*}
+			v&=ax+by\\
+			w&=cx+dy
+		\end{align*}
+		con $ad-bc\neq0$. Entonces
+		\begin{align*}
+			Q(v,w)&=Q(ax+by,cx+dy)\\
+			&=\langle ax+by,ax+by\rangle\langle cx+dy, cx+dy\rangle-\langle ax+by,cx+dy\rangle^2
+			%&=
+		\end{align*}
+		Por otro lado
+		\begin{align*}
+			\langle ax+by,cd+dy\rangle&=\langle ax,cx+dx\rangle+\langle by,cx+dy\rangle\\
+			&=ac\langle x,x\rangle+ad\langle x,y\rangle+bc\langle y,x\rangle+bd\langle y,y\rangle\\
+			&=ac\langle x,x\rangle+(ad+bc)\langle x,y\rangle +bd\langle y,y\rangle
+		\end{align*}
+		Así que
+			\begin{align*}
+			Q(v,w)&=Q(ax+by,cx+dy)\\
+			&=\langle ax+by,ax+by\rangle\langle cx+dy, cx+dy\rangle-\langle ax+by,cx+dy\rangle^2\\
+			&=(a^2\langle x,x\rangle+2ab\langle x,y\rangle+b^2\langle y,y\rangle)(c^2\langle x,x\rangle+2cd\langle x,y\rangle+d^2\langle y,y\rangle)\\&\; -(ac\langle x,x\rangle+(ad-bc)\langle x,y\rangle+bd\langle y,y\rangle)^2
+		\end{align*}
+		Notemos que los términos con $\langle x,x\rangle^2$ se anulan, pues $a^2b^2-(ac)^2=0$. Lo mismo sucede para los términos con $\langle y,y\rangle$. Los términos con $\langle x,x\rangle\langle y,y\rangle$ sí sobreviven, pues
+		\[a^2b^2-b^2d^2-2acbd=(ad-bc)^2\]
+		Los términos con $\langle x,x\rangle\langle x,y\rangle$ nos dan
+		\[2a^2cd+2abc^2-2ac(ad+bc)=-2a^2cd-2bc^2\]
+		Para $\langle y,y\rangle\langle x,y\rangle$, se cancelan. Para $\langle x,y\rangle^2$ obtenemos
+		\begin{align*}
+			2ab2cd&=abcd-(ad+bc)^2\\
+			&=-a^2d^2-2adbc-b^2c^2-a^2d^2+2adbc-b^2d^2
+		\end{align*}
+	\end{proof}
+	Así, la curvatura seccional está definida para subespacios de dimensión 2 del espacio tangente.	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	

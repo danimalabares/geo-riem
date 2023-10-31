@@ -36,4 +36,5 @@
 \contentsline {section}{\numberline {3.6}La aplicación exponencial}{69}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Curvatura}{77}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Simetrías del tensor de curvatura}{77}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Referencias}{80}{chapter.5}%
+\contentsline {section}{\numberline {4.2}Curvatura seccional}{80}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Referencias}{82}{chapter.5}%
