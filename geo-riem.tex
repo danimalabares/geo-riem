@@ -2812,7 +2812,74 @@
 			&=-a^2d^2-2adbc-b^2c^2-a^2d^2+2adbc-b^2d^2
 		\end{align*}
 	\end{proof}
-	Así, la curvatura seccional está definida para subespacios de dimensión 2 del espacio tangente.	
+	De forma que la curvatura seccional está definida para subespacios de dimensión 2 del espacio tangente, que llamaremos \textbf{planos tangentes}.
+	
+	Para el caso de variedades semi-Riemannianas, la curvatura seccional se define para \textbf{planos tangentes no degenerados}, definidos como sigue. 
+	
+	\begin{defn}
+		Sea $V$ un espacio vectorial con un producto escalar $g:V\times V\to \R$, es decir, $g$ es una forma bilineal simétrica no degenerada (no necesariamente definida positiva). Decimos que un subespacio $W$ es \textbf{no degenerado} si $g|_W$ es no degenerado.
+	\end{defn}
+	\begin{obs}
+		Si $g$ es definida positiva, todo subespacio es no degenerado.
+	\end{obs}
+	Un herramienta útil en este contexto es que
+	\begin{prop}
+		Sean $b:V\times V\to \R$ una forma bilineal simétrica y $e_1,\ldots,e_n$ una base de $V$. Entonces, $b$ es no degenerada si y sólo si la matriz $(b_{ij})$ dada por $b_{ij}=b(e_i,e_j)$ es invertible.
+	\end{prop}
+%	\begin{proof}
+%		\begin{align*}
+%			&b(v,w)=0\quad \forall w\in V\\
+%			\iff&b(v,e_j)=0\quad\forall i=1,\ldots,n\\
+%			\iff&0=b\left(\sum v_ie_i,e_j\right)=0\quad \text{si }v=\sum v_ie_i\\
+%			\iff&0=\sum v_ib(e_i,e_j)
+%		\end{align*}
+%	\end{proof}
+	En nuestro caso, para una base $e_1,e_2$ de $\Pi\leq T_pM$, tenemos que $\Pi$ es no denerado si y sólo si
+	\[\left|\begin{matrix}
+		g(e_1,e_2)&g(e_1,e_2)\\
+		g(e_2,e_1)&g(e_2,e_2)
+	\end{matrix}\right|=Q(e_1,e_2)\neq0\]
+	
+	\begin{ejem}
+		Consideremos la forma bilineal simétrica en $\R^2$ dada por
+		\[g(v,w)=v_1w_2-v_2w_1\]
+		Entonces, $g(v,v)=v_1^2-v_2^2$, así que de hecho hay vectores nulos (distintos del cero). Esta forma es no degenerada de índice 1, pues hay un -1 en esta expresión como matriz diagonal:
+		\[\begin{pmatrix}
+			g(e_1,e_2)&g(e_1,e_2)\\
+			g(e_2,e_1)&g(e_2,e_2)
+		\end{pmatrix}=\begin{pmatrix}
+		1&0\\
+		0&-1
+		\end{pmatrix}\]
+		De hecho, podemos definir la norma de un vector $v$ como $g(v,v)^{1/2}$. Si $v$ no es nulo, podemos normalizarlo 
+	\end{ejem}
+	\begin{pregunta}
+		En un espacio con una forma bilineal simétrica no degenerada $b$, aunque no sea definida positiva, ¿podemos definir la noción de base ortonormal? 
+	\end{pregunta}
+	Podemos simplemente definir que dos vectores $v$ y $w$ sean \textbf{$b$-ortonormales} si $b(v,w)=0$.
+	
+	Para mostrar la existencia de bases ortonormales, primero recordemos que:
+	\begin{lema}
+		Para $W<V$,
+		\begin{itemize}
+			\item  $W$ es no degenerado si y sólo si $V=W\oplus W^\perp$.
+			\item $(W^\perp)^\perp=W$.
+		\end{itemize}
+	\end{lema}
+	\begin{lema}
+		Sea $(V,g)$ un espacio vectorial con producto escalar. Entonces $V$ tiene una base ortonormal.
+	\end{lema}
+	\begin{proof}
+		La prueba está dada en dos pasos:
+		\begin{enumerate}
+			\item Existen vectores no nulos.
+			\item Si $e_1,\ldots,e_k$ es un conjunto de $k<n$ vectores ortonormales, entonces podemos añadir otro vector $e_k+1$ y formar un conjunto de $k+1$ vectores ortonormales.
+			
+			Como $W=\langle e_1,\ldots,e_k\rangle$ es no degenerado, podemos agregar un vector no nulo en $W^\perp$.
+		\end{enumerate}
+		
+	\end{proof}
+	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
