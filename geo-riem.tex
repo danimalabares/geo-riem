@@ -2809,11 +2809,21 @@
 		Para $\langle y,y\rangle\langle x,y\rangle$, se cancelan. Para $\langle x,y\rangle^2$ obtenemos
 		\begin{align*}
 			2ab2cd&=abcd-(ad+bc)^2\\
-			&=-a^2d^2-2adbc-b^2c^2-a^2d^2+2adbc-b^2d^2
+			&=-a^2d^2-2adbc-b^2c^2-a^2d^2+2adbc-b^2d^2\\
+			&\cdots
 		\end{align*}
+		
+		Obtendremos que
+		\[\langle R_{vw}v,w\rangle=(ad-bc)^2\langle R_{xy}x,y\rangle\]
+		y que
+		\[Q(v,w)=(ad-bc)^2Q(x,y)\]
+		de lo que se sigue el resultado.
 	\end{proof}
 	De forma que la curvatura seccional está definida para subespacios de dimensión 2 del espacio tangente, que llamaremos \textbf{planos tangentes}.
 	
+	Ahora veamos que no sólo el tensor de curvatura determina la curvatura seccional, sino al contrario también.
+	
+	\subsection{Curvatura seccional en variedades semi-Riemannianas}
 	Para el caso de variedades semi-Riemannianas, la curvatura seccional se define para \textbf{planos tangentes no degenerados}, definidos como sigue. 
 	
 	\begin{defn}
@@ -2875,10 +2885,40 @@
 			\item Existen vectores no nulos.
 			\item Si $e_1,\ldots,e_k$ es un conjunto de $k<n$ vectores ortonormales, entonces podemos añadir otro vector $e_k+1$ y formar un conjunto de $k+1$ vectores ortonormales.
 			
-			Como $W=\langle e_1,\ldots,e_k\rangle$ es no degenerado, podemos agregar un vector no nulo en $W^\perp$.
+			%Como $W=\langle e_1,\ldots,e_k\rangle$ es no degenerado, podemos agregar un vector no nulo en $W^\perp$.
 		\end{enumerate}
-		
 	\end{proof}
+	
+	\begin{ejem}
+		Tomemos $M=\R^3$, $p=(0,0,0)$ y $g(u,v)=u_1v_1+u_2v_2-u_3v_3$. ¿Cómo es un plano degenerado $\Pi\subset T_pM$? ¿Qué tal el plano generado por $e_2$ y $e_3$?
+	\end{ejem}
+	
+	Para ver cómo la curvatura seccional determina el tensor de curvatura, consideremos un plano degenerado $\Pi$ con base $u,v$ y $\Pi_n$ una sucesión de planos generador por $u_n,v_n$ que aproximan a $\Pi$ en el sentido de que $u_n\to u$ y $v_n\to v$. Ahora escojamos un vector de la siguiente manera:
+	
+	\begin{enumerate}
+		\item[Caso 1] Si $v$ es nulo, tomemos $x$ tal que $\langle v,x\rangle\neq0$.
+		
+		\item[Caso 2] Si $v$ no es nulo, tomemos $x\neq0$ tal que $\sgn\langle x,x\rangle=-\sgn\langle v,x\rangle$
+	\end{enumerate}
+	En ambos casos, $Q(v,x)<0$, pues
+	\[Q(v,x)=\left|\begin{matrix}
+		\langle v,v\rangle&\langle v,x\rangle\\
+		\langle v,x\rangle&\langle x,x\rangle
+	\end{matrix}\right|
+	=\begin{cases}
+		\left|\begin{matrix}
+			0&\langle v,x\rangle\\
+			\langle v,x\rangle&\langle x,x\rangle
+		\end{matrix}\right|=-\langle v,x\rangle^2<0\\ \\
+		\left|\begin{matrix}
+			\langle v,v\rangle&\langle v,x\rangle\\
+			\langle v,x\rangle&\langle x,x\rangle
+		\end{matrix}\right|=\langle v,v\rangle\langle x,x\rangle-\langle v,x\rangle^2\leq\langle v,v\rangle\langle x,x\rangle<0
+	\end{cases}\]
+	
+	Luego,
+	\[Q(v,u+\delta x)=Q(v,u)+2\delta b+\delta^2 Q(v,x)\]
+	para algún $\delta$ que nos ayude a aproximar $u$ como planteamos al principio.
 	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
