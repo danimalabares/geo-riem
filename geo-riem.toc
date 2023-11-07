@@ -38,4 +38,5 @@
 \contentsline {section}{\numberline {4.1}Simetrías del tensor de curvatura}{77}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Curvatura seccional}{80}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Curvatura seccional en variedades semi-Riemannianas}{81}{subsection.4.2.1}%
-\contentsline {chapter}{\numberline {5}Referencias}{84}{chapter.5}%
+\contentsline {subsection}{\numberline {4.2.2}La curvatura seccional determina el tensor de curvatura}{83}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Referencias}{85}{chapter.5}%

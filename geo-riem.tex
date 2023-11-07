@@ -2821,7 +2821,7 @@
 	\end{proof}
 	De forma que la curvatura seccional está definida para subespacios de dimensión 2 del espacio tangente, que llamaremos \textbf{planos tangentes}.
 	
-	Ahora veamos que no sólo el tensor de curvatura determina la curvatura seccional, sino al contrario también.
+	Antes de continuar consideraremos la situación para métricas semi-Riemannianas.
 	
 	\subsection{Curvatura seccional en variedades semi-Riemannianas}
 	Para el caso de variedades semi-Riemannianas, la curvatura seccional se define para \textbf{planos tangentes no degenerados}, definidos como sigue. 
@@ -2861,7 +2861,7 @@
 		1&0\\
 		0&-1
 		\end{pmatrix}\]
-		De hecho, podemos definir la norma de un vector $v$ como $g(v,v)^{1/2}$. Si $v$ no es nulo, podemos normalizarlo 
+		De hecho, podemos definir la norma de un vector $v$ como $g(v,v)^{1/2}$. Si $v$ no es nulo, podemos normalizarlo.
 	\end{ejem}
 	\begin{pregunta}
 		En un espacio con una forma bilineal simétrica no degenerada $b$, aunque no sea definida positiva, ¿podemos definir la noción de base ortonormal? 
@@ -2889,11 +2889,29 @@
 		\end{enumerate}
 	\end{proof}
 	
-	\begin{ejem}
-		Tomemos $M=\R^3$, $p=(0,0,0)$ y $g(u,v)=u_1v_1+u_2v_2-u_3v_3$. ¿Cómo es un plano degenerado $\Pi\subset T_pM$? ¿Qué tal el plano generado por $e_2$ y $e_3$?
+	\begin{ejem}[Un plano degenerado en $\R^4$]
+		Dada la forma bilineal en $\R^4$
+		\[g=\begin{pmatrix}
+			1&0&0&0\\
+			0&1&0&0\\
+			0&0&-1&0\\
+			0&0&0&-1
+		\end{pmatrix}\]
+		el plano $\Pi_{u,v}$ generado por $u=(1,0,1,0)$ y $v=(0,1,0,1)$ es degenerado, pues ortogonales y nulos, de tal forma que
+		\[g|_{\Pi_{u,v}}=\begin{pmatrix}
+			0&0\\
+			0&0
+		\end{pmatrix}\]
 	\end{ejem}
 	
-	Para ver cómo la curvatura seccional determina el tensor de curvatura, consideremos un plano degenerado $\Pi$ con base $u,v$ y $\Pi_n$ una sucesión de planos generador por $u_n,v_n$ que aproximan a $\Pi$ en el sentido de que $u_n\to u$ y $v_n\to v$. Ahora escojamos un vector de la siguiente manera:
+	\begin{lema}
+		Es posible aproximar un plano degenerado con planos no degenerados.
+	\end{lema}
+	
+	\begin{proof}
+		Consideremos un plano degenerado $\Pi$ con base $u,v$
+	%y $\Pi_n$ una sucesión de planos generador por $u_n,v_n$ que aproximan a $\Pi$ en el sentido de que $u_n\to u$ y $v_n\to v$.
+	y escojamos un vector de la siguiente manera:
 	
 	\begin{enumerate}
 		\item[Caso 1] Si $v$ es nulo, tomemos $x$ tal que $\langle v,x\rangle\neq0$.
@@ -2915,11 +2933,38 @@
 			\langle v,x\rangle&\langle x,x\rangle
 		\end{matrix}\right|=\langle v,v\rangle\langle x,x\rangle-\langle v,x\rangle^2\leq\langle v,v\rangle\langle x,x\rangle<0
 	\end{cases}\]
+	Recordemos que como $u,v$ generan un plano degenerado sabemos que $Q(u,v)=0$. Podemos aproximar $Q(u,v)$ de la siguiente manera (expandiendo el determinante):
+	\[Q(v,u+\delta x)=Q(v,u)+2\delta b+\delta^2 Q(v,x)=2\delta b+\delta^2 Q(v,x)\]
+	para algún $\delta>0$ y $b=\langle v,v\rangle\langle x,u\rangle+\langle v,u\rangle^2$. Tanto si $b=0$ como si $b\neq0$, esta cantidad es distinta de cero.
+	\end{proof}
 	
-	Luego,
-	\[Q(v,u+\delta x)=Q(v,u)+2\delta b+\delta^2 Q(v,x)\]
-	para algún $\delta$ que nos ayude a aproximar $u$ como planteamos al principio.
+	\subsection{La curvatura seccional determina el tensor de curvatura}
+	Para demostrar esta afirmación seguiremos los siguientes pasos:
+	\begin{prop}
+		Si en un punto $p$, $K(\Pi)=0$ para todo $\Pi\subset T_pM$, entonces $R(x,y)z=0$ en $p$.
+	\end{prop}
 	
+	\begin{defn}
+		Decimos que una función $F:(T_pM)^4\to \R$ \textbf{tiene simetrías de curvatura} (es \textbf{curvaturelike}) si tiene las mismas simetrías que $(v,w,x,y)\mapsto \langle R_{uv}x,y\rangle$.
+	\end{defn}
+	\begin{obs}
+		Para una función que tiene simetrías de curvatura, si $F(u,v,u,v)=0$ para cualesquiera $u,v$ que generan un plano no degenerado, entonces $F=0$.
+	\end{obs}
+	\begin{coro}
+		Si $F$ tiene simetrías de curvatura y 
+		\[K(v,w)=\frac{F(v,w,v,w)}{Q(v,w)}\]
+		entonces $\langle R_{vw}x,y\rangle=F(v,w,x,y)$.
+	\end{coro}
+	Una vez que tengamos este resultado, podemos dar la siguiente descripción sencilla de una variedad Riemanniana con curvatura seccional constante, $K(v,w)=c$.
+	
+	Pensando en la igualdad
+	\[c=\frac{F(v,w,v,w)}{Q(v,w)}\]
+	la función
+	\[F(v,w,x,y)=c(\langle v,x\rangle\langle y,w\rangle -\langle v,y\rangle \langle x,w\rangle)\]
+	tiene simetrías de curvatura, así que
+	\[\langle R_{vw}x,y\rangle=c(\langle v,x\rangle\langle y,w\rangle -\langle v,y\rangle \langle x,w\rangle)\]
+	y de hecho
+	\[R_{vw}x=c(\langle v,x\rangle w-\langle x,w\rangle v)\]
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
