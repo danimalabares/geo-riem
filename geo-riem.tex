@@ -2940,21 +2940,45 @@
 	
 	\subsection{La curvatura seccional determina el tensor de curvatura}
 	Para demostrar esta afirmación seguiremos los siguientes pasos:
-	\begin{prop}
-		Si en un punto $p$, $K(\Pi)=0$ para todo $\Pi\subset T_pM$, entonces $R(x,y)z=0$ en $p$.
-	\end{prop}
-	
-	\begin{defn}
+
+	\begin{enumerate}
+		\item Si en un punto $p$, $K(\Pi)=0$ para todo $\Pi\subset T_pM$, entonces $R(x,y)z=0$ en $p$.
+		\item Si $v,w$ son base de un plano degenerado o si son linelamente independientes, podemos aproximar el plano mediante dos sucesiones $\{v_n\}\to v$ y $\{w_n\}\to w$ que generan planos no degenerados para toda $n$. En consecuencia, $0=\langle R_{v_nw_n}v_n,w_n\rangle\to\langle R_{vw}v,w\rangle$.
+		
+		\item $\langle R_{vw}v,w\rangle=0$ para cualesquiera $v,w\in T_pM$.
+		\item $R_{vw}v=0$.
+%		\begin{proof}
+%			Por 3.,
+%			\begin{align*}
+%				0&=\langle R_{v,w+x}v,w+x\rangle\\
+%				&=\langle R_{v,w+x}v,w\rangle+\langle R_{v,w+x}v,x\rangle\\
+%				&=\langle R_{v,w}v,w\rangle+\langle R_{v,x}v,w\rangle+\langle R_{vw}v,x\rangle+\langle R_{v,x}v,x\rangle\\
+%				&=\langle R_{v,x}v,w\rangle+\langle R_{v,w}v,x\rangle
+%			\end{align*}
+%		\end{proof}
+			
+			\item $R_{vw}x=R_{wx}v$ para cualesquiera $v,w,x\in T_pM$.
+			\item $R_{vw}x+R_{wx}v+R_{xv}w=0$
+	\end{enumerate}
+		\begin{defn}
 		Decimos que una función $F:(T_pM)^4\to \R$ \textbf{tiene simetrías de curvatura} (es \textbf{curvaturelike}) si tiene las mismas simetrías que $(v,w,x,y)\mapsto \langle R_{uv}x,y\rangle$.
 	\end{defn}
 	\begin{obs}
 		Para una función que tiene simetrías de curvatura, si $F(u,v,u,v)=0$ para cualesquiera $u,v$ que generan un plano no degenerado, entonces $F=0$.
 	\end{obs}
-	\begin{coro}
-		Si $F$ tiene simetrías de curvatura y 
-		\[K(v,w)=\frac{F(v,w,v,w)}{Q(v,w)}\]
+	
+		\begin{coro}
+		Si $F$ tiene simetrías de curvatura, $v,w$ generan un plano no degenerado y se cumple la igualdad
+		\[K(v,w)=\frac{F(v,w,v,w)}{Q(v,w)},\]
 		entonces $\langle R_{vw}x,y\rangle=F(v,w,x,y)$.
 	\end{coro}
+	\begin{proof}[Razón]
+		La función $\Delta(v,w,x,y):=\langle R_{v,w}x,y\rangle-F(v,w,x,y)$, también tiene simetrías de curvatura. Luego,
+		\begin{align*}
+			\Delta(v,w,v,w)&=\langle R_{v,x}v,x\rangle-F(v,w,v,w)\\
+			&=\langle R_{v,x}v,w\rangle-K(v,w)Q(v,w)=0
+		\end{align*}
+	\end{proof}
 	Una vez que tengamos este resultado, podemos dar la siguiente descripción sencilla de una variedad Riemanniana con curvatura seccional constante, $K(v,w)=c$.
 	
 	Pensando en la igualdad
@@ -2965,6 +2989,24 @@
 	\[\langle R_{vw}x,y\rangle=c(\langle v,x\rangle\langle y,w\rangle -\langle v,y\rangle \langle x,w\rangle)\]
 	y de hecho
 	\[R_{vw}x=c(\langle v,x\rangle w-\langle x,w\rangle v)\]
+	
+	\begin{ejem}[La gráfica de una función entre espacio euclideanos]
+		Sea $f:\R^m\to \R^{n-m}\approx\R^k$. Trataremos de encontrar el tensor de curvatura de la gráfica de esta función.
+		
+		Una parametrización local está dada por
+		\[(x^1,\ldots,x^m)\mapsto (x^1,\ldots,x^m,f_1(x^1,\ldots,x^m),\ldots,f_k(x^1,\ldots,x^m))\]
+		y los vectores básicos del espacio tangente en cada punto son
+		\[\frac{\partial}{\partial x^i}\longleftrightarrow\left(0,\ldots,1,\ldots,0,\frac{\partial f}{\partial x^i},\ldots,\frac{\partial f_k}{\partial x^i}\right)\]
+		y luego la métrica es
+		\[g_ij=\begin{cases}
+			\begin{aligned}
+				1+\left(\frac{\partial f_1}{\partial x^i}\right)^2+\ldots+\left(\frac{\partial f_k}{\partial x^i}\right)^2\qquad\qquad\qquad&\text{si }i=j\\
+			\left(\frac{\partial f_1}{\partial x^i}\right)\left(\frac{\partial f_1}{\partial x^j}\right)+\ldots+	\left(\frac{\partial f_k}{\partial x^i}\right)\left(\frac{\partial f_k}{\partial x^j}\right)\qquad&\text{si }i\neq j
+			\end{aligned}
+		\end{cases}\]
+		
+	\end{ejem}
+
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	

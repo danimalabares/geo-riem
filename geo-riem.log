@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  7 NOV 2023 09:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  8 NOV 2023 09:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1674,16 +1674,23 @@ Underfull \vbox (badness 3088) has occurred while \output is active []
 Chapter 4.
 [77
 
-] [78] [79] [80] [81] [82] [83] [84]
+] [78] [79] [80] [81] [82]
+Overfull \hbox (4.42923pt too wide) in paragraph at lines 2946--2947
+\OT1/ppl/m/n/10 gen-eran planos no de-gen-er-a-dos para toda $\OML/cmm/m/it/10 
+n$\OT1/ppl/m/n/10 . En con-se-cuen-cia, $\OT1/cmr/m/n/10 0 = \OMS/cmsy/m/n/10 h
+\OML/cmm/m/it/10 R[]v[]; w[]\OMS/cmsy/m/n/10 i !
+ []
+
+[83] [84] [85]
 Chapter 5.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 2969--2969
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 3011--3011
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
  []
 
-[85
+[86
 
 ] (./geo-riem.aux)
 
@@ -1696,8 +1703,8 @@ Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39529 strings out of 476025
- 802731 string characters out of 5790018
+ 39536 strings out of 476025
+ 802780 string characters out of 5790018
  1875388 words of memory out of 5000000
  59086 multiletter control sequences out of 15000+600000
  536207 words of font info for 100 fonts, out of 8000000 for 9000
@@ -1725,10 +1732,10 @@ texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (85 pages, 4020980 bytes).
+Output written on geo-riem.pdf (86 pages, 4024091 bytes).
 PDF statistics:
- 1101 PDF objects out of 1200 (max. 8388607)
- 931 compressed objects within 10 object streams
- 318 named destinations out of 1000 (max. 500000)
+ 1114 PDF objects out of 1200 (max. 8388607)
+ 943 compressed objects within 10 object streams
+ 325 named destinations out of 1000 (max. 500000)
  459 words of extra memory for PDF output out of 10000 (max. 10000000)
 
