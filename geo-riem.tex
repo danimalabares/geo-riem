@@ -103,6 +103,7 @@
 \DeclareMathOperator{\sgn}{sgn}
 
 \usepackage{cleveref}
+\crefname{section}{la sección}{las secciones}
 
 \title{Geometría Riemanniana}
 
@@ -1726,6 +1727,7 @@
 		\[T:\underbrace{V^*\times\ldots\times V^*}_{k\text{ veces}}\times \underbrace{V\times\ldots\times V}_{l\text{ veces}}\to V\]
 	\end{prop}
 	
+	\label{traza}
 	Podemos usar esta proposición para definir rápidamente las contracciones como la traza de una matriz (ver \cite{Lee-riem}, Apéndice B, p. 395). Definimos el operador $\operatorname{tr}:T^{(1,1)}(V)\to\R$ como la traza del endomorfismo asociado a cada tensor visto como una matriz. Como la traza es invariante bajo cambios de coordenadas, este operador está bien definido.
 	
 	En general, podemos definir
@@ -2990,6 +2992,10 @@
 	y de hecho
 	\[R_{vw}x=c(\langle v,x\rangle w-\langle x,w\rangle v)\]
 	
+	\begin{obs}
+		En \cite{Lee-riem} prop. 8.29 se muestra que la curvatura seccional es la curvatura Gaussiana de una 2-subvariedad definida localmente como la imagen del plano tangente bajo la exponencial. Para enunciar esta proposición es necesiario primero definir la noción de curvatura Gaussiana en una subvariedad.
+	\end{obs}
+	
 	\iffalse
 	\begin{ejem}[La gráfica de una función entre espacio euclideanos]
 		Sea $f:\R^m\to \R^{n-m}\approx\R^k$. Trataremos de encontrar el tensor de curvatura de la gráfica de esta función.
@@ -3024,7 +3030,30 @@
 	\end{align*}
 	Es decir,
 	\[\left(\frac{\partial}{\partial x^i}\right)^*=\sum_jg_{ij}dx^j\]
-
+	\begin{obs}
+		La operación bajar un índice es lineal.
+	\end{obs}
+	\begin{defn}
+		Definimos la \textbf{contracción métrica} como la composición de las operaciones
+		\[\begin{tikzcd}[column sep=huge]
+			A\in T^{r}_{s}(M)\arrow{r}{\text{elevar índice}}&\uparrow^b_aA\in T^{r+1}_{s-1}(M)\arrow{r}{\text{contraer}}& C_{ab}(A)\in T_{s-2}^r(M)
+		\end{tikzcd}
+		\]
+	\end{defn}
+	\section{Curvaturas de Ricci y escalar}
+	Los siguientes dos conceptos están definidos en términos de contracciones. Una manera de ver las contracciones de acuerdo a \cite{Lee-riem} está en \cref{traza}.
+	\begin{defn}\leavevmode
+		\begin{itemize}
+			\item El \textbf{tensor de curvatura de Ricci} es $\operatorname{Ric}=C_3^1(R)\in T^0_2(M)$, cuyas componentes son $R_{ij}=\sum_m R_{ijm}^m$.
+			\item La \textbf{curvatura escalar} es
+			\[S=C_{12}(\operatorname{Ric})\in T^0_0(M)=\Cinf(M,\R)\]
+			es decir, es la contracción del tensor de Ricci.
+		\end{itemize}
+	\end{defn}
+	\begin{obs}
+		En \cite{Lee-riem} se define el tensor de curvatura de Ricci como la traza del endomorfismo $Z\mapsto R(Z,X)Y$. De hecho, en cada punto de la variedad este operador es una transformación lineal, que se puede representar como una matriz, respecto a la cual tiene una traza. Como la traza es invariante bajo cambios de coordenadas, la contracción (=traza) es un tensor bien definido.
+	\end{obs}
+	
 	
 	\chapter{Referencias}
 	\printbibliography[heading=none]

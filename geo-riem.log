@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  9 NOV 2023 09:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  10 NOV 2023 09:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1176,31 +1176,31 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 \@quotelevel=\count461
 \@quotereset=\count462
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
-10.
+11.
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 ) (./geo-riem.aux)
 \openout1 = `geo-riem.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1261,7 +1261,7 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 110.
+Package hyperref Info: Link coloring ON on input line 111.
 
 (./geo-riem.out) (./geo-riem.out)
 \@outlinefile=\write5
@@ -1296,14 +1296,14 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'geo-riem.bbl' found.
 
 (./geo-riem.bbl)
-Package biblatex Info: Reference section=0 on input line 110.
-Package biblatex Info: Reference segment=0 on input line 110.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112
+Package biblatex Info: Reference section=0 on input line 111.
+Package biblatex Info: Reference segment=0 on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 113
 .
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+LaTeX Font Info:    Trying to load font information for U+msb on input line 113
 .
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1322,19 +1322,19 @@ Chapter 1.
 [4
 
 ] [5] [6]
-Overfull \hbox (4.69324pt too wide) in paragraph at lines 266--267
+Overfull \hbox (4.69324pt too wide) in paragraph at lines 267--268
 []\OT1/ppl/m/n/10 Bueno, pode-mos darnos cuenta de que es con-tinua cuando pen-
 samos que el plano proyec-
  []
 
 [7] [8]
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 3
-45.
+46.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 [9] [10] [11]
-Overfull \hbox (25.81535pt too wide) in paragraph at lines 466--467
+Overfull \hbox (25.81535pt too wide) in paragraph at lines 467--468
 \OT1/ppl/m/n/10 cios tan-gentes, la ma-triz que la rep-re-senta re-specto a las
  bases $[]$ y $[]$
  []
@@ -1346,34 +1346,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [14] [15
 
 ] [16]
-<fig1.png, id=337, 459.7175pt x 470.75874pt>
+<fig1.png, id=342, 459.7175pt x 470.75874pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 635.
+Package pdftex.def Info: fig1.png  used on input line 636.
 (pdftex.def)             Requested size: 193.33647pt x 197.9831pt.
  [17 <./fig1.png>] [18]
-Overfull \hbox (0.72678pt too wide) in paragraph at lines 700--701
+Overfull \hbox (0.72678pt too wide) in paragraph at lines 701--702
 []\OT1/ppl/m/n/10 Para los m[]ultiplos en-teros de $\OML/cmm/m/it/10 $\OT1/ppl
 /m/n/10 , con-sid-er-e-mos su dis-tan-cia al en-tero menor
  []
 
-<fig9.png, id=352, 361.35pt x 363.3575pt>
+<fig9.png, id=357, 361.35pt x 363.3575pt>
 File: fig9.png Graphic file (type png)
 <use fig9.png>
-Package pdftex.def Info: fig9.png  used on input line 712.
+Package pdftex.def Info: fig9.png  used on input line 713.
 (pdftex.def)             Requested size: 193.33647pt x 194.40819pt.
 
 Underfull \vbox (badness 3312) has occurred while \output is active []
 
  [19]
 [20 <./fig9.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 771
+LaTeX Font Info:    Trying to load font information for U+euf on input line 772
 .
 
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Overfull \hbox (5.23526pt too wide) in paragraph at lines 771--772
+Overfull \hbox (5.23526pt too wide) in paragraph at lines 772--773
 []\OT1/ppl/b/n/10 Observaci^^Son. []\OT1/ppl/m/n/10 De-no-tare-mos al con-junto
  de cam-pos vec-to-ri-ales en una var-iedad por $\U/euf/m/n/10 X\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 )$\OT1/ppl/m/n/10 . 
@@ -1381,59 +1381,59 @@ Overfull \hbox (5.23526pt too wide) in paragraph at lines 771--772
 
 [21] [22] [23]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 8
-79.
+80.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<fig6.png, id=399, 361.35pt x 354.32375pt>
+<fig6.png, id=404, 361.35pt x 354.32375pt>
 File: fig6.png Graphic file (type png)
 <use fig6.png>
-Package pdftex.def Info: fig6.png  used on input line 889.
+Package pdftex.def Info: fig6.png  used on input line 890.
 (pdftex.def)             Requested size: 174.00163pt x 170.61952pt.
-<fig7.png, id=400, 361.35pt x 354.32375pt>
+<fig7.png, id=405, 361.35pt x 354.32375pt>
 File: fig7.png Graphic file (type png)
 <use fig7.png>
-Package pdftex.def Info: fig7.png  used on input line 894.
+Package pdftex.def Info: fig7.png  used on input line 895.
 (pdftex.def)             Requested size: 174.00163pt x 170.61952pt.
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 887--897
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 888--898
 [][] [] 
  []
 
 [24]
-<fig8.png, id=413, 361.35pt x 354.32375pt>
+<fig8.png, id=418, 361.35pt x 354.32375pt>
 File: fig8.png Graphic file (type png)
 <use fig8.png>
-Package pdftex.def Info: fig8.png  used on input line 922.
+Package pdftex.def Info: fig8.png  used on input line 923.
 (pdftex.def)             Requested size: 174.00165pt x 170.61952pt.
  [25 <./fig6.png (PNG copy)> <./fig7.png (PNG copy)>] [26 <./fig8.png (PNG copy
 )>]
-Overfull \hbox (4.05347pt too wide) in paragraph at lines 957--958
+Overfull \hbox (4.05347pt too wide) in paragraph at lines 958--959
 []\OT1/ppl/m/n/10 El mapeo $\OML/cmm/m/it/10 T \OT1/cmr/m/n/10 : \U/msb/m/n/10 
 R[] \OMS/cmsy/m/n/10 ! \U/msb/m/n/10 R[]$ \OT1/ppl/m/n/10 que cam-bia co-or-de-
 nadas cil[]^^Pndricas a carte-sianas manda $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r
 ; ^^R; z\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7!
  []
 
-<fig10.png, id=427, 361.35pt x 401.5pt>
+<fig10.png, id=432, 361.35pt x 401.5pt>
 File: fig10.png Graphic file (type png)
 <use fig10.png>
-Package pdftex.def Info: fig10.png  used on input line 979.
+Package pdftex.def Info: fig10.png  used on input line 980.
 (pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
-<fig11.png, id=428, 361.35pt x 401.5pt>
+<fig11.png, id=433, 361.35pt x 401.5pt>
 File: fig11.png Graphic file (type png)
 <use fig11.png>
-Package pdftex.def Info: fig11.png  used on input line 984.
+Package pdftex.def Info: fig11.png  used on input line 985.
 (pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
 
-Overfull \hbox (1.90001pt too wide) in paragraph at lines 977--987
+Overfull \hbox (1.90001pt too wide) in paragraph at lines 978--988
 [][] [] 
  []
 
-<fig12.png, id=429, 361.35pt x 401.5pt>
+<fig12.png, id=434, 361.35pt x 401.5pt>
 File: fig12.png Graphic file (type png)
 <use fig12.png>
-Package pdftex.def Info: fig12.png  used on input line 990.
+Package pdftex.def Info: fig12.png  used on input line 991.
 (pdftex.def)             Requested size: 174.00163pt x 193.33656pt.
 
 Underfull \vbox (badness 1303) has occurred while \output is active []
@@ -1441,7 +1441,7 @@ Underfull \vbox (badness 1303) has occurred while \output is active []
  [27]
 [28 <./fig10.png (PNG copy)> <./fig11.png (PNG copy)> <./fig12.png (PNG copy)>]
 
-Overfull \hbox (14.85336pt too wide) in paragraph at lines 1030--1031
+Overfull \hbox (14.85336pt too wide) in paragraph at lines 1031--1032
 \OT1/ppl/m/n/10 bierta de "bo-las" $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 h[]\OT1/
 cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 )))\OMS/cmsy/m/n/10 g[]$ \OT1/ppl/m/n/10
@@ -1453,7 +1453,7 @@ cmr/m/n/10 (\OML/cmm/m/it/10 B[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n
 [29] [30]
 Chapter 2.
 
-Overfull \hbox (13.22243pt too wide) in paragraph at lines 1056--1057
+Overfull \hbox (13.22243pt too wide) in paragraph at lines 1057--1058
 \OT1/ppl/m/n/10 m[]odulos) $\OML/cmm/m/it/10 V[]; [] ; V[]$\OT1/ppl/m/n/10 , po
 de-mos definir el \OT1/ppl/b/n/10 pro-ducto di-recto \OT1/ppl/m/n/10 como el es
 -pa-cio vec-to-rial definido
@@ -1462,20 +1462,20 @@ de-mos definir el \OT1/ppl/b/n/10 pro-ducto di-recto \OT1/ppl/m/n/10 como el es
 [31
 
 ] [32] [33] [34] [35] [36] [37]
-Overfull \hbox (14.01784pt too wide) in paragraph at lines 1325--1327
+Overfull \hbox (14.01784pt too wide) in paragraph at lines 1326--1328
 \OT1/ppl/m/n/10 la proyecci[]on nat-u-ral $\OML/cmm/m/it/10 ^^Y \OT1/cmr/m/n/10
  : \OML/cmm/m/it/10 M \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 M=G$\OT1/ppl/m/n/10 .
  Para cada parametrizaci[]on lo-cal $[]$
  []
 
 [38]
-<fig13.png, id=540, 1041.8925pt x 469.755pt>
+<fig13.png, id=545, 1041.8925pt x 469.755pt>
 File: fig13.png Graphic file (type png)
 <use fig13.png>
-Package pdftex.def Info: fig13.png  used on input line 1353.
+Package pdftex.def Info: fig13.png  used on input line 1354.
 (pdftex.def)             Requested size: 270.66988pt x 122.03307pt.
  [39]
-Overfull \hbox (6.2015pt too wide) in paragraph at lines 1374--1376
+Overfull \hbox (6.2015pt too wide) in paragraph at lines 1375--1377
 []\OT1/ppl/b/n/10 Ejercicio \OT1/ppl/m/n/10 ([][][]Lee[][]\OT1/ppl/b/n/10 , 15.
 13\OT1/ppl/m/n/10 )\OT1/ppl/b/n/10 . []\OT1/ppl/m/n/10 Si $\OML/cmm/m/it/10 M$ 
 \OT1/ppl/m/n/10 y $\OML/cmm/m/it/10 N$ \OT1/ppl/m/n/10 son var-iedades ori-en-t
@@ -1484,13 +1484,13 @@ adas de di-mensi[]on $\OML/cmm/m/it/10 > \OT1/cmr/m/n/10 0$ \OT1/ppl/m/n/10 y $
  []
 
 [40 <./fig13.png>]
-Overfull \hbox (7.32584pt too wide) in paragraph at lines 1417--1418
+Overfull \hbox (7.32584pt too wide) in paragraph at lines 1418--1419
 []\OT1/ppl/m/n/10 Un grupo de Lie $\OML/cmm/m/it/10 G$ \OT1/ppl/m/n/10 es un gr
 upo que adem[]as es una var-iedad difer-en-cia-ble con la propiedad
  []
 
 [41] [42]
-Overfull \hbox (23.0445pt too wide) in paragraph at lines 1481--1482
+Overfull \hbox (23.0445pt too wide) in paragraph at lines 1482--1483
 []\OT1/ppl/b/n/10 Definici^^Son \OT1/ppl/m/n/10 ([][][]O'Neill[][])\OT1/ppl/b/n
 /10 . []\OT1/ppl/m/n/10 Un $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r; s\OT1/cmr/m/n/
 10 )$\OT1/ppl/b/n/10 -campo ten-so-rial \OT1/ppl/m/n/10 en una var-iedad $\OML/
@@ -1499,7 +1499,7 @@ cmm/m/it/10 M$ \OT1/ppl/m/n/10 es una funci[]on $\OML/cmm/m/it/10 C[]\OT1/cmr/m
  []
 
 [43]
-Overfull \hbox (2.30365pt too wide) in paragraph at lines 1525--1526
+Overfull \hbox (2.30365pt too wide) in paragraph at lines 1526--1527
 []\OT1/ppl/b/n/10 Definici^^Son. []\OT1/ppl/m/n/10 Sea $\OML/cmm/m/it/10 A$ \OT
 1/ppl/m/n/10 un $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r; s\OT1/cmr/m/n/10 )$\OT1/p
 pl/m/n/10 -campo ten-so-rial $\OML/cmm/m/it/10 A$ \OT1/ppl/m/n/10 definido en u
@@ -1507,7 +1507,7 @@ na var-iedad $\OML/cmm/m/it/10 M$\OT1/ppl/m/n/10 . Si $[]$
  []
 
 [44]
-Overfull \hbox (17.7621pt too wide) in paragraph at lines 1557--1558
+Overfull \hbox (17.7621pt too wide) in paragraph at lines 1558--1559
 []\OT1/ppl/m/n/10 En una vecin-dad co-or-de-nada $\OML/cmm/m/it/10 U$ \OT1/ppl/
 m/n/10 alrede-dor de $\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 M$
  \OT1/ppl/m/n/10 con carta $\OML/cmm/m/it/10 h \OT1/cmr/m/n/10 = (\OML/cmm/m/it
@@ -1515,17 +1515,17 @@ m/n/10 alrede-dor de $\OML/cmm/m/it/10 p \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 M$
  []
 
 [45] [46] [47] [48] [49] [50] [51] [52]
-Overfull \hbox (43.92085pt too wide) detected at line 1823
+Overfull \hbox (43.92085pt too wide) detected at line 1825
 []
  []
 
 
-Overfull \hbox (46.07361pt too wide) detected at line 1830
+Overfull \hbox (46.07361pt too wide) detected at line 1832
 []
  []
 
 
-Overfull \hbox (45.51808pt too wide) detected at line 1836
+Overfull \hbox (45.51808pt too wide) detected at line 1838
 []
  []
 
@@ -1534,14 +1534,14 @@ Chapter 3.
 [54
 
 ]
-Overfull \hbox (0.47884pt too wide) in paragraph at lines 1898--1900
+Overfull \hbox (0.47884pt too wide) in paragraph at lines 1900--1902
 []\OT1/ppl/b/n/10 Ejemplo \OT1/ppl/m/n/10 (Es-pa-cio de Minkowski)\OT1/ppl/b/n/
 10 . []\OT1/ppl/m/n/10 En un es-pa-cio vec-to-rial $\OML/cmm/m/it/10 V$ \OT1/pp
 l/m/n/10 en el que teng-amos definida
  []
 
 
-Overfull \hbox (1.74425pt too wide) in paragraph at lines 1912--1913
+Overfull \hbox (1.74425pt too wide) in paragraph at lines 1914--1915
 []\OT1/ppl/b/n/10 Observaci^^Son. []\OT1/ppl/m/n/10 Un \OT1/ppl/b/n/10 es-pa-ci
 o m^^Setrico $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$ \OT1/ppl
 /m/n/10 es un con-junto $\OML/cmm/m/it/10 X$ \OT1/ppl/m/n/10 junto con una \OT1
@@ -1549,67 +1549,67 @@ o m^^Setrico $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X; d\OT1/cmr/m/n/10 )$ \OT1/ppl
  []
 
 
-Overfull \hbox (13.85275pt too wide) in paragraph at lines 1920--1921
+Overfull \hbox (13.85275pt too wide) in paragraph at lines 1922--1923
 \OT1/ppl/m/n/10 debe es-tar de-ter-mi-nada por los dos vec-tores tan-gentes b[]
 asicos. As[]^^P que si la parametrizaci[]on
  []
 
 [55]
-Overfull \hbox (8.26239pt too wide) in paragraph at lines 1952--1954
+Overfull \hbox (8.26239pt too wide) in paragraph at lines 1954--1956
 \OT1/ppl/m/n/10 que es dis-tinta de la eu-clideana. Para una ex-ce-lente in-tro
 -ducci[]on a la ge-ometr[]^^Pa hiperb[]olica
  []
 
 [56] [57]
-Overfull \hbox (4.9004pt too wide) in paragraph at lines 2025--2026
+Overfull \hbox (4.9004pt too wide) in paragraph at lines 2027--2028
 []\OT1/ppl/m/n/10 Finalmente se de-mues-tra que la cor-re-spon-den-cia $\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 V; W\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 7! \OML/cmm/m
 /it/10 D[]W$ \OT1/ppl/m/n/10 cumple las propiedades
  []
 
 [58] [59] [60] [61]
-Overfull \hbox (0.3701pt too wide) in paragraph at lines 2179--2180
+Overfull \hbox (0.3701pt too wide) in paragraph at lines 2181--2182
 []\OT1/ppl/b/n/10 Ejemplo \OT1/ppl/m/n/10 (Cam-pos par-ale-los en $\OML/cmm/m/i
 t/10 S[]$\OT1/ppl/m/n/10 )\OT1/ppl/b/n/10 . []\OT1/ppl/m/n/10 Ver [][]\OT1/pcr/
 m/n/10 Transporte Paralelo en la Esfera.nb[][]\OT1/ppl/m/n/10 . 
  []
 
 [62]
-<fig14.png, id=748, 478.78876pt x 480.79625pt>
+<fig14.png, id=753, 478.78876pt x 480.79625pt>
 File: fig14.png Graphic file (type png)
 <use fig14.png>
-Package pdftex.def Info: fig14.png  used on input line 2187.
+Package pdftex.def Info: fig14.png  used on input line 2189.
 (pdftex.def)             Requested size: 154.66681pt x 155.31053pt.
  [63 <./fig14.png>]
-<fig15a.png, id=755, 360.34625pt x 370.38374pt>
+<fig15a.png, id=760, 360.34625pt x 370.38374pt>
 File: fig15a.png Graphic file (type png)
 <use fig15a.png>
-Package pdftex.def Info: fig15a.png  used on input line 2245.
+Package pdftex.def Info: fig15a.png  used on input line 2247.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15b.png, id=756, 360.34625pt x 370.38374pt>
+<fig15b.png, id=761, 360.34625pt x 370.38374pt>
 File: fig15b.png Graphic file (type png)
 <use fig15b.png>
-Package pdftex.def Info: fig15b.png  used on input line 2250.
+Package pdftex.def Info: fig15b.png  used on input line 2252.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15c.png, id=757, 360.34625pt x 370.38374pt>
+<fig15c.png, id=762, 360.34625pt x 370.38374pt>
 File: fig15c.png Graphic file (type png)
 <use fig15c.png>
-Package pdftex.def Info: fig15c.png  used on input line 2255.
+Package pdftex.def Info: fig15c.png  used on input line 2257.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15d.png, id=758, 360.34625pt x 370.38374pt>
+<fig15d.png, id=763, 360.34625pt x 370.38374pt>
 File: fig15d.png Graphic file (type png)
 <use fig15d.png>
-Package pdftex.def Info: fig15d.png  used on input line 2260.
+Package pdftex.def Info: fig15d.png  used on input line 2262.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15e.png, id=759, 360.34625pt x 370.38374pt>
+<fig15e.png, id=764, 360.34625pt x 370.38374pt>
 File: fig15e.png Graphic file (type png)
 <use fig15e.png>
-Package pdftex.def Info: fig15e.png  used on input line 2265.
+Package pdftex.def Info: fig15e.png  used on input line 2267.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
-<fig15f.png, id=760, 360.34625pt x 370.38374pt>
+<fig15f.png, id=765, 360.34625pt x 370.38374pt>
 File: fig15f.png Graphic file (type png)
 <use fig15f.png>
-Package pdftex.def Info: fig15f.png  used on input line 2270.
+Package pdftex.def Info: fig15f.png  used on input line 2272.
 (pdftex.def)             Requested size: 154.66681pt x 158.97366pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1621,51 +1621,51 @@ Overfull \vbox (7.44443pt too high) has occurred while \output is active []
 [65 <./fig15a.png (PNG copy)> <./fig15b.png (PNG copy)> <./fig15c.png (PNG copy
 )> <./fig15d.png (PNG copy)> <./fig15e.png (PNG copy)> <./fig15f.png (PNG copy)
 >]
-<fig16.png, id=771, 395.4775pt x 396.48125pt>
+<fig16.png, id=776, 395.4775pt x 396.48125pt>
 File: fig16.png Graphic file (type png)
 <use fig16.png>
-Package pdftex.def Info: fig16.png  used on input line 2283.
+Package pdftex.def Info: fig16.png  used on input line 2285.
 (pdftex.def)             Requested size: 193.33647pt x 193.82982pt.
  [66 <./fig16.png (PNG copy)>]
 
 LaTeX Warning: Hyper reference `ejem:chsitorffel-hip' on page 67 undefined on i
-nput line 2323.
+nput line 2325.
 
 [67] [68]
-<fig17.png, id=794, 682.55pt x 680.5425pt>
+<fig17.png, id=799, 682.55pt x 680.5425pt>
 File: fig17.png Graphic file (type png)
 <use fig17.png>
-Package pdftex.def Info: fig17.png  used on input line 2403.
+Package pdftex.def Info: fig17.png  used on input line 2405.
 (pdftex.def)             Requested size: 193.33647pt x 192.76244pt.
-<fig18.jpeg, id=795, 1171.37625pt x 1188.44pt>
+<fig18.jpeg, id=800, 1171.37625pt x 1188.44pt>
 File: fig18.jpeg Graphic file (type jpg)
 <use fig18.jpeg>
-Package pdftex.def Info: fig18.jpeg  used on input line 2413.
+Package pdftex.def Info: fig18.jpeg  used on input line 2415.
 (pdftex.def)             Requested size: 154.66681pt x 156.91446pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [69 <./fig17.png>]
-<fig19.png, id=805, 600.2425pt x 261.97874pt>
+<fig19.png, id=810, 600.2425pt x 261.97874pt>
 File: fig19.png Graphic file (type png)
 <use fig19.png>
-Package pdftex.def Info: fig19.png  used on input line 2419.
+Package pdftex.def Info: fig19.png  used on input line 2421.
 (pdftex.def)             Requested size: 193.33647pt x 84.38255pt.
  [70 <./fig18.jpeg> <./fig19.png>] [71]
-<fig20.jpeg, id=833, 2131.965pt x 1003.75pt>
+<fig20.jpeg, id=838, 2131.965pt x 1003.75pt>
 File: fig20.jpeg Graphic file (type jpg)
 <use fig20.jpeg>
-Package pdftex.def Info: fig20.jpeg  used on input line 2500.
+Package pdftex.def Info: fig20.jpeg  used on input line 2502.
 (pdftex.def)             Requested size: 270.66988pt x 127.42888pt.
 
 Underfull \vbox (badness 1603) has occurred while \output is active []
 
  [72]
 [73 <./fig20.jpeg>]
-<fig21.jpeg, id=853, 1247.66125pt x 941.5175pt>
+<fig21.jpeg, id=858, 1247.66125pt x 941.5175pt>
 File: fig21.jpeg Graphic file (type jpg)
 <use fig21.jpeg>
-Package pdftex.def Info: fig21.jpeg  used on input line 2544.
+Package pdftex.def Info: fig21.jpeg  used on input line 2546.
 (pdftex.def)             Requested size: 154.66681pt x 116.71248pt.
 
 Underfull \vbox (badness 3088) has occurred while \output is active []
@@ -1675,38 +1675,38 @@ Chapter 4.
 [77
 
 ] [78] [79] [80] [81] [82]
-Overfull \hbox (4.42923pt too wide) in paragraph at lines 2946--2947
+Overfull \hbox (4.42923pt too wide) in paragraph at lines 2948--2949
 \OT1/ppl/m/n/10 gen-eran planos no de-gen-er-a-dos para toda $\OML/cmm/m/it/10 
 n$\OT1/ppl/m/n/10 . En con-se-cuen-cia, $\OT1/cmr/m/n/10 0 = \OMS/cmsy/m/n/10 h
 \OML/cmm/m/it/10 R[]v[]; w[]\OMS/cmsy/m/n/10 i !
  []
 
-[83] [84] [85]
+[83] [84] [85] [86]
 Chapter 5.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 3030--3030
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 3059--3059
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
  []
 
-[86
+[87
 
 ] (./geo-riem.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `geo-riem.out' has not changed.
-(rerunfilecheck)             Checksum: 05A1C1137192DE2C2626FBCC983A803D;7423.
+(rerunfilecheck)             Checksum: 0A484A48C87461089600D4AF7637DA5F;7634.
 Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 \openout1 = `geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39538 strings out of 476025
- 802804 string characters out of 5790018
+ 39580 strings out of 476025
+ 803751 string characters out of 5790018
  1875388 words of memory out of 5000000
- 59087 multiletter control sequences out of 15000+600000
+ 59124 multiletter control sequences out of 15000+600000
  536207 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,89p,1878b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1732,10 +1732,10 @@ texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/texmf-
 dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/typ
 e1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (86 pages, 4024716 bytes).
+Output written on geo-riem.pdf (87 pages, 4028400 bytes).
 PDF statistics:
- 1119 PDF objects out of 1200 (max. 8388607)
- 948 compressed objects within 10 object streams
- 326 named destinations out of 1000 (max. 500000)
- 467 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1136 PDF objects out of 1200 (max. 8388607)
+ 964 compressed objects within 10 object streams
+ 331 named destinations out of 1000 (max. 500000)
+ 475 words of extra memory for PDF output out of 10000 (max. 10000000)
 
