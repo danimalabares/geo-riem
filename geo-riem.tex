@@ -2990,23 +2990,42 @@
 	y de hecho
 	\[R_{vw}x=c(\langle v,x\rangle w-\langle x,w\rangle v)\]
 	
+	\iffalse
 	\begin{ejem}[La gráfica de una función entre espacio euclideanos]
 		Sea $f:\R^m\to \R^{n-m}\approx\R^k$. Trataremos de encontrar el tensor de curvatura de la gráfica de esta función.
 		
 		Una parametrización local está dada por
 		\[(x^1,\ldots,x^m)\mapsto (x^1,\ldots,x^m,f_1(x^1,\ldots,x^m),\ldots,f_k(x^1,\ldots,x^m))\]
 		y los vectores básicos del espacio tangente en cada punto son
-		\[\frac{\partial}{\partial x^i}\longleftrightarrow\left(0,\ldots,1,\ldots,0,\frac{\partial f}{\partial x^i},\ldots,\frac{\partial f_k}{\partial x^i}\right)\]
+		\[\frac{\partial}{\partial x^i}\longleftrightarrow\left(0,\ldots,\underbrace{1}_{i},\ldots,0,\frac{\partial f}{\partial x^i},\ldots,\frac{\partial f_k}{\partial x^i}\right)\]
 		y luego la métrica es
-		\[g_ij=\begin{cases}
+		\[g_{ij}=\begin{cases}
 			\begin{aligned}
 				1+\left(\frac{\partial f_1}{\partial x^i}\right)^2+\ldots+\left(\frac{\partial f_k}{\partial x^i}\right)^2\qquad\qquad\qquad&\text{si }i=j\\
 			\left(\frac{\partial f_1}{\partial x^i}\right)\left(\frac{\partial f_1}{\partial x^j}\right)+\ldots+	\left(\frac{\partial f_k}{\partial x^i}\right)\left(\frac{\partial f_k}{\partial x^j}\right)\qquad&\text{si }i\neq j
 			\end{aligned}
 		\end{cases}\]
-		
 	\end{ejem}
+	\fi
+	
+	\section{Subir y bajar índices}
+	Para un tensor $A\in T^r_s(M)$, definimos $	\downarrow^a_bA\in T^{r-1}_{s+1}(M)$ mediante 
+	\begin{align*}
+		(\downarrow^a_bA(\theta^1,\ldots,\theta^{r-1},&X_1,\ldots,X_b,\ldots,X_{s+1}))\\
+		&:=A(\theta^1,\ldots,X^*_b,\ldots,\theta^n,X_1,\ldots,X_{b-1},X_{b+1},\ldots,X_s)
+	\end{align*}
+	donde $X^*_b$ se define como sigue.
+	
+	Primero consideremos el caso en que $X=\frac{\partial}{\partial x^i}$. Definimos simplemente
+	\begin{align*}\left(\frac{\partial}{\partial x^i}\right)^*(V)&=\left\langle V,\frac{\partial}{\partial x^i}\right\rangle\\
+		&=\left\langle \sum_j V^j\frac{\partial}{\partial x^j},\frac{\partial}{\partial x^i}\right\rangle\\
+		&=\sum_j V^j\left\langle \frac{\partial}{\partial x^j},\frac{\partial}{\partial x^i}\right\rangle\\
+		&=\sum_jV^jg_{ij}
+	\end{align*}
+	Es decir,
+	\[\left(\frac{\partial}{\partial x^i}\right)^*=\sum_jg_{ij}dx^j\]
 
+	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
