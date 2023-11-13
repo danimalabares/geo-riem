@@ -3053,7 +3053,16 @@
 	\begin{obs}
 		En \cite{Lee-riem} se define el tensor de curvatura de Ricci como la traza del endomorfismo $Z\mapsto R(Z,X)Y$. De hecho, en cada punto de la variedad este operador es una transformación lineal, que se puede representar como una matriz, respecto a la cual tiene una traza. Como la traza es invariante bajo cambios de coordenadas, la contracción (=traza) es un tensor bien definido.
 	\end{obs}
+	\section{Segunda forma fundamental en superficies}
 	
+	\begin{prop}
+		Sean $u_1,u_2$ coordenadas locales alrededor de $p\in S\subset\R^n$ para alguna superficie $S$. La segunda forma fundamental $\operatorname{II}$ es similar a
+		\[(g^{-1})P(D^2x)=g^{-1}\left[\begin{matrix}
+			P(x_{11})&P(x_{12})\\
+			P(x_{12})&P(x_{22})
+		\end{matrix}\right]\]
+		donde $x_{ij}=\frac{\partial^2x}{\partial u_i\partial u_j}$, $P$ es la proyección sobre $T_pS^\perp$ y $g$ es la métrica Riemanniana de $S$ inducida por la métrica euclideana.
+	\end{prop}
 	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
