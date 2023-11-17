@@ -937,9 +937,9 @@
 		\end{align*}
 	\end{obs}
 	\subsection{Ejercicios 4-8 septiembre}
-	\begin{ejer}
+	\begin{ejer*}
 		En $\R^3$ considera los campos vectoriales en coodenadas cartesianas $X=x^2E_1+yE_3$ y $Y=y^3E_2$ y la función $f:\R^3\to\R$ dada por $f(p,q,r)=p^2qr$. Calcula $[X,Y]$ en $(1,01)$, $fY$ en $(1,01)$ y $Yf$ en $(1,0,1)$. Expresa $X$ en términos de la base de campos coordenados correspondiente a coordenadas cilíndricas.
-	\end{ejer}
+	\end{ejer*}
 	\begin{proof}[Solución]
 		
 		El corchete de Lie de $X$ y $Y$ debe ser un campo vectorial, es decir, un operador que asocia funciones suaves en la variedad con números reales. Para cualquier $g\in\Cinf(\R^3,\R)$, tenemos
@@ -1735,9 +1735,9 @@
 	declarando que $(\operatorname{tr}F)(\omega^1,\ldots,\omega^k,v_1,\ldots,v_l)$ sea la traza el $(1,1)$ tensor dado al fijar todas las entradas salvo una covariante y una contravariante de $F$:
 	\[F(\omega^1,\ldots,\omega^k,\bullet,v_1,\ldots,v_l,\bullet)\in T^{(1,1)}\]
 	
-	\begin{ejer}[\cite{Lee-riem}\textbf{, B.3}]
+	\begin{ejer*}[\cite{Lee-riem}\textbf{, B.3}]
 		Muestra que la traza respecto a cualesquiera dos índices (uno arriba y uno abajo) es un mapeo lineal bien definido de $T^{(k+1,l+1)}(V)$ en $T^{(k,l)}(V)$.
-	\end{ejer}
+	\end{ejer*}
 	\section{Ejercicios de campos tensoriales}
 	\begin{enumerate}
 		\item Una 1-forma $\theta$ es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$. Un campo vectorial es cero si y sólo si $\theta X=0$ para toda $X\in\X(M)$.
@@ -3054,16 +3054,111 @@
 		En \cite{Lee-riem} se define el tensor de curvatura de Ricci como la traza del endomorfismo $Z\mapsto R(Z,X)Y$. De hecho, en cada punto de la variedad este operador es una transformación lineal, que se puede representar como una matriz, respecto a la cual tiene una traza. Como la traza es invariante bajo cambios de coordenadas, la contracción (=traza) es un tensor bien definido.
 	\end{obs}
 	\section{Segunda forma fundamental en superficies}
-	
-	\begin{prop}
+		En esta sección hacemos una lectura de \cite{Morgan}\textbf{, p. 25}.
+		
+		Sea $S\subset\R^n$ una superficie. Podemos escoger coordenadas ortonormales de $\R^n$ de forma que cualquier punto $p\in S$ esté en el origen y el plano tangente $T_pS$ sea el plano $x_1x_2$. En este caso, $S$ se puede ver localmente como la gráfica de una función
+		\[f:T_pS\to T_pS^\perp\]
+		Cualquier vector normal a $S$ en $p$ junto con un vector $v$ tangente a $S$ en $p$ generan un plano que intersecta $S$ en una \textbf{curva normal}. El \textbf{vector de curvatura} en $p$ en la dirección de $v$ es
+		\[\kappa=(D^2f)_p(v,v)\]
+		
+		La forma bilineal $(D^2f)_p$ en $T_pS$ con valores en $T_pS^\perp$ es la \textbf{segunda forma fundamental $\operatorname{II}$} de $S$ en $p$, dada por la matriz
+		\[\operatorname{II}= 
+		\begin{pmatrix}
+			\frac{\partial^2 f}{\partial x^2_1}&\frac{\partial^2f}{\partial x_1\partial x_2}\\
+			\frac{\partial^2f}{\partial x_1\partial x_2}&\frac{\partial^2f}{\partial x_2^2}
+		\end{pmatrix}\]
+		\textbf{Esta fórmula sólo es cierta cuando la superficie es tangente al plano $x_1x_2$.} En coordenadas generales tenemos el siguiente resultado:
+\begin{prop}[\cite{Morgan}\textbf{, 4.2}]
 		Sean $u_1,u_2$ coordenadas locales alrededor de $p\in S\subset\R^n$ para alguna superficie $S$. La segunda forma fundamental $\operatorname{II}$ es similar a
 		\[(g^{-1})P(D^2x)=g^{-1}\left[\begin{matrix}
 			P(x_{11})&P(x_{12})\\
 			P(x_{12})&P(x_{22})
 		\end{matrix}\right]\]
 		donde $x_{ij}=\frac{\partial^2x}{\partial u_i\partial u_j}$, $P$ es la proyección sobre $T_pS^\perp$ y $g$ es la métrica Riemanniana de $S$ inducida por la métrica euclideana.
+		
+		En estas condiciones
+		\[ \mathbf{H} = \text{traza de }(g^{-1})P(D^2x) = \frac{{(x_2 \cdot x_2) x_{11} - 2(x_1 \cdot x_2) x_{12} + (x_1 \cdot x_1) x_{22}}}{{(x_1 \cdot x_1)(x_2 \cdot x_2) - (x_1 \cdot x_2)^2}} \]
+		(el vector de curvatura media).
+\[ G = \det(g^{-1}P(D^2x)) = \frac{{P(x_{11}) \cdot P(x_{22}) - P(x_{12}) \cdot P(x_{12})}}{{(x_1 \cdot x_1)(x_2 \cdot x_2) - (x_1 \cdot x_2)^2}} \]
 	\end{prop}
-	
+\begin{ejem}
+	Es posible usar estas ecuaciones para encontrar la curvatura de la superficie
+	\[\{(w,z)\in\C^2:w=e^z\}\]
+\end{ejem}
+
+%Ahora hacemos una lectura de \cite{sing}.
+%
+%Consideremos una superficie orientada $M$ en $\R^4$ parametrizada por $x:U\subset\R^2\to\R^4$, y supongamos que $\{e_1,e_2,e_3,e_4\}$ es un marco ortonormal positivamente orientado tal que para cada $p\in M$, $\{e_1,e_2\}$ sea una base de $T_pM$ y $\{e_3,e_4\}$ sea una base de $T_pM^\perp:=N_pM$.
+
+Para concluir esta sección mostramos una última proposición.
+
+Diremos que una base del espacio tangente $e_1,\ldots,e_n$ es un \textbf{marco}, y un \textbf{marco móvil} es una colección de campos vectoriales $E_1,\ldots,E_n$ definidos en un abierto $U\subset M$ tales que en cada punto de $U$ son un marco.
+\begin{prop}
+	Si $\alpha:I\to M$ es una curva parametrizada y $e_1,\ldots,e_n$ es un marco ortonormal en $T_pM$ con $\alpha(0)=p$, entonces exite un único marco móvil $E_1,\ldots,E_n$ ortonormal tal que
+	\begin{enumerate}
+		\item $E_i(0)=e_i$
+		\item Cada $E_i$ es paralelo a lo largo de $\alpha$.
+	\end{enumerate}
+\end{prop}
+
+\section{Segunda forma fundamental}
+Sea $\bar{M}$ una veridad semi-Riemanniana y $M$ una subvariedad de $\bar{M}$. Sabemos que $\bar{M}$ tiene una conexión de Levi-Civita, $\X(\bar{M})\times\X(\bar{M})\to \X(\bar{M})$, a la que corresponde la \textbf{conexión inducidida}
+\[\bar{D}:\X(M)\times \bar{\X}(M)\to\bar{\X}(M).\]
+donde $\bar{\X(M)}$ denota la colección de campos vectoriales en $\bar{M}$ restringidos a $M$.
+
+La observación clave es que cualquier campo vectorial $V\in\bar{X}(M)$ se puede descomponer como una suma
+\[V=\operatorname{tan}V+\operatorname{nor}V\]
+donde $\operatorname{tan}V\in\X(M)$ y $\operatorname{nor}V\in\X(M)^\perp$.
+
+De acuerdo a \cite{Lee-riem} p. 16 el \textbf{espacio normal a un punto} $N_pM=(T_pM)^\perp$ es la colección de vectores $v\in T_p\bar{M}$ tales que $\langle v,w\rangle=0$ para todo $w\in T_pM$. Al menos en el caso Riemanniano, $T_p\bar{M}=T_pM\oplus N_pM$. Luego, la noción de \textbf{campo vectorial normal} queda definida como una sección del \textbf{haz normal} $NM=\bigsqcup_{p\in M}N_pM$. Denotamos la colección de tales secciones por $\X(M)^\perp$.
+
+En este contexo podemos descomponer
+\begin{align*}
+	\bar{D}_VW&=(D_VW)^{T}+(\bar{D}_XY)^\perp\\
+	&:=(D_VW)^{T}+\operatorname{II}(X,Y)
+\end{align*}
+donde cada sumando es la proyección de la derivada covariante al espacio tangente y normal en cada punto. Es decir, la \textbf{segunda forma fundamental} es la componente normal de la derivada covariante de la variedad ambiente respecto a la subvariedad.
+
+En clase definimos la segunda forma fundamental mediante el siguiente teorema:
+
+\begin{teo}[\cite{Lee-riem}\textbf{, 8.2, La fórmula de Gauss}]
+	Sea $(M,g)$ una subvariedad Riemanniana encajada en una variedad Riemanniana o semi-Riemanniana $(\tilde{M},\tilde{g})$. Si $X,Y\in\X(M)$ se extienden a campos vectoriales arbitrarios en $\X(\tilde{M})$ en alguna vecindad, entonces
+	\[\tilde{D}_XY=D_XY+\operatorname{II}(X,Y)\]
+\end{teo}
+\begin{coro}[\cite{Lee-riem}\textbf{, 8.3, La fórmula de Gauss a lo largo de una curva}]
+	Sean $(M,g)$ una subvariedad Riemanniana encajada en una variedad Riemanniana o semi-Riemanniana $(\tilde{M},\tilde{g})$ y $\gamma:I\to M$ una curva suave. Si $X$ es un campo vectorial suave a lo largo de $\gamma$ y tangente a $M$,
+	\[\frac{\tilde{D}X}{dt}=\frac{Dx}{dt}+\operatorname{II}(\gamma',X)\]
+\end{coro}
+
+La observación central es que la segunda forma fundamental es una medida de qué tan diferente es la conexión de Levi-Civita de la variedad ambiente respecto a la conexión de Levi-Civita de la subvariedad.
+
+Aunque la segunda forma fundamental está completamente determinada por los vectores en cada punto (ver \cite{Lee-riem}, prop. 8.1), no es formalmente un tensor, pues se trata de una función multilineal
+\[\operatorname{II}:\X(M)\times\X(M)\to\X(M)^\perp\]
+
+
+\iffalse
+\section{Ejercicios}
+Para concluir el curso nos dedicaremos a resolver los ejercicios del capítulo 3 de \cite{ONeill}.
+
+\begin{ejer}
+	Sea $D$ una conexión en una variedad $M$. Sea
+	\[T(X,Y)=[X,Y]-D_XY+D_YX\]
+	Demostrar que $T$ es un campo tensorial tipo $(1,2)$ en $M$, que llamaremos \textbf{tensor de torsión} de $D$.
+\end{ejer}
+\begin{obs}
+	La conexión de Levi-Civita es libre de torsión, es decir, $T\equiv0$.
+\end{obs}
+\begin{proof}[Solución]
+	Veamos que $T$ es $\Cinf$-multilineal. Para $f\in\Cinf(M)$,
+	\begin{align*}
+		T(fX,Y)&=[fX,Y]-D_{fX}Y+D_Y(fX)\\
+		&=fXY-Y(fX)-fD_XY+Y(f)X+fD_YX\\
+		&=fXY-Y(f)X-fYX-fD_XYY(f)X+fX_YX\\
+		&=fT(X,Y)
+	\end{align*}
+\end{proof}
+
+	\fi
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	

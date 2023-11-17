@@ -154,6 +154,51 @@
     \field{year}{2000}
   \endentry
 
+  \entry{sing}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=IS}{%
+         family={Izumiya},
+         familyi={I\bibinitperiod},
+         given={Shyūichi},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=dCRFM}{%
+         prefix={del},
+         prefixi={d\bibinitperiod},
+         family={Carmen Romero\bibnamedelima Fuster},
+         familyi={C\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim
+  F\bibinitperiod},
+         given={Mar{\'i}a},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RMAS}{%
+         family={Ruas},
+         familyi={R\bibinitperiod},
+         given={Maria Aparecida\bibnamedelima Soares},
+         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+      }}%
+      {{hash=TF}{%
+         family={Tari},
+         familyi={T\bibinitperiod},
+         given={Farid},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{IS+1}
+    \strng{fullhash}{ISdCRFMRMASTF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \true{singletitle}
+    \field{title}{Differential Geometry from a Singularity Theory Viewpoint}
+    \verb{url}
+    \verb https://api.semanticscholar.org/CorpusID:123874271
+    \endverb
+    \field{year}{2015}
+  \endentry
+
   \entry{Lee}{book}{}
     \name{author}{1}{}{%
       {{hash=LJM}{%
@@ -277,6 +322,33 @@
     \field{series}{Universitext}
     \field{title}{An Introduction to Manifolds}
     \field{year}{2010}
+  \endentry
+
+  \entry{Morgan}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MF}{%
+         family={Morgan},
+         familyi={M\bibinitperiod},
+         given={F.},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Taylor \& Francis}%
+    }
+    \strng{namehash}{MF1}
+    \strng{fullhash}{MF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \true{singletitle}
+    \field{isbn}{9781568814711}
+    \field{title}{Riemannian Geometry: A Beginners Guide, Second Edition}
+    \verb{url}
+    \verb https://books.google.com.mx/books?id=UviMQAAACAAJ
+    \endverb
+    \field{year}{2009}
   \endentry
 
   \entry{ONeill}{book}{}
