@@ -1415,7 +1415,7 @@
 		Si $G$ es un \textbf{grupo de Lie} que actúa suave, \textbf{libre} y \textbf{propiamente} en una variedad suave $M$, el espacio de órbitas $M/G$ es una variedad topológica de dimensión $\dim M-\dim G$ y tiene una estructura diferenciable única tal que la proyección $\pi:M\to M/G$ es una sumersión suave.
 	\end{teo}
 	
-	Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la propiedad de que las funciones
+	\label{grupo-Lie}Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la propiedad de que las funciones
 	\begin{align*}
 		\begin{aligned}
 			G\times G&\to G\\
@@ -3159,6 +3159,94 @@ Para concluir el curso nos dedicaremos a resolver los ejercicios del capítulo 3
 \end{proof}
 
 	\fi
+	\chapter{Grupos de Lie}
+	Esta sección es una breve introducción a grupos de Lie. Los habíamos mencionado en \cref{grupo-Lie}.
+	\begin{defn}
+Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la propiedad de que las funciones
+		\begin{align*}
+			\begin{aligned}
+				G\times G&\to G\\
+				(g,h)&\mapsto g\cdot h\\
+			\end{aligned}
+			\qquad\qquad\qquad
+			\begin{aligned}
+				G&\to G\\
+				g&\mapsto g^{-1}\\
+			\end{aligned}
+		\end{align*}
+		son suaves.
+	\end{defn}\leavevmode
+	\begin{ejem}
+		\begin{enumerate}
+			\item $S^1\subseteq\C$ con la multiplicación de números complejos.
+			\item El \textbf{grupo general lineal} $\operatorname{GL}(n,\R)$, las matrices de $n\times n$ con coeficientes en $\R$ y la multiplicación usual de matrices. 
+		\end{enumerate}
+	\end{ejem}
+	\begin{defn}[\cite{ONeill}]
+		Un \textbf{subgrupo de Lie} es un subgrupo $H$ de un grupo de Lie $G$ que es una variedad inmersa.
+	\end{defn}
+	\begin{ejem}
+			 Si $\phi:G_1\to G_2$ es un homomorfismo suave de grupos de Lie, $\ker\phi$ es un subgrupo cerrado (con la topología de subespacio). Un ejemplo de esta situación es el \textbf{grupo especial lineal }$\operatorname{SL}(n,\R)=\{g\in\operatorname{GL}(2,\R)|\det g=1\}$, es el kernel de $\det:\operatorname{GL}(n,\R)\to\R^*=\R\backslash\{0\}$.
+	\end{ejem}
+	\begin{defn}\leavevmode
+				\begin{itemize}
+		\item Un \textbf{álgebra de Lie} es un espacio vectorial $V$ que además está provisto de un producto o \textbf{corchete}
+		\begin{align*}
+			[-,-]:V\times V&\to V\\
+			(v,w)&\mapsto [v,w]
+		\end{align*}
+		que satisface las siguientes propiedades:
+		\begin{itemize}
+			\item Es bilineal.
+			\item Es antisimétrico, es decir, $[v,w]=[w,v]$.
+			\item La identidad de Jacobi,
+			\[[[x,y],z]+[[y,z],x]+[[z,x],y]=0\]
+		\end{itemize}
+
+
+			\item Dado un grupo de $G$ y un elemento $g\in G$ la \textbf{traslación izquierda (derecha)} es la función de la forma
+		\[\begin{aligned}
+			L_g:G&\to G
+			h&\mapsto gh
+		\end{aligned}\qquad\begin{aligned}
+		R_g:G&\to G
+		h&\mapsto hg
+	\end{aligned}\]
+	que son difeomorfismos.
+	\item Un campo vectorial $X\in\X(G)$ es \textbf{invariante por la izquierda (derecha)} si para cualquier $g\in G$, $dL_g(X_a)=X_{ga}$. Notemos que un campo vectorial invariante por la izquierda $X$ está completamente determinado por su valor en el elemento neutro. 
+		\end{itemize}
+	\end{defn}
+	\begin{ejem}[El espacio tangente al elemento neutro]
+		Sean $G$ un grupo de Lie y dos vecotres tangentes al elemento neutro $x,y\in T_eG$. Si $X,Y$ son extensiones de $x,y$ invariantes por la izquierda, podemos definir un corchete en $T_eG$ como
+		\[[x,y]=[X,Y]_e\in T_eG,\]
+		que también es un campo invariante por la izquierda \cite{Lee}, prop. 8.33.
+	\end{ejem}
+	\begin{obs}
+		Si $G$ es un grupo de Lie, el conjunto de campos vectoriales invariantes por la izquierda $\mathfrak{g}$ es un álgebra de Lie (de hecho, es una subálgebra de Lie del conjunto de todos los campos vectoriales en $G$). (Ver \cite{Lee}, ejemplo 8.36).
+	\end{obs}
+	\begin{teo}[\cite{Lee}\textbf{, 8.37}]
+		Si $G$ es un grupo de Lie, el álgebra $\mathfrak{g}$ es isomorfa (como espacio vectorial) a $T_eG$.
+	\end{teo}
+	\begin{proof}
+		El isomorfismo está dado por el mapeo
+		\begin{align*}
+			\mathfrak{g}&\to T_eG\\
+			X&\mapsto X_e
+		\end{align*} 
+	\end{proof}
+	\begin{defn}
+		Un \textbf{subgrupo 1-paramétrico} de un grupo de Lie $G$ es un homomorfismo $(\R,+)\to (G,\mu)$. (Es decir, es una \textbf{representación} del grupo $\R$ aditivo en $G$).
+	\end{defn}
+	\begin{teo}[\cite{Lee}\textbf{, 20.1}]
+		Sea $G$ un grupo de Lie. Los subgrupos 1-paramétricos de $G$ son las curvas integrales maximales de campos vectoriales invariantes por la izquierda que comienzan en la identidad (es decir, la curva en el tiempo 0 está en la identidad).
+	\end{teo}
+	Recordemos que una curva integral es \textbf{maximal} si su dominio no se puede extender a una curva integral más grande en algún abierto (ver \cite{Lee}, p. 212).
+	
+	\section{Exponencial en grupos de Lie}
+	\begin{prop}[\cite{Lee}\textbf{, 20.5}]
+		Sea $G$ un grupo de Lie. Para cualquier $X\in\mathfrak{g}$, $\gamma(s)=\exp(sX)$ es el subgrupo 1-paramétrico de $G$ generado por $X$.
+	\end{prop}
+	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
 	
