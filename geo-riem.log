@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  21 NOV 2023 10:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.1)  22 NOV 2023 09:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1698,10 +1698,15 @@ n$\OT1/ppl/m/n/10 . En con-se-cuen-cia, $\OT1/cmr/m/n/10 0 = \OMS/cmsy/m/n/10 h
 Chapter 5.
 [89
 
-] [90] [91]
+] [90]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 3250.
+
+[91]
 Chapter 6.
 
-Overfull \hbox (8.75383pt too wide) in paragraph at lines 3251--3251
+Overfull \hbox (8.75383pt too wide) in paragraph at lines 3272--3272
 []\OT1/ppl/m/n/10 Loring (dif geo), L.W. \OT1/ppl/m/it/10 Dif-fer-en-tial Ge-om
 -e-try: Con-nec-tions, Cur-va-ture, and Char-ac-ter-is-tic Classes\OT1/ppl/m/n/
 10 .
@@ -1714,16 +1719,16 @@ Overfull \hbox (8.75383pt too wide) in paragraph at lines 3251--3251
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `geo-riem.out' has not changed.
-(rerunfilecheck)             Checksum: CEF552D960A69F2237B2E20FC690AF19;8415.
+(rerunfilecheck)             Checksum: 13ED30CAF44081812AFBE9DE283CC0AD;8454.
 Package logreq Info: Writing requests to 'geo-riem.run.xml'.
 \openout1 = `geo-riem.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39631 strings out of 476025
- 804568 string characters out of 5790018
+ 39662 strings out of 476025
+ 805297 string characters out of 5790018
  1875388 words of memory out of 5000000
- 59146 multiletter control sequences out of 15000+600000
+ 59175 multiletter control sequences out of 15000+600000
  537134 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,89p,1878b,2645s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1750,10 +1755,10 @@ exmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2023/texmf-d
 ist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on geo-riem.pdf (92 pages, 4055195 bytes).
+Output written on geo-riem.pdf (92 pages, 4057320 bytes).
 PDF statistics:
- 1220 PDF objects out of 1440 (max. 8388607)
- 1040 compressed objects within 11 object streams
- 357 named destinations out of 1000 (max. 500000)
+ 1223 PDF objects out of 1440 (max. 8388607)
+ 1043 compressed objects within 11 object streams
+ 359 named destinations out of 1000 (max. 500000)
  507 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -44,5 +44,5 @@
 \contentsline {section}{\numberline {4.5}Segunda forma fundamental en superficies}{86}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Segunda forma fundamental}{87}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Grupos de Lie}{89}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Exponencial en grupos de Lie}{91}{section.5.1}%
+\contentsline {subsection}{\numberline {5.0.1}Grupos y álgebras de Lie clásicas}{91}{subsection.5.0.1}%
 \contentsline {chapter}{\numberline {6}Referencias}{92}{chapter.6}%

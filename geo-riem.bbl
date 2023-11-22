@@ -154,51 +154,6 @@
     \field{year}{2000}
   \endentry
 
-  \entry{sing}{inproceedings}{}
-    \name{author}{4}{}{%
-      {{hash=IS}{%
-         family={Izumiya},
-         familyi={I\bibinitperiod},
-         given={Shyūichi},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=dCRFM}{%
-         prefix={del},
-         prefixi={d\bibinitperiod},
-         family={Carmen Romero\bibnamedelima Fuster},
-         familyi={C\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim
-  F\bibinitperiod},
-         given={Mar{\'i}a},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=RMAS}{%
-         family={Ruas},
-         familyi={R\bibinitperiod},
-         given={Maria Aparecida\bibnamedelima Soares},
-         giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim
-  S\bibinitperiod},
-      }}%
-      {{hash=TF}{%
-         family={Tari},
-         familyi={T\bibinitperiod},
-         given={Farid},
-         giveni={F\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{IS+1}
-    \strng{fullhash}{ISdCRFMRMASTF1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{I}
-    \field{sortinithash}{I}
-    \true{singletitle}
-    \field{title}{Differential Geometry from a Singularity Theory Viewpoint}
-    \verb{url}
-    \verb https://api.semanticscholar.org/CorpusID:123874271
-    \endverb
-    \field{year}{2015}
-  \endentry
-
   \entry{Lee}{book}{}
     \name{author}{1}{}{%
       {{hash=LJM}{%

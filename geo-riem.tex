@@ -3175,11 +3175,12 @@ Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la
 			\end{aligned}
 		\end{align*}
 		son suaves.
-	\end{defn}\leavevmode
-	\begin{ejem}
+	\end{defn}
+	\begin{ejem}\leavevmode
 		\begin{enumerate}
 			\item $S^1\subseteq\C$ con la multiplicación de números complejos.
 			\item El \textbf{grupo general lineal} $\operatorname{GL}(n,\R)$, las matrices de $n\times n$ con coeficientes en $\R$ y la multiplicación usual de matrices. 
+			\item El \textbf{grupo ortogonal} $\operatorname{O}(n)$, las matrices de $n\times n$ con entradas reales cuya inversa es igual a su transpuesta. Preservan el producto interior de $\R^n$.
 		\end{enumerate}
 	\end{ejem}
 	\begin{defn}[\cite{ONeill}]
@@ -3242,10 +3243,30 @@ Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la
 	\end{teo}
 	Recordemos que una curva integral es \textbf{maximal} si su dominio no se puede extender a una curva integral más grande en algún abierto (ver \cite{Lee}, p. 212).
 	
-	\section{Exponencial en grupos de Lie}
 	\begin{prop}[\cite{Lee}\textbf{, 20.5}]
 		Sea $G$ un grupo de Lie. Para cualquier $X\in\mathfrak{g}$, $\gamma(s)=\exp(sX)$ es el subgrupo 1-paramétrico de $G$ generado por $X$.
 	\end{prop}
+	
+	\subsection{Grupos y álgebras de Lie clásicas}
+	Al \textbf{grupo de Lie clásico} $\operatorname{GL}(n,\C)$ corresponde un \textbf{álgebra de Lie clásica}, $\mathfrak{gl}(n,\C)$, que de hecho es el álgebra de matrices con el conmutador como corchete. Específicamente, si $A$ y $B$ son dos matrices de $n\times n$, definimos $[A,B]=AB-BA$. (En clase demostramos que satisface las propiedades en la definición).
+	
+	Citamos el resultado para el caso real, usando la noción de \textbf{isomorfismo de álgebras de Lie}, que no es más que un isomorfismo que preserva los corchetes:
+	
+	\begin{teo}[\cite{Lee}\textbf{, 8.41}, El álgebra de Lie del grupo general lineal]
+		La composición de mapeos naturales
+		\[\begin{tikzcd}
+			\mathfrak{g}\arrow{r}&T_{e}\operatorname{GL}(n,\R)\arrow{r}&\mathfrak{gl}
+		\end{tikzcd}\]
+		nos da un isomorfismo de álgebras de Lie entre el álgebra de campos vectoriales invariantes por la izquierda en $\operatorname{GL}(n,\R)$ y el álgebra de matrices de $n\times n$ con coeficientes en $\R$.
+	\end{teo}
+	
+	En el caso del grupo ortogonal presentado en la sección anterior, le corresponde el álgebra $\mathfrak{o}(n)$, que son las matrices de $n\times n$ antisimétricas con entradas reales.
+	
+	\begin{obs}[Extra]
+		En este punto es recomendable leer en \cite{Loring-dif} la interpretación del tensor de curvatura como una medida de qué tan cerca está un mapeo de ser un homomorfismo de álgebras de Lie (Cap. 1, Sec. 6.2).
+	\end{obs}
+	
+
 	
 	\chapter{Referencias}
 	\printbibliography[heading=none]
