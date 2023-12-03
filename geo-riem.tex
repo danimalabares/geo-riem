@@ -3160,7 +3160,9 @@ Para concluir el curso nos dedicaremos a resolver los ejercicios del capítulo 3
 
 	\fi
 	\chapter{Grupos de Lie}
-	Esta sección es una breve introducción a grupos de Lie. Los habíamos mencionado en \cref{grupo-Lie}.
+	Este capítulo es una brevísima introducción a los grupos de Lie. Los habíamos mencionado en \cref{grupo-Lie}.
+	\section{Definiciones y ejemplos}
+
 	\begin{defn}
 Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la propiedad de que las funciones
 		\begin{align*}
@@ -3242,12 +3244,19 @@ Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la
 		Sea $G$ un grupo de Lie. Los subgrupos 1-paramétricos de $G$ son las curvas integrales maximales de campos vectoriales invariantes por la izquierda que comienzan en la identidad (es decir, la curva en el tiempo 0 está en la identidad).
 	\end{teo}
 	Recordemos que una curva integral es \textbf{maximal} si su dominio no se puede extender a una curva integral más grande en algún abierto (ver \cite{Lee}, p. 212).
+%	\begin{proof}
+%		($\implies$) Supongamos que $\alpha:\R\to G$ es un subgrupo 1-paramétrico de $G$, es decir, un homomorfismo de grupos. 
+%	\end{proof}
 	
 	\begin{prop}[\cite{Lee}\textbf{, 20.5}]
 		Sea $G$ un grupo de Lie. Para cualquier $X\in\mathfrak{g}$, $\gamma(s)=\exp(sX)$ es el subgrupo 1-paramétrico de $G$ generado por $X$.
+		
+		
+		%(ver \cite{Lee}, teo. 8.44).
+
 	\end{prop}
 	
-	\subsection{Grupos y álgebras de Lie clásicas}
+	\section{Grupos y álgebras de Lie clásicas}
 	Al \textbf{grupo de Lie clásico} $\operatorname{GL}(n,\C)$ corresponde un \textbf{álgebra de Lie clásica}, $\mathfrak{gl}(n,\C)$, que de hecho es el álgebra de matrices con el conmutador como corchete. Específicamente, si $A$ y $B$ son dos matrices de $n\times n$, definimos $[A,B]=AB-BA$. (En clase demostramos que satisface las propiedades en la definición).
 	
 	Citamos el resultado para el caso real, usando la noción de \textbf{isomorfismo de álgebras de Lie}, que no es más que un isomorfismo que preserva los corchetes:
@@ -3265,7 +3274,33 @@ Un grupo de Lie $G$ es un grupo que además es una variedad diferenciable con la
 	\begin{obs}[Extra]
 		En este punto es recomendable leer en \cite{Loring-dif} la interpretación del tensor de curvatura como una medida de qué tan cerca está un mapeo de ser un homomorfismo de álgebras de Lie (Cap. 1, Sec. 6.2).
 	\end{obs}
+
 	
+	\begin{ejem}[El grupo simpléctico]
+	Definamos siguiendo a \cite{Helgason} el \textbf{grupo simpléctico} como
+	\[\operatorname{Sp}(n,\C)=\{g\in\operatorname{GL}(2n,\C):g^tJ_ng=J_n\}\]
+	donde $J_n=\begin{pmatrix}
+		0&I_n\\
+		-I_n&0
+	\end{pmatrix}$.
+	
+	Para estudiar el álgebra de Lie correspondiente tomamos una curva $\alpha:\R\to\operatorname{Sp}(n,\C)$ tal que $\alpha(0)=\Id$, digamos
+	\[g=\alpha(t)=\begin{pmatrix}
+		x(t)&y(t)\\
+		u(t)&v(t)
+	\end{pmatrix}\]
+	Derivando y evaluando en cero, obtenemos un vector tangente a la identidad, que corresponde a un elemento del álgebra de Lie. Derivando la ecuación $g^tJ_ng=J_n$, en clase obtuvimos la expresión 
+	\[\mathfrak{sp}(n,\C)=\left\{\begin{pmatrix}
+		z_1&z_2\\
+		z_3&-z_1^t\end{pmatrix}:z_1,z_2,z_3\in\mathcal{M}_{n\times n}\C
+	\right\}\]
+	\end{ejem}
+
+%\chapter{Ejercicios}
+%\begin{ejer*}
+%	Sea $A\in T^1_2(M)$. Mostrar que las componentes de la diferencial del tensor A, $DA\in T^1_3(M)$ son
+%	\[A^i_{jk,\ell}=\sum\frac{\partial}{\partial x^\ell}A^i_{jk}+\sum_{m=1}^n\left\{A^m_{jk}\Gamma^i_{m\ell}-A^i_{mk}\Gamma^m_{j\ell}-A^i_{jm}\Gamma^m_{k\ell} \right\}\]
+%\end{ejer*}
 
 	
 	\chapter{Referencias}
